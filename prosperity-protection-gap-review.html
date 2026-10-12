@@ -599,29 +599,40 @@
 }
 
 
-/* MULTI-COLOUR PALETTE — green + navy blue + wine + gold (edit values here) */
-:root{
-  --green:#013601; --green-mid:#006600;
-  --blue:#0B2447;  --blue-mid:#19376D;
-  --wine:#3A1428;  --wine-mid:#5A1F3D;
-}
-body{background:var(--blue);}
-/* sections alternate: blue / green / blue / wine / blue / green / blue / wine / blue / green */
-section.bg-emerald,section.bg-navy{background:var(--blue);}
-body > section:nth-of-type(2n){background:var(--green);}
-body > section:nth-of-type(4),body > section:nth-of-type(8){background:var(--wine);}
-body > section:nth-of-type(10){background:var(--green);}
-/* hero + final: green blending into blue */
-.hero{background:linear-gradient(135deg,#013601 0%,#006600 45%,#19376D 100%);}
-.final{background:linear-gradient(145deg,#19376D 0%,#0B2447 40%,#013601 100%);}
-footer,.sticky-cta{background:#071530;}
-/* neutral card tints instead of green tints */
+/* TWO-TONE PALETTE — one dark green, one light ivory (edit values here) */
+:root{ --dark:#013601; --dark-deep:#002A01; --light:#F4EFE0; --light-ink:#0B2A0B; }
+body{background:var(--dark);}
+section.bg-emerald,section.bg-navy{background:var(--dark);}
+.hero{background:linear-gradient(135deg,#013601 0%,#006600 100%);}
+.final{background:linear-gradient(145deg,#006600 0%,#013601 70%,#002A01 100%);}
+footer,.sticky-cta{background:var(--dark-deep);}
 .retirement-factor{background:rgba(255,255,255,.07);}
 .process-card{background:rgba(255,255,255,.06);}
 .apply-bonus{background:rgba(255,255,255,.07);}
 .about-img{background:transparent;}
-.scenario-card.mod{border-top-color:#4FACFE;}
-.scenario-card.cons{border-top-color:#E8752F;}
+/* light sections: 1,3,5,7,9 */
+body > section:nth-of-type(odd):not(.final){
+  background:var(--light);
+  --ink:var(--light-ink); --cream:var(--light-ink);
+  --ink-soft:rgba(11,42,11,.78); --ink-soft-2:rgba(11,42,11,.6);
+  --gold-deep:#7A5F0B; --gold-bright:#7A5F0B; --line:rgba(1,54,1,.22);
+  color:var(--light-ink);
+}
+body > section:nth-of-type(odd):not(.final) :is(.area-card,.persona-card,.audience-card,.qcard,.gem-card,.testi-card,.fit-col,.faq-item,.walk-item,.diag-list-item,.process-card,.retirement-factor,.journey-node,.hero-mini-card){
+  background:#fff;box-shadow:0 10px 22px -14px rgba(1,54,1,.35);color:var(--light-ink);
+}
+body > section:nth-of-type(odd):not(.final) .retirement-factor b{color:#7A5F0B;}
+body > section:nth-of-type(odd):not(.final) .fit-item{border-bottom-color:rgba(1,54,1,.15);}
+body > section:nth-of-type(odd):not(.final) .slider-nav button{background:#fff;}
+body > section:nth-of-type(odd):not(.final) h1,
+body > section:nth-of-type(odd):not(.final) h2,
+body > section:nth-of-type(odd):not(.final) h3,
+body > section:nth-of-type(odd):not(.final) h4{color:var(--light-ink);}
+body > section:nth-of-type(odd):not(.final) p{color:var(--ink-soft);}
+body > section:nth-of-type(odd):not(.final) .btn{color:#082408;}
+body > section:nth-of-type(odd):not(.final) .btn.outline{color:#013601;border-color:#013601;}
+.scenario-card.cons,.scenario-card.mod,.scenario-card.accident,.scenario-card.growth{border-top-color:#C9A227;}
+body > section:nth-of-type(odd):not(.final) .scenario-card{border-top-color:#013601;}
 </style>
 <body>
 <nav class="nav">
