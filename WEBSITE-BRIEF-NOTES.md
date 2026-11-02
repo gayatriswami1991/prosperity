@@ -60,6 +60,7 @@ Compliance notes for reels on the site: keep "illustration only, not a promise o
 ## Photos received (2026-11)
 - Dr Maria in a dark-green blazer, fists raised, green wall with gold decor: saved as `website/assets/img/dr-maria-green-fists.jpg`. Green + gold look suits the original brand direction (navy, green, gold). Consider a green-gold accent for the community/join sections.
 - Pink blazer portrait (already on file).
+- Seen in chat but NOT saved as files (only the fists photo above was): (a) white-blazer office portrait (already on file), (b) Dr Maria in a green blazer and dress, smiling, one hand in a "come here / join us" gesture, green wall with gold accents, (c) same green outfit, both thumbs up, green and gold arched background. These suit the Community / "Join" section. Ask the user to re-send (b) and (c) as attached files so they can be placed on the site.
 
 ## YouTube plan
 - Channels from the content document: @prosperitylifeschool and @drmariapramila. Plan: Prosperity TV section on the home page with embedded latest videos, a subscribe button and a "Watch on YouTube" link. Needs channel URLs and the video IDs to feature.
