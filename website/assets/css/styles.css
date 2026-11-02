@@ -688,3 +688,15 @@ section{padding:88px 0}
 .extiles a:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:var(--shadow-sm)}
 .extiles svg{width:32px;height:32px;color:var(--gold-deep)}
 .extiles b{margin-top:12px;font-size:16.5px;color:var(--navy)}.extiles small{font-size:13px;color:var(--ink-soft);margin-top:3px}
+
+/* image fixes */
+img{height:auto}
+.about .ph{aspect-ratio:4/5;max-width:440px}
+.about .ph img{object-position:center top}
+.bimg{max-width:380px;aspect-ratio:4/5;position:relative;background:#2b2b2b}
+.bimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.bstack img{width:100%;height:auto;display:block}
+.frame img,.cph img,.ev img{height:100%}
+.cph img{height:auto}
+.wizpic img{height:auto}
+.bimg{width:100%;margin:0 auto}
