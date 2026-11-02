@@ -73,6 +73,11 @@ Five photos from a "Making The Stage" programme (badge reads "Success Resources"
 - Only the image previews reached me, not files, so none are on the site folder. Ask the user to re-attach as files if she wants them used.
 - CAUTION: these show named third parties. Do not caption anyone by name or imply endorsement or partnership unless the user confirms permission. Safe use: a small "Continuous learning" gallery with neutral captions ("Making The Stage programme, Chennai, 2023") and the certificate.
 
+## More training photos + logo (seen in chat, NOT saved as files)
+- Six more "Making The Stage" photos: with trainers at the event, in the photo booth under the Success Resources / Success Gyan backdrop, and receiving the completion certificate on stage (the clearest one, wide 2000px). The certificate shot is the best single proof image. Same caution as above: no naming of third parties, no implied endorsement.
+- The Prosperity Life School logo was re-shared: a round seal, navy ring with white lettering, gold outer ring and a gold-leaf tree with roots and sun rays on white. Confirms navy + gold. The site already uses a copy of this logo in `website/assets/img/logo-transparent.png`. If the user wants the exact new file used, ask her to attach it as a file.
+- Ask the user to attach the certificate photo and any photos she wants as files.
+
 ## YouTube plan
 - Channels from the content document: @prosperitylifeschool and @drmariapramila. Plan: Prosperity TV section on the home page with embedded latest videos, a subscribe button and a "Watch on YouTube" link. Needs channel URLs and the video IDs to feature.
 
