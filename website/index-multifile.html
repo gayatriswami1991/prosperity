@@ -19,6 +19,7 @@
 </script>
 </head>
 <body>
+<div class="progress" id="progress"></div>
 
 <!-- icon sprite -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -86,13 +87,14 @@
 <main>
 
 <!-- 1. HERO -->
-<section class="hero" style="padding-bottom:0">
+<section class="hero" id="hero" style="padding-bottom:0"><div class="glow" id="glow"></div>
 <div class="wrap hero-grid">
 <div>
 <span class="pill">Financial education · Planning · Community</span>
 <h1>Build Financial Clarity. <em>Grow Wealth.</em> Create a Prosperous Life.</h1>
 <p class="lede">Prosperity Life School helps individuals and families build a strong financial foundation, protect what they have, plan retirement, grow wealth and create additional income, with a mentor who has spent 15+ years making money simple.</p>
 <div class="cta-row"><a class="btn lg" href="assessment.html">Get Your Free Clarity Assessment <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn ghost lg" href="community.html">Join the Community</a></div>
+<p class="rot">I want to plan for <b id="rot">retirement</b></p>
 <p class="micro">Free to start · No jargon · Educational, not investment advice</p>
 <a class="herolink" href="contact.html"><svg class="ic" style="width:18px;height:18px"><use href="#i-phone"/></svg>Prefer to talk? Book a 1-to-1 Clarity Call</a>
 </div>
@@ -103,127 +105,120 @@
 </div>
 </div>
 <div class="proof"><div class="wrap">
-<div class="it"><b>12,000+</b><span>People educated</span></div>
-<div class="it"><b>500+</b><span>Client families supported</span></div>
-<div class="it"><b>15+ yrs</b><span>Guiding families on money</span></div>
+<div class="it"><b data-count="12000" data-suf="+">12,000+</b><span>People educated</span></div>
+<div class="it"><b data-count="500" data-suf="+">500+</b><span>Client families supported</span></div>
+<div class="it"><b data-count="15" data-suf="+ yrs">15+ yrs</b><span>Guiding families on money</span></div>
 <div class="it"><b>Ph.D. · CWM</b><span>Finance and wealth credentials</span></div>
 </div></div>
 </section>
 
-<!-- 1b. TWO DOORS -->
-<section class="doors reveal" id="doors">
-<div class="wrap">
-<div class="sec-head" style="margin-bottom:34px"><span class="eyebrow">Two easy ways to begin</span><h2>How Would You Like to Start?</h2></div>
-<div class="doorgrid">
-<a class="door d1" href="community.html"><span class="ico"><svg class="ic"><use href="#i-users"/></svg></span><span class="lab">Learn with others</span><h3>Join the Prosperity Community</h3><p>Weekly mentorship, money lessons and families on the same journey. Start free at a live masterclass.</p><span class="go">Join the community <svg><use href="#i-arrow"/></svg></span></a>
-<a class="door d2" href="contact.html"><span class="ico"><svg class="ic"><use href="#i-phone"/></svg></span><span class="lab">Get personal guidance</span><h3>Book a Free 1-to-1 Clarity Call</h3><p>Fill in a short form, pick a convenient slot and talk to our team about your retirement, protection or financial plan.</p><span class="go">Book my slot <svg><use href="#i-arrow"/></svg></span></a>
+<div class="ticker" aria-hidden="true"><div class="tk"><span>Financial Clarity</span><span>Retirement Planning</span><span>Family Protection</span><span>Wealth Creation</span><span>Multiple Income</span><span>Kids Financial Literacy</span><span>NRI Planning</span><span>Insurance Claims</span><span>SIP &amp; Investing</span><span>Legacy Planning</span><span>Financial Clarity</span><span>Retirement Planning</span><span>Family Protection</span><span>Wealth Creation</span><span>Multiple Income</span><span>Kids Financial Literacy</span><span>NRI Planning</span><span>Insurance Claims</span><span>SIP &amp; Investing</span><span>Legacy Planning</span></div></div>
+<!-- 1b. STEP WIZARD -->
+<section class="wizsec" id="wizard">
+<div class="wrap wizgrid">
+<div class="wizside">
+<span class="eyebrow">60-second path finder</span>
+<h2>Tell Us What You Need. We’ll Show You the Right Next Step.</h2>
+<p>Answer 2 quick questions. Get a personal recommendation and book a free slot. No jargon, no pressure.</p>
+<div class="wizpic"><img src="assets/img/dr-maria-pink.jpg" alt="Dr Maria Pramila Dsouza ready to guide you" loading="lazy" width="397" height="457"><span class="wizbadge"><b>Free</b>1-to-1 guidance</span></div>
 </div>
-</div>
-</section>
-
-<!-- 2. WHY -->
-<section class="bg-cream reveal" id="why">
-<div class="wrap why">
-<div>
-<span class="eyebrow">Why Prosperity Life School</span>
-<h2>Earning Money Is Only One Part of Financial Success.</h2>
-<p class="lead">Many people work hard for decades but still are not completely clear about the questions on the right. Prosperity Life School exists to bridge this gap. We combine financial education, practical implementation, professional guidance and accountability so that financial knowledge turns into meaningful action.</p>
-<div class="close"><b>Knowledge creates awareness. Implementation creates transformation.</b></div>
-<div class="cta-row" style="margin-top:26px"><a class="btn navy" href="assessment.html">Find My Gaps: Free Assessment <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-</div>
-<div class="gaps">
-<div class="gap"><span class="q">?</span>How much should I save and invest?</div>
-<div class="gap"><span class="q">?</span>Is my family adequately protected?</div>
-<div class="gap"><span class="q">?</span>How much do I need for retirement?</div>
-<div class="gap"><span class="q">?</span>Do my investments match my goals?</div>
-<div class="gap"><span class="q">?</span>How do I reduce unnecessary debt?</div>
-<div class="gap"><span class="q">?</span>How can I create additional sources of income?</div>
-<div class="gap"><span class="q">?</span>How do I teach my children practical money skills?</div>
-<div class="gap"><span class="q">?</span>How do I organise wealth for the next generation?</div>
-</div>
-</div>
-</section>
-
-<!-- 3. 3M -->
-<section class="bg-navy reveal" id="philosophy">
-<div class="wrap">
-<div class="sec-head"><span class="eyebrow">Our core philosophy</span><h2>The 3M Model</h2><p>Three ideas that work together: how you think about money, how you manage it, and how you grow what comes in.</p></div>
-<div class="m3">
-<div class="c"><span class="n">01</span><div class="ico"><svg class="ic"><use href="#i-mind"/></svg></div><h3>Millionaire Mindset</h3><p>Develop the beliefs, habits and decision-making skills required to build long-term prosperity.</p></div>
-<div class="c"><span class="n">02</span><div class="ico"><svg class="ic"><use href="#i-wallet"/></svg></div><h3>Money Management</h3><p>Learn to manage cash flow, debt, protection, investments, retirement, taxation and succession systematically.</p></div>
-<div class="c"><span class="n">03</span><div class="ico"><svg class="ic"><use href="#i-coins"/></svg></div><h3>Multiple Sources of Income</h3><p>Discover and develop additional income opportunities based on your skills, experience and financial goals.</p></div>
-</div>
-<div class="flow"><span>Income</span><i>→</i><span>Foundation</span><i>→</i><span>Corpus</span><i>→</i><span class="l">Legacy</span></div>
-<p class="m3cap">Our goal is not simply to help you earn more. It is to help you build a financial life that supports freedom, security, choice and legacy.</p>
-</div>
-</section>
-
-<!-- 4. PATHS -->
-<section class="reveal" id="paths">
-<div class="wrap">
-<div class="sec-head"><span class="eyebrow">Find your Prosperity path</span><h2>Where Would You Like to Start?</h2><p>Choose the path closest to your situation. Each one leads to a focused page with a clear next step.</p></div>
-<div class="paths">
-<a class="path" href="../prosperity-clarity-call-v5.html"><span class="ico"><svg class="ic"><use href="#i-compass"/></svg></span><h3>I Want Financial Clarity</h3><p>Understand where you are financially today and identify the areas that may require your attention.</p><span class="go">Take the Prosperity Clarity Assessment <svg><use href="#i-arrow"/></svg></span></a>
-<a class="path" href="comprehensive-financial-planning.html"><span class="ico"><svg class="ic"><use href="#i-plan"/></svg></span><h3>I Want a Comprehensive Financial Plan</h3><p>Bring your goals, cash flow, protection, debt, investments, retirement and succession planning together into one structured roadmap.</p><span class="go">Explore Comprehensive Planning <svg><use href="#i-arrow"/></svg></span></a>
-<a class="path" href="../prosperity-retirement-clarity-call.html"><span class="ico"><svg class="ic"><use href="#i-sun"/></svg></span><h3>I Want to Prepare for Retirement</h3><p>Discover your retirement number, assess your existing retirement resources and build a strategy designed around your desired lifestyle.</p><span class="go">Explore Retirement Planning <svg><use href="#i-arrow"/></svg></span></a>
-<a class="path" href="../prosperity-protection-gap-review.html"><span class="ico"><svg class="ic"><use href="#i-shield"/></svg></span><h3>I Want to Protect My Family</h3><p>Understand potential gaps in term insurance, health insurance, personal accident protection and overall financial protection planning.</p><span class="go">Review My Protection <svg><use href="#i-arrow"/></svg></span></a>
-<a class="path" href="wealth-creation.html"><span class="ico"><svg class="ic"><use href="#i-trend"/></svg></span><h3>I Want to Grow My Wealth</h3><p>Build goal-oriented wealth strategies through appropriate investment and wealth-creation solutions.</p><span class="go">Explore Wealth Creation <svg><use href="#i-arrow"/></svg></span></a>
-<a class="path" href="multiple-sources-of-income.html"><span class="ico"><svg class="ic"><use href="#i-coins"/></svg></span><h3>I Want Multiple Sources of Income</h3><p>Explore opportunities to expand your earning potential through financial services, advisory, digital skills, content, consulting and other suitable income pathways.</p><span class="go">Explore Income Opportunities <svg><use href="#i-arrow"/></svg></span></a>
-<a class="path" href="financial-literacy.html"><span class="ico"><svg class="ic"><use href="#i-kids"/></svg></span><h3>I Want My Children to Learn Money Skills</h3><p>Age-appropriate financial literacy programs designed to introduce practical money skills early in life.</p><span class="go">Explore Financial Literacy Programs <svg><use href="#i-arrow"/></svg></span></a>
-<a class="path" href="../prosperity-advisor-career-readiness.html"><span class="ico"><svg class="ic"><use href="#i-brief"/></svg></span><h3>I Want to Build a Career in Financial Services</h3><p>Explore opportunities as an insurance advisor or build and lead a financial-services team.</p><span class="go">Explore Advisor &amp; Leadership Opportunities <svg><use href="#i-arrow"/></svg></span></a>
+<div class="wizard" id="wiz">
+<div class="wz-top"><span id="wzStep">Step 1 of 3</span><span class="wz-free">Free · 60 seconds</span></div>
+<div class="wz-bar"><i id="wzBar"></i></div>
+<div class="wz-body" id="wzBody"></div>
 </div>
 </div>
 </section>
 
 <!-- REELS -->
-<section class="bg-navy reveal" id="reels">
+<section class="reelsec reveal" id="reels">
 <div class="wrap">
-<div class="sec-head"><span class="eyebrow">Money Minutes · Watch</span><h2>Quick Money Lessons From Dr Maria</h2><p>Short, practical reels you can watch in under a minute. Tap to play. Follow on Instagram for a new one every week.</p></div>
-<div class="reelrow" id="reelrow">
-<button class="reel" type="button" data-src="assets/reels/reel-1.mp4" aria-label="Play Money Minute 1"><img src="assets/reels/reel-1-poster.jpg" alt="Dr Maria Pramila reel 1" loading="lazy" width="540" height="960"><span class="rp"></span><span class="rt">Money Minute 1<small>Dr Maria Pramila</small></span></button>
-<button class="reel" type="button" data-src="assets/reels/reel-2.mp4" aria-label="Play Money Minute 2"><img src="assets/reels/reel-2-poster.jpg" alt="Dr Maria Pramila reel 2" loading="lazy" width="540" height="960"><span class="rp"></span><span class="rt">Money Minute 2<small>Dr Maria Pramila</small></span></button>
-<button class="reel" type="button" data-src="assets/reels/reel-3.mp4" aria-label="Play Money Minute 3"><img src="assets/reels/reel-3-poster.jpg" alt="Dr Maria Pramila reel 3" loading="lazy" width="540" height="960"><span class="rp"></span><span class="rt">Money Minute 3<small>Dr Maria Pramila</small></span></button>
-<button class="reel" type="button" data-src="assets/reels/reel-4.mp4" aria-label="Play Money Minute 4"><img src="assets/reels/reel-4-poster.jpg" alt="Dr Maria Pramila reel 4" loading="lazy" width="540" height="960"><span class="rp"></span><span class="rt">Money Minute 4<small>Dr Maria Pramila</small></span></button>
-<button class="reel" type="button" data-src="assets/reels/reel-5.mp4" aria-label="Play Money Minute 5"><img src="assets/reels/reel-5-poster.jpg" alt="Dr Maria Pramila reel 5" loading="lazy" width="540" height="960"><span class="rp"></span><span class="rt">Money Minute 5<small>Dr Maria Pramila</small></span></button>
-
+<div class="reelhead">
+<div><span class="eyebrow">Money Minutes · Watch now</span><h2>Real Money Lessons.<br><em>In Under a Minute.</em></h2><p>Short, practical reels from Dr Maria. Preview plays automatically. Tap any reel to watch it full with sound, then book a slot if you want to go deeper.</p>
+<div class="cta-row"><a class="btn" href="https://www.instagram.com/drmariapramila/" target="_blank" rel="noopener">Follow on Instagram <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn ghost" href="#wizard">Find My Path</a></div></div>
+<div class="reelhint"><span>←</span> swipe <span>→</span></div>
 </div>
-<div class="cta-row center" style="margin-top:30px"><a class="btn" href="https://www.instagram.com/drmariapramila/" target="_blank" rel="noopener">Follow on Instagram <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn ghost" href="tv.html">More on Prosperity TV</a></div>
+<div class="reelrow" id="reelrow">
+<div class="reel" data-full="assets/reels/reel-1.mp4" tabindex="0" role="button" aria-label="Play: The 6-jar money system"><video src="assets/reels/preview-1.mp4" poster="assets/reels/reel-1-poster.jpg" muted loop playsinline preload="metadata"></video><span class="live"><i></i>LIVE PREVIEW</span><span class="rp"></span><span class="rt">The 6-jar money system<small>Tap to watch with sound</small></span></div>
+<div class="reel" data-full="assets/reels/reel-2.mp4" tabindex="0" role="button" aria-label="Play: Kids and money"><video src="assets/reels/preview-2.mp4" poster="assets/reels/reel-2-poster.jpg" muted loop playsinline preload="metadata"></video><span class="live"><i></i>LIVE PREVIEW</span><span class="rp"></span><span class="rt">Kids and money<small>Tap to watch with sound</small></span></div>
+<div class="reel" data-full="assets/reels/reel-3.mp4" tabindex="0" role="button" aria-label="Play: Savings, investment and your family balance sheet"><video src="assets/reels/preview-3.mp4" poster="assets/reels/reel-3-poster.jpg" muted loop playsinline preload="metadata"></video><span class="live"><i></i>LIVE PREVIEW</span><span class="rp"></span><span class="rt">Savings, investment and your family balance sheet<small>Tap to watch with sound</small></span></div>
+<div class="reel" data-full="assets/reels/reel-4.mp4" tabindex="0" role="button" aria-label="Play: Fixed SIP vs step-up SIP"><video src="assets/reels/preview-4.mp4" poster="assets/reels/reel-4-poster.jpg" muted loop playsinline preload="metadata"></video><span class="live"><i></i>LIVE PREVIEW</span><span class="rp"></span><span class="rt">Fixed SIP vs step-up SIP<small>Tap to watch with sound</small></span></div>
+<div class="reel" data-full="assets/reels/reel-5.mp4" tabindex="0" role="button" aria-label="Play: Before you buy health insurance"><video src="assets/reels/preview-5.mp4" poster="assets/reels/reel-5-poster.jpg" muted loop playsinline preload="metadata"></video><span class="live"><i></i>LIVE PREVIEW</span><span class="rp"></span><span class="rt">Before you buy health insurance<small>Tap to watch with sound</small></span></div>
+</div>
 <p class="fine">Illustrations in reels are examples only and not a promise of returns. Educational content, not investment advice.</p>
+</div>
+</section>
+<div class="rmodal" id="rmodal" hidden><button class="rx" id="rx" type="button" aria-label="Close">×</button><div class="rbox"><video id="rvid" controls playsinline></video><div class="rcta"><a class="btn" href="#wizard" id="rbook">Book a Free Slot <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn ghost" href="https://www.instagram.com/drmariapramila/" target="_blank" rel="noopener">More on Instagram</a></div></div></div>
+
+<!-- SPOTLIGHT: SIP -->
+<section class="spot sipsec reveal" id="sip">
+<div class="wrap spotgrid">
+<div class="spv"><div class="reel big" data-full="assets/reels/reel-4.mp4" tabindex="0" role="button" aria-label="Play: Fixed SIP vs step-up SIP"><video src="assets/reels/preview-4.mp4" poster="assets/reels/reel-4-poster.jpg" muted loop playsinline preload="metadata"></video><span class="live"><i></i>WATCH</span><span class="rp"></span><span class="rt">Fixed SIP vs step-up SIP<small>Tap to watch with sound</small></span></div></div>
+<div>
+<span class="eyebrow" style="color:var(--gold-bright)">Try it yourself</span>
+<h2>Start Small. <em>Step It Up.</em> See the Difference.</h2>
+<p class="d">Would you pick a fixed ₹10,000 monthly SIP, or start at ₹6,000 and raise it 10% every year? Move the sliders and see an illustration.</p>
+<div class="sipbox">
+<div class="sr2"><label>Start SIP per month <b id="v_s">₹6,000</b></label><input type="range" id="r_s" min="2000" max="30000" step="1000" value="6000"></div>
+<div class="sr2"><label>Yearly step-up <b id="v_u">10%</b></label><input type="range" id="r_u" min="0" max="15" step="1" value="10"></div>
+<div class="sr2"><label>Years <b id="v_y">20</b></label><input type="range" id="r_y" min="5" max="30" step="1" value="20"></div>
+<div class="sipres"><div><span>Fixed ₹10,000 SIP</span><b id="o_f">₹0</b></div><div class="hl"><span>Your step-up SIP</span><b id="o_u">₹0</b></div></div>
+<p class="sipn">Illustration at 12% yearly return. Not a promise or forecast. Actual returns vary and can be lower or negative.</p>
+</div>
+<div class="cta-row"><a class="btn lg" href="#wizard">Plan My SIP With Dr Maria <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+</div>
+</div>
+</section>
+
+<!-- SPOTLIGHT: HEALTH INSURANCE -->
+<section class="spot hisec reveal" id="health">
+<div class="wrap spotgrid rev">
+<div>
+<span class="eyebrow">Before you buy or renew</span>
+<h2>Is Your Health Insurance <em>Really</em> Protecting You?</h2>
+<p class="d">A claim can turn stressful when you discover policy restrictions at the worst time. Check these before you sign.</p>
+<div class="chk2">
+<div class="ck"><b>1</b><span>Waiting periods<small>Some illnesses or treatments may not be covered until the waiting period has passed.</small></span></div>
+<div class="ck"><b>2</b><span>Room rent limits<small>A room above your limit can mean proportionate deductions on other hospital expenses.</small></span></div>
+<div class="ck q"><b>?</b><span>Ask your insurer<small>“What are my waiting periods and room rent limits? Can I get them in writing?”</small></span></div>
+</div>
+<div class="cta-row"><a class="btn navy lg" href="../prosperity-protection-gap-review.html">Review My Protection <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn outline lg" href="#wizard">Book a Free Slot</a></div>
+</div>
+<div class="spv"><div class="reel big" data-full="assets/reels/reel-5.mp4" tabindex="0" role="button" aria-label="Play: Before you buy health insurance"><video src="assets/reels/preview-5.mp4" poster="assets/reels/reel-5-poster.jpg" muted loop playsinline preload="metadata"></video><span class="live"><i></i>WATCH</span><span class="rp"></span><span class="rt">Before you buy health insurance<small>Tap to watch with sound</small></span></div></div>
 </div>
 </section>
 
 <!-- YOUTUBE -->
-<section class="bg-cream reveal" id="youtube">
+<section class="ytsec reveal" id="youtube">
 <div class="wrap">
-<div class="sec-head"><span class="eyebrow">YouTube · Prosperity TV</span><h2>Dr Maria’s Finance Chapel on YouTube</h2><p>Hundreds of free videos in English and Kannada: podcasts, insurance, retirement, mindset and tips for NRIs.</p></div>
-<div class="ytgrid">
-<div class="ytmain"><div class="ytbadge"><svg class="ic" style="width:30px;height:30px"><use href="#i-play"/></svg></div><h3>Dr Maria’s Finance Chapel</h3><p>@drmariapramila · Financial Coach, Consultant &amp; Keynote Speaker · 500+ videos</p><div class="cta-row" style="margin-top:20px"><a class="btn" href="https://www.youtube.com/@drmariapramila?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn outline" href="https://www.youtube.com/@drmariapramila/videos" target="_blank" rel="noopener">Watch Latest Videos</a></div></div>
-<div class="ytlist">
-<a href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span>Unlocking Insurance Insights</span><small>Playlist · 5 videos</small></a>
-<a href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span>Insure To Secure: Book Launch</span><small>Playlist · 5 videos</small></a>
-<a href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span>Millionaire Mindset Practice</span><small>Playlist · 19 videos</small></a>
-<a href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span>Tips &amp; Hacks for NRIs</span><small>Playlist · 5 videos</small></a>
-<a href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span>Money Mathu (Kannada, National TV)</span><small>Playlist · 12 videos</small></a>
-<a href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span>Podcast with Errol Fernandes</span><small>4-part series</small></a>
+<div class="yth">
+<div><span class="ytlive"><i></i>YouTube · Prosperity TV</span><h2>Learn From <em>500+ Free Videos</em> on Dr Maria’s Finance Chapel</h2><p>Podcasts, insurance explained, retirement, money mindset and tips for NRIs. In English and Kannada. Watch free, anytime.</p>
+<div class="cta-row"><a class="btn yt" href="https://www.youtube.com/@drmariapramila?sub_confirmation=1" target="_blank" rel="noopener"><svg class="ic" style="fill:#fff;stroke:none"><use href="#i-play"/></svg>Subscribe on YouTube</a><a class="btn ghost" href="https://www.youtube.com/@drmariapramila/videos" target="_blank" rel="noopener">Watch Latest Videos</a></div></div>
+<div class="ytstats"><div><b>500+</b><span>videos</span></div><div><b>10</b><span>playlists</span></div><div><b>EN · ಕನ್ನಡ</b><span>languages</span></div></div>
 </div>
+<div class="ytpl">
+<a class="plc c1" href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span class="pn">PODCAST</span><b>4-Part Series with Errol Fernandes</b><small>4 episodes</small><i class="pi2"></i></a>
+<a class="plc c2" href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span class="pn">INSURANCE</span><b>Unlocking Insurance Insights</b><small>5 videos</small><i class="pi2"></i></a>
+<a class="plc c3" href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span class="pn">BOOK LAUNCH</span><b>Insure To Secure Live Event</b><small>5 videos</small><i class="pi2"></i></a>
+<a class="plc c4" href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span class="pn">MINDSET</span><b>Millionaire Mindset Practice</b><small>19 videos</small><i class="pi2"></i></a>
+<a class="plc c5" href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span class="pn">NRI</span><b>Tips &amp; Hacks for NRIs</b><small>5 videos</small><i class="pi2"></i></a>
+<a class="plc c6" href="https://www.youtube.com/@drmariapramila/playlists" target="_blank" rel="noopener"><span class="pn">ಕನ್ನಡ · KANNADA</span><b>Money Mathu · National TV</b><small>12 videos</small><i class="pi2"></i></a>
 </div>
 </div>
 </section>
 
-<!-- 5. LITERACY -->
-<section class="bg-mist reveal" id="literacy">
-<div class="wrap lit">
+<!-- COMMUNITY -->
+<section class="community reveal" id="community">
+<div class="wrap comm">
 <div>
-<span class="eyebrow">Financial literacy for the next generation</span>
-<h2>Money Skills Children Can Use for Life.</h2>
-<p class="lead">Schools prepare children for examinations. Prosperity Life School prepares families for life. Our financial literacy programs help young people understand money progressively, according to their age and stage of life.</p>
-<div class="cta-row" style="margin-top:26px"><a class="btn navy" href="financial-literacy.html">Explore Financial Literacy Programs <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+<span class="eyebrow" style="color:var(--gold-bright)">The Prosperity Community</span>
+<h2>You Don’t Have to Work Out Money on Your Own.</h2>
+<p class="d">A family community for money that grows, protects and lasts. Learn step by step, get live mentorship from Dr Maria, and share the journey with families who show their numbers.</p>
+<ul class="cl"><li><svg><use href="#i-check"/></svg>Live weekly mentor calls</li><li><svg><use href="#i-check"/></svg>16 money-mastery modules</li><li><svg><use href="#i-check"/></svg>A private group of families, not a feed</li><li><svg><use href="#i-check"/></svg>Start with a free live masterclass</li></ul>
+<div class="cta-row"><a class="btn lg" href="community.html">Join the Community <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn ghost lg" href="masterclass.html">Attend a Free Masterclass</a></div>
+<p class="micro">Membership opens every month · No card needed for the free masterclass</p>
 </div>
-<div class="ages">
-<a class="age" href="financial-literacy-ages-8-13.html"><span class="a">8-13<small>AGES</small></span><span><h3>Money Foundations</h3><span class="t">Money basics · Needs vs wants · Saving · Smart spending · Goal setting · Good money habits</span><span class="go">Explore Ages 8-13 →</span></span></a>
-<a class="age" href="financial-literacy-ages-14-18.html"><span class="a">14-18<small>AGES</small></span><span><h3>Young Money Skills</h3><span class="t">Budgeting · Banking · Digital money · Financial responsibility · Investing basics · Scam awareness · Entrepreneurship</span><span class="go">Explore Ages 14-18 →</span></span></a>
-<a class="age" href="financial-literacy-ages-19-25.html"><span class="a">19-25<small>AGES</small></span><span><h3>Financial Independence</h3><span class="t">Income management · Cash flow · Credit and debt · Insurance · Investing · Taxes · Career income · Wealth-building foundations</span><span class="go">Explore Ages 19-25 →</span></span></a>
-</div>
+<div class="cph"><img src="assets/img/dr-maria-green-fists.jpg" alt="Dr Maria Pramila Dsouza inviting you to join the Prosperity community" loading="lazy" width="1000" height="868"></div>
 </div>
 </section>
 
@@ -247,114 +242,6 @@
 </div>
 </section>
 
-<!-- 7. ECOSYSTEM -->
-<section class="bg-cream reveal" id="ecosystem">
-<div class="wrap">
-<div class="sec-head"><span class="eyebrow">Our learning ecosystem</span><h2>Learn. Implement. Grow.</h2><p>Sixteen practical modules that take you from your relationship with money to legacy planning.</p></div>
-<div class="mods">
-<div class="mod"><div class="no">01</div><h4>Money Awakening</h4><p>Understand your current relationship with money.</p></div>
-<div class="mod"><div class="no">02</div><h4>Rewire Your Money Mindset</h4><p>Identify beliefs and behaviours influencing your financial decisions.</p></div>
-<div class="mod"><div class="no">03</div><h4>Prosperity Blueprint</h4><p>Build the foundations of your financial life.</p></div>
-<div class="mod"><div class="no">04</div><h4>Cash Flow Mastery</h4><p>Take control of income and expenses.</p></div>
-<div class="mod"><div class="no">05</div><h4>Debt Freedom</h4><p>Create a structured approach to debt.</p></div>
-<div class="mod"><div class="no">06</div><h4>Freedom Roadmap</h4><p>Connect your money with meaningful financial goals.</p></div>
-<div class="mod"><div class="no">07</div><h4>Safe Wealth</h4><p>Understand financial protection.</p></div>
-<div class="mod"><div class="no">08</div><h4>Mutual Funds</h4><p>Build foundational understanding of mutual fund investing.</p></div>
-<div class="mod"><div class="no">09</div><h4>Stock Market</h4><p>Learn essential stock-market concepts and disciplined investing principles.</p></div>
-<div class="mod"><div class="no">10</div><h4>Next-Level Investing</h4><p>Advance your understanding of wealth-building strategies.</p></div>
-<div class="mod"><div class="no">11</div><h4>Protection Blueprint</h4><p>Organise the protection layer of your financial life.</p></div>
-<div class="mod"><div class="no">12</div><h4>Retire Rich</h4><p>Understand retirement preparation and corpus planning.</p></div>
-<div class="mod"><div class="no">13</div><h4>Tax Smarter</h4><p>Build awareness around tax-efficient financial decisions.</p></div>
-<div class="mod"><div class="no">14</div><h4>Banking Secrets</h4><p>Understand important banking concepts and practices.</p></div>
-<div class="mod"><div class="no">15</div><h4>Scam-Proof</h4><p>Recognise common financial scams and protect yourself.</p></div>
-<div class="mod"><div class="no">16</div><h4>Legacy Blueprint</h4><p>Prepare for succession, estate organisation and legacy.</p></div>
-</div>
-<div class="cta-row center" style="margin-top:38px"><a class="btn navy" href="programs.html">Explore Prosperity Life School <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-</div>
-</section>
-
-<!-- 8. SERVICES -->
-<section class="bg-navy reveal" id="services">
-<div class="wrap">
-<div class="sec-head"><span class="eyebrow">Financial services</span><h2>Financial Solutions for Different Stages of Life</h2><p>Education is only one part of the journey. Where appropriate, our team can also help clients explore financial solutions aligned with their needs and goals.</p></div>
-<div class="svc">
-<div class="c"><div class="ico"><svg class="ic"><use href="#i-shield"/></svg></div><h3>Protection</h3><ul><li>Term Insurance</li><li>Health Insurance</li><li>Personal Accident Insurance</li><li>Travel and other protection solutions</li></ul></div>
-<div class="c"><div class="ico"><svg class="ic"><use href="#i-trend"/></svg></div><h3>Wealth Creation</h3><ul><li>Mutual Funds</li><li>Systematic Investment Plans</li><li>Goal-based investment planning</li><li>Wealth-building solutions</li></ul></div>
-<div class="c"><div class="ico"><svg class="ic"><use href="#i-sun"/></svg></div><h3>Retirement</h3><ul><li>Retirement Planning</li><li>Retirement Corpus Strategy</li><li>Income Planning</li><li>Systematic Withdrawal Strategies</li></ul></div>
-<div class="c"><div class="ico"><svg class="ic"><use href="#i-layers"/></svg></div><h3>Wealth &amp; Legacy</h3><ul><li>Portfolio Planning</li><li>Structured Financial Solutions</li><li>Succession and Legacy Planning</li></ul></div>
-</div>
-<div class="cta-row center" style="margin-top:38px"><a class="btn" href="financial-services.html">Speak With Our Financial Services Team <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-<p class="fine">Financial products are subject to eligibility, applicable regulations, product terms, market risks and suitability assessment. Please review relevant product documents before making financial decisions.</p>
-</div>
-</section>
-
-<!-- 9. RETIREMENT + INCOME -->
-<section class="reveal" id="retire-income">
-<div class="wrap split">
-<div class="pane ret">
-<span class="eyebrow" style="color:var(--gold-bright)">Retirement planning</span>
-<h2>Don’t Leave Your Retirement Number to Guesswork.</h2>
-<p class="d">Retirement planning is not simply about accumulating investments. It is about knowing how much you may need, whether your existing resources are on track, how income may be generated after retirement, and how inflation and unexpected expenses can affect your corpus.</p>
-<div class="stepsr"><div><b>1</b>Know how much you may need</div><div><b>2</b>Check whether your resources are on track</div><div><b>3</b>Plan how income may be generated after retirement</div></div>
-<div class="cta-row"><a class="btn" href="../prosperity-retirement-clarity-call.html">Calculate Your Retirement Readiness <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-</div>
-<div class="pane inc">
-<span class="eyebrow">Multiple sources of income</span>
-<h2>Your Income Doesn’t Have to Depend on Only One Source.</h2>
-<p class="d" style="color:var(--ink-soft)">Prosperity Life School helps participants explore practical income pathways based on their strengths, interests, available time and experience. The objective is not to chase every opportunity. It is to identify the right opportunities and build them systematically.</p>
-<div class="chips"><span>Financial Services</span><span>Insurance Advisory</span><span>Mutual Fund Distribution</span><span>Stock Market Skills</span><span>Digital Coaching</span><span>Consulting</span><span>YouTube &amp; Content Creation</span><span>Affiliate Income</span><span>Digital Products</span><span>Skill-Based Services</span></div>
-<div class="cta-row"><a class="btn navy" href="multiple-sources-of-income.html">Discover Your Income Opportunities <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-</div>
-</div>
-</section>
-
-<!-- 10. CAREERS -->
-<section class="bg-mist reveal" id="careers">
-<div class="wrap">
-<div class="sec-head"><span class="eyebrow">Careers in financial services</span><h2>Build a Career. Or Build a Team.</h2><p>Two pathways for people who want meaningful work in financial services, with training and mentoring, and no promises of quick income.</p></div>
-<div class="careers">
-<div class="career"><div class="ico"><svg class="ic"><use href="#i-brief"/></svg></div><h3>Advisor Opportunities</h3><p class="d">Looking for a flexible or full-time opportunity where your work can make a meaningful difference? Build your career as a financial-services or insurance advisor while developing practical skills.</p>
-<ul><li>Client communication</li><li>Financial protection</li><li>Sales</li><li>Relationship building</li><li>Financial products</li><li>Digital prospecting</li><li>Business development</li></ul>
-<a class="btn navy" href="../prosperity-advisor-career-readiness.html">Explore Advisor Opportunities <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-<div class="career"><div class="ico"><svg class="ic"><use href="#i-users"/></svg></div><h3>Leadership Opportunity</h3><p class="d">Don’t just build your career. Build a team. For people with leadership and entrepreneurial aspirations, Prosperity Life School provides a pathway to develop teams of financial-services professionals.</p>
-<ul><li>Recruit</li><li>Train</li><li>Mentor</li><li>Build systems</li><li>Develop advisors</li><li>Grow a financial-services business</li></ul>
-<a class="btn navy" href="leadership-opportunity.html">Explore Leadership Opportunities <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-</div>
-</div>
-</section>
-
-<!-- 11. MASTERCLASS -->
-<section class="reveal" id="masterclass">
-<div class="wrap">
-<div class="mc">
-<div>
-<span class="eyebrow">Prosperity Foundation Masterclass</span>
-<h2>Not Sure Where to Begin? Start With the Free Masterclass.</h2>
-<p class="d">Discover the fundamental principles behind money mindset, money management, protection, wealth creation, financial independence, multiple sources of income and building your personal prosperity roadmap. A free live class with Dr Maria: no stock tips, no risky schemes, no complicated jargon.</p>
-<div class="three"><div><b>01</b><span>Wealthy Mindset<small>Find the hidden beliefs that keep money leaving your home</small></span></div><div><b>02</b><span>Money Management<small>Budget, emergency fund, insurance and debt, in the right order</small></span></div><div><b>03</b><span>Multiple Sources of Income<small>Map your next income source</small></span></div></div>
-<div class="cta-row"><a class="btn lg" href="masterclass.html">Register for the Next Masterclass <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-<p class="micro">Free live class on Sunday · 2 hours · Online via Zoom · English and Kannada · No card needed</p>
-</div>
-<div class="mcimg"><div class="ph"><img src="assets/img/dr-maria-thumbsup.jpg" alt="Dr Maria Pramila Dsouza welcoming you to the free masterclass" loading="lazy" width="689" height="532"></div><div class="tag"><b>The 3M Secrets</b>to grow, protect and multiply your family’s money</div></div>
-</div>
-</div>
-</section>
-
-<!-- COMMUNITY -->
-<section class="community reveal" id="community">
-<div class="wrap comm">
-<div>
-<span class="eyebrow" style="color:var(--gold-bright)">The Prosperity Community</span>
-<h2>You Don’t Have to Work Out Money on Your Own.</h2>
-<p class="d">A family community for money that grows, protects and lasts. Learn step by step, get live mentorship from Dr Maria, and share the journey with families who show their numbers.</p>
-<ul class="cl"><li><svg><use href="#i-check"/></svg>Live weekly mentor calls</li><li><svg><use href="#i-check"/></svg>16 money-mastery modules</li><li><svg><use href="#i-check"/></svg>A private group of families, not a feed</li><li><svg><use href="#i-check"/></svg>Start with a free live masterclass</li></ul>
-<div class="cta-row"><a class="btn lg" href="community.html">Join the Community <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn ghost lg" href="masterclass.html">Attend a Free Masterclass</a></div>
-<p class="micro">Membership opens every month · No card needed for the free masterclass</p>
-</div>
-<div class="cph"><img src="assets/img/dr-maria-green-fists.jpg" alt="Dr Maria Pramila Dsouza inviting you to join the Prosperity community" loading="lazy" width="1000" height="868"></div>
-</div>
-</section>
-
 <!-- BOOK -->
 <section class="bg-mist reveal" id="book">
 <div class="wrap bookgrid">
@@ -367,18 +254,6 @@
 <div class="cta-row"><a class="btn navy" href="reads.html">Read the Free Preview <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn outline" href="reads.html">Get the Book</a></div>
 <div class="bstack"><img src="assets/img/book/insure-to-secure-stack.jpg" alt="Copies of the book Insure to Secure by Dr Maria Pramila" loading="lazy" width="1400" height="787"></div>
 </div>
-</div>
-</section>
-
-<!-- LIVE EVENTS -->
-<section class="reveal" id="live">
-<div class="wrap">
-<div class="sec-head"><span class="eyebrow">Live seminars · India and the Gulf</span><h2>Learning Happens Better in Person</h2><p>Dr Maria teaches live to professionals and families, from corporate rooms in Kuwait to community halls. Invite her to your organisation or join the next public workshop.</p></div>
-<div class="evgrid">
-<figure class="ev big"><img src="assets/img/events/kuwait-badr-al-samaa-audience.jpg" alt="Dr Maria Pramila teaching a seminar on creating and protecting wealth in Kuwait" loading="lazy" width="1200" height="774"><figcaption>Seminar on creating and protecting wealth · Kuwait</figcaption></figure>
-<figure class="ev"><img src="assets/img/events/kuwait-seminar-keralite-hall.jpg" alt="Dr Maria Pramila teaching a financial workshop to a community audience" loading="lazy" width="1200" height="900"><figcaption>Community workshop · Gulf</figcaption></figure>
-</div>
-<div class="cta-row center" style="margin-top:34px"><a class="btn navy" href="corporate-workshops.html">Invite Prosperity Life School <svg class="ic"><use href="#i-arrow"/></svg></a><a class="btn outline" href="workshops.html">See Upcoming Workshops</a></div>
 </div>
 </section>
 
@@ -399,93 +274,19 @@
 </div>
 </section>
 
-<!-- 13. PILLARS -->
-<section class="reveal" id="pillars">
+<!-- EXPLORE -->
+<section class="bg-cream reveal" id="explore">
 <div class="wrap">
-<div class="sec-head"><span class="eyebrow">Why Prosperity Life School?</span><h2>Financial Education That Moves Beyond Theory</h2></div>
-<div class="pillars">
-<div class="c"><div class="ico"><svg class="ic"><use href="#i-school"/></svg></div><h3>Education</h3><p>Understand the why behind your financial decisions.</p></div>
-<div class="c"><div class="ico"><svg class="ic"><use href="#i-compass"/></svg></div><h3>Clarity</h3><p>Know where you are, where you want to go and what needs attention.</p></div>
-<div class="c"><div class="ico"><svg class="ic"><use href="#i-plan"/></svg></div><h3>Implementation</h3><p>Turn knowledge into practical action.</p></div>
-<div class="c"><div class="ico"><svg class="ic"><use href="#i-trend"/></svg></div><h3>Accountability</h3><p>Stay focused on the actions that can move you towards your goals.</p></div>
-</div>
-<p class="bigq">Knowledge creates awareness. <em>Implementation creates transformation.</em></p>
-</div>
-</section>
-
-<!-- 14. COMMUNITY: STORIES -->
-<section class="bg-mist reveal" id="stories">
-<div class="wrap">
-<div class="sec-head"><span class="eyebrow">Success stories</span><h2>They Took Charge of Their Money, and Their Families Feel It</h2><p>Real members who followed the system. Every story follows six stages, from the first spark to the ripple effect on the family.</p></div>
-<div class="stories">
-<!-- PLACEHOLDER STORIES: replace with approved member stories, photos and permissions before launch -->
-<div class="story"><div class="row"><span class="t1">Savings</span><span class="t2">Diamond member</span></div><div class="big">₹52 lakh in 9 months</div><h3>From earning well to building real wealth</h3><p>[Member’s before-story and quote to be added with permission.]</p><div class="who">[Name, profession]</div></div>
-<div class="story"><div class="row"><span class="t1">Family</span><span class="t2">Gold member</span></div><div class="big">“I am at peace.”</div><h3>A family plan that finally made money feel calm</h3><p>[Member’s story to be added with permission.]</p><div class="who">[Name, profession]</div></div>
-<div class="story"><div class="row"><span class="t1">Insurance</span><span class="t2">Claim settled</span></div><div class="big">One claim. One protected family.</div><h3>How one insurance claim protected a family</h3><p>[Family’s story and claim details to be added with permission.]</p><div class="who">[Family name, city]</div></div>
-</div>
-<div class="sixs"><span>Spark</span><i>→</i><span>Fall</span><i>→</i><span>Shift</span><i>→</i><span>Climb</span><i>→</i><span>Rise</span><i>→</i><span>Ripple</span></div>
-<div class="cta-row center" style="margin-top:34px"><a class="btn navy" href="stories.html">Read More Success Stories <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-<p class="fine light-fine" style="color:var(--ink-soft)">Member results are individual and depend on their own effort and choices.</p>
-</div>
-</section>
-
-<!-- 15. TV + READS -->
-<section class="reveal" id="tv-reads">
-<div class="wrap">
-<div class="sec-head"><span class="eyebrow">Learn at your own pace</span><h2>Watch. Read. Understand Money Better.</h2></div>
-<div class="tvgrid">
-<div class="tv">
-<span class="eyebrow">Prosperity TV · Streaming free</span>
-<h3>Real families. Real numbers. Real peace of mind.</h3>
-<p class="d">Honest conversations with families who took control of their money, one story at a time. Videos from Dr Maria’s YouTube channels, organised like a streaming app.</p>
-<div class="shows"><div><b>Prosperity Talks</b><span>Dr Maria’s own talks: journey, mindset, saving, insurance, investing</span></div><div><b>Hall of Fame</b><span>Members who crossed a milestone</span></div><div><b>Kannada Corner</b><span>All Kannada videos</span></div><div><b>Money Minutes</b><span>Short reels and Shorts</span></div></div>
-<div class="talks"><a href="tv.html"><svg><use href="#i-play"/></svg>From Government Teacher to Wealth Mentor: My Journey</a><a href="tv.html"><svg><use href="#i-play"/></svg>The 3M Secrets Every Family Must Know</a><a href="tv.html"><svg><use href="#i-play"/></svg>Is Your Family Really Insured?</a></div>
-<div class="cta-row"><a class="btn" href="tv.html">Explore Prosperity TV <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-</div>
-<div class="reads">
-<span class="eyebrow">Prosperity Reads</span>
-<h3>Short, practical reads you can finish in one sitting.</h3>
-<p class="d">Dr Maria’s books bring real family stories that quietly change how you think about money.</p>
-<ul><li><b>1</b>One sitting: start and finish whenever it suits you.</li><li><b>2</b>One story: real families, real choices.</li><li><b>3</b>One lesson: something to use in your money today.</li></ul>
-<a class="btn navy" href="reads.html">Read the Free Preview <svg class="ic"><use href="#i-arrow"/></svg></a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- 16. ORGANISATIONS -->
-<section class="bg-cream reveal" id="organisations">
-<div class="wrap org">
-<div>
-<span class="eyebrow">For organisations</span>
-<h2>Financial Wellness &amp; Financial Literacy Programs</h2>
-<p class="d">Prosperity Life School provides customised learning experiences, online and offline, on financial literacy, money management, financial wellness, protection, retirement preparedness, wealth creation and income development.</p>
-<div class="cta-row"><a class="btn navy" href="corporate-workshops.html">Invite Prosperity Life School <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-</div>
-<div class="audi">
-<div><svg><use href="#i-build"/></svg>Corporates</div>
-<div><svg><use href="#i-school"/></svg>Schools &amp; Colleges</div>
-<div><svg><use href="#i-book"/></svg>Teachers</div>
-<div><svg><use href="#i-users"/></svg>Professional Groups</div>
-<div><svg><use href="#i-brief"/></svg>Entrepreneurs</div>
-<div><svg><use href="#i-chat"/></svg>Communities &amp; Associations</div>
-</div>
-</div>
-</section>
-
-<!-- 17. TOOLS -->
-<section class="reveal" id="tools">
-<div class="wrap">
-<div class="sec-head"><span class="eyebrow">Free financial tools</span><h2>Start With Your Numbers</h2><p>Simple tools that show where you stand today. Each one comes with plain-language guidance on what the result means.</p></div>
-<div class="tools">
-<a class="tool" href="tools/insurance-gap-calculator.html"><div class="ico"><svg class="ic"><use href="#i-shield"/></svg></div><h3>Insurance Gap Calculator</h3><p>See how far your cover is from what your family may need.</p><span>Use the tool →</span></a>
-<a class="tool" href="tools/cash-flow-calculator.html"><div class="ico"><svg class="ic"><use href="#i-wallet"/></svg></div><h3>Cash Flow Calculator</h3><p>Understand where your income goes each month.</p><span>Use the tool →</span></a>
-<a class="tool" href="tools/debt-health-calculator.html"><div class="ico"><svg class="ic"><use href="#i-calc"/></svg></div><h3>Debt Health Calculator</h3><p>Check how healthy your debt load is.</p><span>Use the tool →</span></a>
-<a class="tool" href="tools/retirement-number-calculator.html"><div class="ico"><svg class="ic"><use href="#i-sun"/></svg></div><h3>Retirement Number Calculator</h3><p>Estimate the corpus your future lifestyle may require.</p><span>Use the tool →</span></a>
-<a class="tool" href="tools/risk-appetite-assessment.html"><div class="ico"><svg class="ic"><use href="#i-compass"/></svg></div><h3>Risk Appetite Assessment</h3><p>Find out how much risk you are comfortable taking.</p><span>Take the assessment →</span></a>
-<a class="tool" href="tools/protection-knowledge-assessment.html"><div class="ico"><svg class="ic"><use href="#i-book"/></svg></div><h3>Protection / Policy Knowledge Assessment</h3><p>Test how well you understand your policies.</p><span>Take the assessment →</span></a>
-<a class="tool" href="tools/multiple-income-planner.html"><div class="ico"><svg class="ic"><use href="#i-coins"/></svg></div><h3>Multiple Income Planner</h3><p>Map your possible additional income sources.</p><span>Use the tool →</span></a>
-<a class="tool cta" href="tools.html"><h3>Explore Free Financial Tools</h3><p>All seven tools in one place.</p><span style="color:var(--gold-bright)">See all tools →</span></a>
+<div class="sec-head" style="margin-bottom:34px"><span class="eyebrow">Everything in one place</span><h2>Explore Prosperity Life School</h2></div>
+<div class="extiles">
+<a href="financial-planning.html"><svg class="ic"><use href="#i-plan"/></svg><b>Financial Planning</b><small>Clarity · Comprehensive · Retirement</small></a>
+<a href="financial-services.html"><svg class="ic"><use href="#i-shield"/></svg><b>Financial Services</b><small>Protection · Wealth · Legacy</small></a>
+<a href="financial-literacy.html"><svg class="ic"><use href="#i-kids"/></svg><b>Kids &amp; Youth</b><small>Ages 8-13 · 14-18 · 19-25</small></a>
+<a href="multiple-sources-of-income.html"><svg class="ic"><use href="#i-coins"/></svg><b>Multiple Income</b><small>Advisor · Leader · Skills</small></a>
+<a href="tools.html"><svg class="ic"><use href="#i-calc"/></svg><b>Free Tools</b><small>7 calculators &amp; assessments</small></a>
+<a href="masterclass.html"><svg class="ic"><use href="#i-school"/></svg><b>Free Masterclass</b><small>Live with Dr Maria</small></a>
+<a href="corporate-workshops.html"><svg class="ic"><use href="#i-build"/></svg><b>For Organisations</b><small>Corporate · Schools · Groups</small></a>
+<a href="stories.html"><svg class="ic"><use href="#i-book"/></svg><b>Stories &amp; Reads</b><small>Members · Insure to Secure</small></a>
 </div>
 </div>
 </section>
@@ -558,6 +359,81 @@ if(FORM_ENDPOINT){var fd=new FormData();Object.keys(data).forEach(function(k){fd
 else console.warn('FORM_ENDPOINT empty: lead NOT sent anywhere',data);
 f.querySelectorAll('input,select,button').forEach(function(x){x.disabled=true});document.getElementById('lf_ok').hidden=false;});
 })();
+</script>
+<script>
+(function(){
+/* progress bar */
+var pg=document.getElementById('progress');
+window.addEventListener('scroll',function(){var h=document.documentElement;pg.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+/* hero glow */
+var hero=document.getElementById('hero'),gl=document.getElementById('glow');
+if(hero&&gl&&matchMedia('(pointer:fine)').matches)hero.addEventListener('mousemove',function(e){var r=hero.getBoundingClientRect();gl.style.left=(e.clientX-r.left)+'px';gl.style.top=(e.clientY-r.top)+'px'});
+/* rotator */
+var rt=document.getElementById('rot'),w=['retirement','my family’s protection','wealth creation','my child’s future','extra income','financial clarity'],wi=0;
+if(rt&&!matchMedia('(prefers-reduced-motion:reduce)').matches)setInterval(function(){rt.classList.add('sw');setTimeout(function(){wi=(wi+1)%w.length;rt.textContent=w[wi];rt.classList.remove('sw')},250)},2200);
+/* count up */
+var cu=document.querySelectorAll('[data-count]');
+function run(el){var t=+el.dataset.count,suf=el.dataset.suf||'',t0=performance.now();(function f(n){var p=Math.min(1,(n-t0)/1400),v=Math.round(t*(1-Math.pow(1-p,3)));el.textContent=v.toLocaleString('en-IN')+suf;if(p<1)requestAnimationFrame(f)})(t0)}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.6});cu.forEach(function(x){io.observe(x)})}
+/* tilt */
+if(matchMedia('(pointer:fine)').matches)document.querySelectorAll('.path,.tier,.tool').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(800px) rotateX('+(-y*6)+'deg) rotateY('+(x*6)+'deg) translateY(-6px)'});c.addEventListener('mouseleave',function(){c.style.transform=''})});
+/* reels: autoplay previews in view, modal with sound */
+var rv=document.querySelectorAll('.reel video');
+if('IntersectionObserver' in window){var ro=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.5});rv.forEach(function(v){ro.observe(v)})}
+var rm=document.getElementById('rmodal'),rvid=document.getElementById('rvid'),IG='https://www.instagram.com/drmariapramila/';
+function openReel(card){var src=card.dataset.full;rvid.onerror=function(){rm.hidden=true;rvid.removeAttribute('src');window.open(IG,'_blank','noopener')};rvid.src=src;rm.hidden=false;document.body.style.overflow='hidden';var p=rvid.play();if(p&&p.catch)p.catch(function(){})}
+function closeReel(){rm.hidden=true;rvid.pause();rvid.removeAttribute('src');document.body.style.overflow=''}
+document.querySelectorAll('.reel').forEach(function(c){c.addEventListener('click',function(){openReel(c)});c.addEventListener('keydown',function(e){if(e.key==='Enter')openReel(c)})});
+document.getElementById('rx').addEventListener('click',closeReel);rm.addEventListener('click',function(e){if(e.target===rm)closeReel()});
+document.getElementById('rbook').addEventListener('click',closeReel);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeReel()});
+/* step wizard */
+var ic={clar:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',ret:'<path d="M3 17h18M6 17a6 6 0 0112 0M12 4v3"/>',prot:'<path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',wealth:'<path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/>',inc:'<ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.700 2.700 3 6 3"/><ellipse cx="16" cy="14" rx="5" ry="2.600"/>',kids:'<circle cx="9" cy="7" r="3"/><path d="M3 20v-2a5 5 0 015-5h2a5 5 0 015 5v2"/><circle cx="18" cy="9" r="2"/>',career:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/>',comm:'<circle cx="9" cy="8" r="3.200"/><circle cx="17" cy="9" r="2.400"/><path d="M3 20v-1.500A5 5 0 018 14h2a5 5 0 015 4.500V20"/>'};
+var G=[
+ {k:'clar',t:'Understand my money (clarity)',s:'Where I stand today',rec:'Financial Clarity Assessment',href:'../prosperity-clarity-call-v5.html',pts:['See your gaps in saving, protection and debt','Plain-language results','Free 1-to-1 call to go through it']},
+ {k:'ret',t:'Plan my retirement',s:'How much will I need?',rec:'Retirement Clarity Call',href:'../prosperity-retirement-clarity-call.html',pts:['Know your retirement number','Check if your assets work together','Leave with your next 3 priorities']},
+ {k:'prot',t:'Protect my family',s:'Insurance gaps',rec:'Protection Gap Review',href:'../prosperity-protection-gap-review.html',pts:['Check term, health and accident cover','Know waiting periods and limits','Clear, no-pressure review']},
+ {k:'wealth',t:'Grow my wealth',s:'SIPs and goals',rec:'Comprehensive Financial Planning',href:'comprehensive-financial-planning.html',pts:['Goal-based investment planning','Match each goal to a timeline','Step-by-step implementation guidance']},
+ {k:'inc',t:'Earn extra income',s:'Multiple income streams',rec:'Multiple Sources of Income',href:'multiple-sources-of-income.html',pts:['Find income paths that fit your skills','Practical, step-by-step approach','No quick-income promises']},
+ {k:'kids',t:'Teach my kids money',s:'Ages 8 to 25',rec:'Financial Literacy Programs',href:'financial-literacy.html',pts:['Age-wise programs: 8-13, 14-18, 19-25','Money habits for life','Parents guided too']},
+ {k:'career',t:'Build a finance career',s:'Advisor or leader',rec:'Advisor Career Readiness',href:'../prosperity-advisor-career-readiness.html',pts:['Check your readiness first','Training and mentoring','No guaranteed-income claims']},
+ {k:'comm',t:'Join the community',s:'Learn with other families',rec:'Prosperity Community',href:'community.html',pts:['Live weekly mentor calls','16 money-mastery modules','Start with a free masterclass']}
+];
+var S=[['Just starting out','I want the basics'],['Earning well, saving little','Money disappears by month end'],['Planning bigger goals','Home, education, retirement'],['Already well settled','I want structure and review']];
+var st={step:0},wb=document.getElementById('wzBody'),ws=document.getElementById('wzStep'),wbar=document.getElementById('wzBar');
+function e(h){return String(h==null?'':h).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+function wr(){
+ var h='',back=st.step>0&&st.step<3?'<button class="wzback" type="button" data-a="back">← Back</button>':'<span></span>';
+ ws.textContent=st.step<3?'Step '+(st.step+1)+' of 3':'Your match';wbar.style.width=(st.step<3?(st.step+1)/3*100*0.9:100)+'%';
+ if(st.step===0){h='<h3>What would you like help with?</h3><p class="hint">Pick the one that matters most right now.</p><div class="wzopts">'+G.map(function(g,i){return '<button class="wzo" type="button" data-g="'+i+'"><span class="wi"><svg viewBox="0 0 24 24">'+ic[g.k]+'</svg></span><span>'+g.t+'<small>'+g.s+'</small></span></button>'}).join('')+'</div>'}
+ else if(st.step===1){h='<h3>Where are you right now?</h3><p class="hint">This helps us tailor your recommendation.</p><div class="wzopts">'+S.map(function(x,i){return '<button class="wzo" type="button" data-s="'+i+'"><span>'+x[0]+'<small>'+x[1]+'</small></span></button>'}).join('')+'</div>'}
+ else if(st.step===2){var g=G[st.g];h='<h3>Great choice. Here is your match.</h3><div class="rec"><div class="rl">Recommended for you</div><h4>'+g.rec+'</h4><ul>'+g.pts.map(function(p){return '<li>'+p+'</li>'}).join('')+'</ul></div><p class="hint" style="margin-top:14px">Leave your details and pick a time. We will confirm your free slot.</p><div class="wzf"><div><label>Full name<input id="w_n" autocomplete="name"></label></div><div><label>Mobile / WhatsApp<input id="w_m" inputmode="tel" autocomplete="tel"></label></div><div class="full"><label>Best time to call<select id="w_t"><option>Morning 9 AM to 12 PM</option><option>Afternoon 12 PM to 4 PM</option><option>Evening 4 PM to 7 PM</option></select></label></div></div><label class="wzchk"><input type="checkbox" id="w_c"><span>I agree to be contacted by Prosperity Life School. Privacy Policy applies.</span></label><p class="wzerr" id="w_e" hidden>Please add your name, a valid mobile number and tick the box.</p>'}
+ else{var g2=G[st.g];h='<div class="wzdone"><div class="tick">✓</div><h3>You’re in, '+e((st.n||'').split(' ')[0])+'!</h3><p class="hint" style="max-width:420px;margin:10px auto 0">We will contact you on WhatsApp to confirm your free slot. While you wait, explore your match:</p><div class="cta-row center" style="margin-top:20px"><a class="btn" href="'+g2.href+'">Open '+e(g2.rec)+' →</a><a class="btn outline" href="community.html">Join the Community</a></div></div>'}
+ var next=st.step===2?'<button class="btn" type="button" data-a="go">Book My Free Slot →</button>':'<span></span>';
+ wb.innerHTML=h+(st.step<3?'<div class="wzfoot">'+back+next+'</div>':'');wb.style.animation='none';wb.offsetWidth;wb.style.animation='';
+}
+wb.addEventListener('click',function(ev){
+ var o=ev.target.closest('[data-g]');if(o){st.g=+o.dataset.g;st.step=1;wr();return}
+ o=ev.target.closest('[data-s]');if(o){st.s=+o.dataset.s;st.step=2;wr();return}
+ var a=ev.target.closest('[data-a]');if(!a)return;
+ if(a.dataset.a==='back'){st.step--;wr()}
+ else{var n=document.getElementById('w_n').value.trim(),m=document.getElementById('w_m').value.trim(),d=m.replace(/\D/g,''),ok=n.length>1&&d.length>=8&&d.length<=15&&document.getElementById('w_c').checked;
+  document.getElementById('w_e').hidden=ok;if(!ok)return;
+  var q=new URLSearchParams(location.search),data={name:n,mobile:m,interest:G[st.g].t,stage:S[st.s][0],recommended:G[st.g].rec,call_time:document.getElementById('w_t').value,source:'Home page step wizard',page:location.href.split('?')[0],utm_source:q.get('utm_source')||'',utm_campaign:q.get('utm_campaign')||'',submitted_at:new Date().toISOString()};
+  try{var arr=JSON.parse(localStorage.getItem('psl_leads')||'[]');arr.push(data);localStorage.setItem('psl_leads',JSON.stringify(arr))}catch(x){}
+  if(typeof FORM_ENDPOINT!=='undefined'&&FORM_ENDPOINT){var fd=new FormData();Object.keys(data).forEach(function(k){fd.append(k,data[k])});try{fetch(FORM_ENDPOINT,{method:'POST',body:fd,mode:'no-cors'})}catch(x){}}else console.warn('FORM_ENDPOINT empty: lead NOT sent anywhere',data);
+  st.n=n;st.step=3;wr()}
+});
+wr();
+})();
+</script>
+<script>
+(function(){var rs=document.getElementById('r_s');if(!rs)return;var ru=document.getElementById('r_u'),ry=document.getElementById('r_y');
+function fmt(n){if(n>=1e7)return '₹'+(n/1e7).toFixed(2)+' crore';return '₹'+(n/1e5).toFixed(1)+' lakh'}
+function fv(start,step,years){var r=0.01,t=0,m=start;for(var y=0;y<years;y++){for(var k=0;k<12;k++){t=(t+m)*(1+r)}m=m*(1+step/100)}return t}
+function up(){var s=+rs.value,u=+ru.value,y=+ry.value;document.getElementById('v_s').textContent='₹'+s.toLocaleString('en-IN');document.getElementById('v_u').textContent=u+'%';document.getElementById('v_y').textContent=y;
+document.getElementById('o_f').textContent=fmt(fv(10000,0,y));document.getElementById('o_u').textContent=fmt(fv(s,u,y))}
+[rs,ru,ry].forEach(function(x){x.addEventListener('input',up)});up()})();
 </script>
 <script src="assets/js/main.js" defer></script>
 </body>
