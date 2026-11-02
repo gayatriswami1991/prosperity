@@ -62,6 +62,12 @@ Compliance notes for reels on the site: keep "illustration only, not a promise o
 - Pink blazer portrait (already on file).
 - Seen in chat but NOT saved as files (only the fists photo above was): (a) white-blazer office portrait (already on file), (b) Dr Maria in a green blazer and dress, smiling, one hand in a "come here / join us" gesture, green wall with gold accents, (c) same green outfit, both thumbs up, green and gold arched background. These suit the Community / "Join" section. Ask the user to re-send (b) and (c) as attached files so they can be placed on the site.
 
+## Event photos and book (received 2026-11)
+Saved in `website/assets/img/events/` and `website/assets/img/book/`.
+- Events (live seminars): three photos from a seminar at **Badr Al Samaa Medical Centre, Kuwait** (camera stamp 03 Nov 2022, talks on "How much corpus you need for 30 years of retired life" and "Secret techniques to create and protect wealth"), and one more seminar in a hall with Kerala-themed wall photos (audience of about 15, slide on a famous "strangest secret" quote). Use as proof of live teaching in the Gulf: Workshops, About, Masterclass, "Guides families in India and the Gulf".
+- CAUTION: the slides in these photos carry another name and logo ("Wealthy Ways", "Copyright reserved @ Wealthy Ways Research Pvt Ltd"). Ask the user whether that is an earlier brand of hers and whether it is fine to show. Safer: crop the screen or use the audience/speaker shots only.
+- Book: **"Insure to Secure: Building Wealth and Freedom Through Insurance"** by Dr Maria Pramila. This answers the "[Book title]" placeholder in the Reads section. The cover shows a "Best Seller" seal: do not repeat "best seller" in text unless the user can prove it. Photos: stacked copies, and Dr Maria holding the book (orange striped top, dark background). A YouTube playlist "Insure To Secure: Book Launch Live Event" (5 videos) goes with it. Still needed: Amazon/buy link, free-preview PDF, one-line description.
+
 ## YouTube plan
 - Channels from the content document: @prosperitylifeschool and @drmariapramila. Plan: Prosperity TV section on the home page with embedded latest videos, a subscribe button and a "Watch on YouTube" link. Needs channel URLs and the video IDs to feature.
 
