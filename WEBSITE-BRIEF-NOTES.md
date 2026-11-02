@@ -68,6 +68,11 @@ Saved in `website/assets/img/events/` and `website/assets/img/book/`.
 - CAUTION: the slides in these photos carry another name and logo ("Wealthy Ways", "Copyright reserved @ Wealthy Ways Research Pvt Ltd"). Ask the user whether that is an earlier brand of hers and whether it is fine to show. Safer: crop the screen or use the audience/speaker shots only.
 - Book: **"Insure to Secure: Building Wealth and Freedom Through Insurance"** by Dr Maria Pramila. This answers the "[Book title]" placeholder in the Reads section. The cover shows a "Best Seller" seal: do not repeat "best seller" in text unless the user can prove it. Photos: stacked copies, and Dr Maria holding the book (orange striped top, dark background). A YouTube playlist "Insure To Secure: Book Launch Live Event" (5 videos) goes with it. Still needed: Amazon/buy link, free-preview PDF, one-line description.
 
+## Training and credentials photos (seen in chat 2026-11, NOT saved as files)
+Five photos from a "Making The Stage" programme (badge reads "Success Resources", delegate badge "Dr Maria Pramila Dsouza", Chennai, August 2023 as printed on the badge): Dr Maria with several international speakers/trainers, a framed completion certificate from Success Resources being handed over, and one photo of her at a book signing ("Summit Leadership"). These support a "Trained with global speakers / continuous learning" trust strip.
+- Only the image previews reached me, not files, so none are on the site folder. Ask the user to re-attach as files if she wants them used.
+- CAUTION: these show named third parties. Do not caption anyone by name or imply endorsement or partnership unless the user confirms permission. Safe use: a small "Continuous learning" gallery with neutral captions ("Making The Stage programme, Chennai, 2023") and the certificate.
+
 ## YouTube plan
 - Channels from the content document: @prosperitylifeschool and @drmariapramila. Plan: Prosperity TV section on the home page with embedded latest videos, a subscribe button and a "Watch on YouTube" link. Needs channel URLs and the video IDs to feature.
 
