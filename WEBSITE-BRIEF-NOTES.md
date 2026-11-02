@@ -29,7 +29,39 @@ Not yet confirmed: which of the five MP4 files matches which caption. I have no 
 
 Compliance notes for reels on the site: keep "illustration only, not a promise of returns", do not show guaranteed-return wording, include the standard disclaimer near the reel section.
 
-## YouTube
+## Social links (given by the user, 2026-11)
+- YouTube: https://www.youtube.com/@drmariapramila
+- LinkedIn: https://www.linkedin.com/in/drmariapramila/
+- Instagram: https://www.instagram.com/drmariapramila/
+(Content document also lists a second YouTube handle, @prosperitylifeschool. Not confirmed it exists. Use only @drmariapramila until the user confirms.)
+
+## YouTube channel details (from the user's screenshots, not verified live)
+- Channel name: **Dr Maria's Finance Chapel**, handle @drmariapramila
+- About line: "Hello, I am Dr Maria Pramila, Financial Coach, Consultant & Keynote Speaker. Founder of ..." with link **financechapel.com** (an existing website/brand: ask the user how it relates to Prosperity Life School)
+- Shown at screenshot time: **6.58K subscribers, 515 videos**. Treat as a snapshot; do not hard-code, or show it with "approx." and refresh before launch
+- Tabs: Videos, Shorts, Live, Podcasts, Playlists, Posts
+- Languages: English and Konkani/Kannada videos (thumbnails in Kannada script)
+- Playlists seen:
+  | Playlist | Size |
+  |---|---|
+  | 4-Part Podcast Series with Errol Fernandes (ROSETTA 25-year dream; Do What You Love; Health is Wealth; Ground Zero to Hurun India's Top 600 Rich List) | 4 episodes, 18 to 44 min each |
+  | Financial literacy (Kannada) "Are you doing these investment mistakes?" | 30 videos |
+  | Podcast Series: Financial Literacy & Financial Management | 2 episodes |
+  | Money Mathu: National TV (Kannada) | 12 videos |
+  | Money Secrets that no one told you ("Unlock Financial Success: conquer the 10 roadblocks to your money goals") | 6 videos |
+  | Unlocking Insurance Insights | 5 videos |
+  | Insure To Secure: Book Launch Live Event | 5 videos |
+  | Millionaire Mindset Practice ("The power of a Guru/Mentor") | 19 videos |
+  | Live Sessions (Personal Finance Mastery Workshop, 24 June 2023) | 3 videos |
+  | Tips & Hacks for NRIs (12 essential tips for NRIs visiting India) | 5 videos |
+- Home feed examples: The Business of Design (interview, 36:12), Kannada/Konkani videos on time-and-wealth and on parents' finances
+- Mapping to the site: Prosperity TV section (shows from these playlists), NRI page, Insurance/Protection page (Insure To Secure, Unlocking Insurance Insights), Millionaire Mindset (3M), Kannada Corner (Money Mathu, Kannada literacy), Podcasts
+
+## Photos received (2026-11)
+- Dr Maria in a dark-green blazer, fists raised, green wall with gold decor: saved as `website/assets/img/dr-maria-green-fists.jpg`. Green + gold look suits the original brand direction (navy, green, gold). Consider a green-gold accent for the community/join sections.
+- Pink blazer portrait (already on file).
+
+## YouTube plan
 - Channels from the content document: @prosperitylifeschool and @drmariapramila. Plan: Prosperity TV section on the home page with embedded latest videos, a subscribe button and a "Watch on YouTube" link. Needs channel URLs and the video IDs to feature.
 
 ## Open questions to ask after all details arrive
