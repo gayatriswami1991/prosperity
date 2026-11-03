@@ -721,3 +721,15 @@ img{height:auto}
 .hdr-cta .btn:not(.outline){animation:pulseg 3s infinite}
 
 .rbook{width:100%;height:auto;border-radius:16px;margin-bottom:18px;box-shadow:var(--shadow-sm)}
+
+/* brand social icons */
+.soc2{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.soc2 a{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;transition:.2s;box-shadow:0 8px 18px -8px rgba(0,0,0,.6)}
+.soc2 a:hover{transform:translateY(-4px) scale(1.06)}
+.soc2 svg{width:24px;height:24px;fill:#fff}
+.s-wa{background:#25D366}.s-yt{background:#FF0000}.s-fb{background:#1877F2}.s-li{background:#0A66C2}
+.s-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.btn.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 40%,#d6249f 62%,#285AEB 95%);border-color:transparent;color:#fff}
+.btn.ig:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(214,36,159,.7);background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 40%,#d6249f 62%,#285AEB 95%);border-color:transparent}
+.btn.ig svg{width:20px;height:20px}
+.wa svg{width:30px;height:30px;fill:#fff}
