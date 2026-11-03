@@ -880,3 +880,8 @@ body{top:0!important}.skiptranslate iframe,.goog-te-banner-frame{display:none!im
 .yplay::before{content:'';position:absolute;left:23px;top:18px;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #FF0033}
 .ytbig.sh .yplay::before{border-left-color:#123A73}
 @media(min-width:901px){.brand{order:0!important}.nav{order:1!important;margin-left:auto}.hdr-cta{order:2!important}}
+
+/* about image fix: boxes with only absolute children collapsed to 0 width */
+.ppic,.gal,.bkimg{width:100%}
+.gal{max-width:540px;aspect-ratio:4/3}
+.gal img{object-position:center 20%}
