@@ -970,3 +970,58 @@ body{top:0!important}.skiptranslate iframe,.goog-te-banner-frame{display:none!im
 .gbadge{bottom:-2%}
 
 .sunring{display:none!important}
+
+/* ===== shared lead form ===== */
+.pform{background:#fff;color:var(--navy);border-radius:24px;padding:30px 28px;border:1px solid var(--line);box-shadow:var(--shadow);text-align:left}
+.pform h3{font-size:27px;color:var(--navy)}
+.pform .ph{margin:6px 0 4px;font-size:14.5px;color:var(--ink-soft)}
+.pform label{display:block;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--gold-deep);margin-top:14px}
+.pform input:not([type=checkbox]),.pform select{display:block;width:100%;margin-top:6px;font:500 16px 'Poppins',Arial,sans-serif;padding:13px 14px;border:2px solid var(--line);border-radius:12px;color:var(--navy);background:#fff;min-height:48px}
+.pform input:focus,.pform select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(208,156,50,.2)}
+.pf-g{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media(max-width:560px){.pf-g{grid-template-columns:1fr}.pform{padding:24px 18px;border-radius:20px}.pform h3{font-size:23px}}
+.pform .pf-chk{display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--ink-soft);line-height:1.5}
+.pform .pf-chk input{width:20px;height:20px;margin-top:2px;flex-shrink:0;min-height:0}
+.pform .pf-chk a{text-decoration:underline}
+.pform .btn{width:100%;margin-top:18px}
+.pf-err{color:#c0392b;font-size:13px;font-weight:600;margin-top:10px}
+.pf-fine{margin-top:10px;font-size:12px;color:var(--ink-soft);text-align:center}
+.pf-done{text-align:center;padding:36px 24px}
+.pf-done .tick{width:78px;height:78px;border-radius:50%;background:var(--navy);color:var(--gold-bright);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:38px;animation:pop .5s}
+.pf-done p{margin:10px auto 20px;max-width:420px;color:var(--ink-soft)}
+.btn.wab{background:#25D366;border-color:#25D366;color:#fff}.btn.wab:hover{background:#1fb858;border-color:#1fb858}.btn.wab svg{width:20px;height:20px}
+.wz-form{margin-top:16px}.wz-form .pform{box-shadow:none;border:1px solid var(--line);padding:22px 20px}
+.rec-link{display:inline-block;margin-top:12px;color:var(--gold-bright);font-weight:600;font-size:14px}
+.cardmount{max-width:640px;width:100%}
+.gt-hide{position:absolute;left:-9999px;top:0;width:1px;height:1px;overflow:hidden}
+.psl-toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:12px 20px;border-radius:50px;font-size:14px;z-index:900;box-shadow:0 14px 30px -10px rgba(0,0,0,.5);max-width:90vw;text-align:center}
+.skiptranslate iframe,.goog-te-banner-frame,#goog-gt-tt,.goog-te-balloon-frame{display:none!important}
+.goog-text-highlight{background:none!important;box-shadow:none!important}
+body{top:0!important;position:static!important}
+.reel video{background:#000}
+
+/* ===== mobile hardening ===== */
+.cgrid2>*,.two>*,.bk>*,.pgrid>*,.h2grid>*,.comm>*,.joingrid>*,.finalgrid>*,.lit>*,.call>*,.wizgrid>*{min-width:0}
+.cardmount,.pform-mount{max-width:100%;min-width:0}
+.pillars4>div{min-width:0;word-break:break-word}
+@media(max-width:560px){
+  .pillars4{grid-template-columns:1fr}
+  .sec-head h2{font-size:26px}
+  .btn{padding:14px 20px}.btn.lg{padding:15px 22px;font-size:15px;width:100%}
+  .cta-row .btn{width:100%}
+  .hero2 .cta-row .btn,.phero .cta-row .btn{width:100%}
+  .wrap{padding-left:18px;padding-right:18px}
+  .proof2 b{font-size:22px}
+  .cinfo .ci a,.cinfo .ci span{word-break:break-word}
+  .footer .contact a{word-break:break-word}
+  .reel{flex-basis:72vw}
+  .brand .w{font-size:14px}
+  .tr select{max-width:150px}
+}
+@media(max-width:380px){.hero2 h1{font-size:27px}.brand .w small{display:none}}
+a,button{-webkit-tap-highlight-color:transparent}
+.nav>li>a,.nav>li>button,.sub a{min-height:44px}
+.proof b{display:block!important}
+.hero2 .proof{background:var(--navy-deep);border-top:0;position:relative;z-index:2}
+.mnav-cta{visibility:hidden}.nav-open .mnav-cta{visibility:visible}
+@media(min-width:901px){.mnav-cta{display:none!important}}

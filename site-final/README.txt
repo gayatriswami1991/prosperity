@@ -1,21 +1,9 @@
 Prosperity Life School website
-Open index.html to start.
+Open index.html to start. Every page is ONE file: photos, videos and design are inside it. No other folder is needed.
 
-MAIN PAGES (6)
-  index.html       Home
-  about.html       About Dr Maria
-  programs.html    Programs
-  community.html   Join our community
-  youtube.html     YouTube and reels
-  contact.html     Contact and book a free slot
+MAIN PAGES (6): index (Home), about, programs, community, youtube, contact
+AD LANDING PAGES (unchanged): prosperity-clarity-call-v5, prosperity-retirement-clarity-call (+ book-retirement-clarity-call, retirement-booking-form), prosperity-protection-gap-review, prosperity-advisor-career-readiness, prosperity-thank-you
 
-LANDING PAGES (for ads)
-  prosperity-clarity-call-v5.html
-  prosperity-retirement-clarity-call.html  (booking: book-retirement-clarity-call.html, retirement-booking-form.html)
-  prosperity-protection-gap-review.html
-  prosperity-advisor-career-readiness.html
-  prosperity-thank-you.html
-
-FOLDER assets/reels = full reels (play when a reel is tapped). Keep it next to the pages.
-
-BEFORE GOING LIVE: set FORM_ENDPOINT (lead sheet/CRM URL) in each form page, GROUP_URL (WhatsApp group) in community.html, and the Facebook link in the footer.
+ONE FORM EVERYWHERE: the same lead form is used on Home, Community, Contact and the Home path finder. Settings (lead URL, WhatsApp group link) sit at the top of the script in each main page: search for PSL_CONFIG.
+BEFORE GOING LIVE: set FORM_ENDPOINT (where leads go), GROUP_URL (WhatsApp community link), real Terms text.
+Translator needs internet (Google). Fonts need internet.
