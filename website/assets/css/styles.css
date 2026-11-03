@@ -786,3 +786,5 @@ body{top:0!important}.skiptranslate iframe,.goog-te-banner-frame{display:none!im
 .faqs details[open] summary::after{content:'−'}
 .faqs details p{padding:0 0 16px;color:var(--ink-soft)}
 .btn.wab{background:#25D366;border-color:#25D366;color:#fff}.btn.wab:hover{background:#1fb858;border-color:#1fb858}.btn.wab svg{width:20px;height:20px}
+.reel video{background:#000}
+.reel.big{width:320px}
