@@ -957,3 +957,6 @@ body{top:0!important}.skiptranslate iframe,.goog-te-banner-frame{display:none!im
 @media(max-width:560px){.hero2 h1{font-size:30px}}
 .growth{bottom:110px;opacity:.6}
 .arch{aspect-ratio:4/5}.arch img{object-position:center 8%}
+
+.arch{aspect-ratio:639/600;border-radius:999px 999px 28px 28px}
+.arch img{object-position:center 6%}
