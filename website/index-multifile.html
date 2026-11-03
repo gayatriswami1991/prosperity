@@ -54,7 +54,7 @@
 
 <div class="topbar"><div class="wrap">
 <div class="l"><a href="tel:+918904820166"><svg class="ic" style="width:15px;height:15px"><use href="#i-phone"/></svg>+91 8904820166</a><a href="mailto:maria@prosperitylifeschool.com"><svg class="ic" style="width:15px;height:15px"><use href="#i-mail"/></svg>maria@prosperitylifeschool.com</a></div>
-<span class="tag">Financial Wisdom for a Blessed Life</span>
+<div class="tr"><label for="langSel" class="sr">Language</label><svg class="ic" style="width:15px;height:15px"><use href="#i-chat"/></svg><select id="langSel" aria-label="Translate this page"><option value="">🌐 English</option><option value="kn">ಕನ್ನಡ Kannada</option><option value="gom">कोंकणी Konkani</option><option value="hi">हिन्दी Hindi</option><option value="ml">മലയാളം Malayalam</option><option value="ta">தமிழ் Tamil</option><option value="te">తెలుగు Telugu</option><option value="mr">मराठी Marathi</option><option value="ar">العربية Arabic</option></select></div><div id="google_translate_element" style="display:none"></div><span class="tag">Financial Wisdom for a Blessed Life</span>
 </div></div>
 
 <header class="header">
@@ -482,6 +482,16 @@ if(pf&&hr&&matchMedia('(pointer:fine)').matches){hr.addEventListener('mousemove'
 window.pslConfetti=function(){var cl=['#D09C32','#E8BC5A','#011D43','#1F8A63','#fff'];for(var i=0;i<60;i++){var d=document.createElement('i');d.className='confetti';d.style.left=Math.random()*100+'vw';d.style.background=cl[i%5];d.style.setProperty('--dx',(Math.random()*200-100)+'px');d.style.animationDelay=Math.random()*.4+'s';document.body.appendChild(d);setTimeout(function(x){x.remove()},3000,d)}};
 var wb=document.getElementById('wzBody');if(wb)new MutationObserver(function(){if(wb.querySelector('.tick'))window.pslConfetti()}).observe(wb,{childList:true});
 })();
+</script>
+<script>
+function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'kn,gom,hi,ml,ta,te,mr,ar',autoDisplay:false},'google_translate_element')}
+(function(){var sel=document.getElementById('langSel');if(!sel)return;var loaded=false;
+function load(){if(loaded)return;loaded=true;var sc=document.createElement('script');sc.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';document.head.appendChild(sc)}
+function apply(v){var t=0,iv=setInterval(function(){var c=document.querySelector('.goog-te-combo');t++;if(c){clearInterval(iv);c.value=v;c.dispatchEvent(new Event('change'))}else if(t>40)clearInterval(iv)},250)}
+sel.addEventListener('change',function(){var v=sel.value;try{localStorage.setItem('psl_lang',v)}catch(e){}
+if(!v){document.cookie='googtrans=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/';var c=document.querySelector('.goog-te-combo');if(c){c.value='';c.dispatchEvent(new Event('change'))}else location.reload();return}
+load();apply(v)});
+try{var sv=localStorage.getItem('psl_lang');if(sv){sel.value=sv;load();apply(sv)}}catch(e){}})();
 </script>
 <script src="assets/js/main.js" defer></script>
 </body>
