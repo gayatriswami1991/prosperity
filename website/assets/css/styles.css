@@ -897,3 +897,5 @@ body{top:0!important}.skiptranslate iframe,.goog-te-banner-frame{display:none!im
 .lf.big{grid-row:1/3;aspect-ratio:auto}
 .lf figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 12px;background:linear-gradient(180deg,transparent,rgba(0,19,48,.92));font-size:13px;font-weight:600}
 @media(max-width:800px){.lgrid{grid-template-columns:1fr 1fr}.lf.big{grid-column:1/-1;grid-row:auto;aspect-ratio:4/5}}
+
+.gal.sq{aspect-ratio:1/1;max-width:480px}.gal.sq img{object-position:center 25%}
