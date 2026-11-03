@@ -960,3 +960,13 @@ body{top:0!important}.skiptranslate iframe,.goog-te-banner-frame{display:none!im
 
 .arch{aspect-ratio:639/600;border-radius:999px 999px 28px 28px}
 .arch img{object-position:center 6%}
+
+/* hero photo: show the WHOLE photo, never crop */
+.arch{aspect-ratio:auto!important;border-radius:32px!important;background:#fff}
+.arch img{width:100%;height:auto!important;display:block;object-fit:contain;object-position:center}
+.h2art{padding:34px 20px}
+.sunring{border-radius:40px;aspect-ratio:auto;inset:6px 0}
+.gchip.c1{top:6%}.gchip.c2{top:44%}.gchip.c3{bottom:2%}
+.gbadge{bottom:-2%}
+
+.sunring{display:none!important}
