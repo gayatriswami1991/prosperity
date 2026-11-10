@@ -5,7 +5,19 @@ window.PSL_CONFIG = {
   FORM_ENDPOINT: '',   // URL that receives every lead (Google Apps Script / Formspree / Zapier). Empty = leads are NOT sent anywhere.
   GROUP_URL: '',       // WhatsApp community group invite link (optional)
   WHATSAPP: '918904820166',
-  INSTAGRAM: 'https://www.instagram.com/drmariapramila/'
+  INSTAGRAM: 'https://www.instagram.com/drmariapramila/',
+  // Membership links from the client's Google Drive. Paste each URL between the quotes.
+  // Empty = the button opens the enquiry form (contact page) instead; empty PDF links stay hidden.
+  LINKS: {
+    silver_individual: '',  // Silver Individual (website price)
+    silver_plus: '',        // Silver Plus
+    silver_family: '',      // Silver Family
+    gold: '',               // Gold
+    onepager_silver: '',    // Silver one-pager PDF
+    onepager_gold: '',      // Gold one-pager PDF
+    onepager_diamond: '',   // Diamond one-pager PDF
+    all_programs_pdf: ''    // PDF with all programs and social links
+  }
 };
 /* ======================================================================= */
 
@@ -82,6 +94,7 @@ window.PSL_CONFIG = {
       '<label for="' + id + 'c">City / Country<input id="' + id + 'c" name="city" autocomplete="address-level2"></label></div>' +
       '<label for="' + id + 'i">I am interested in<select id="' + id + 'i" name="interest">' + list.map(function (x) { return '<option' + (x === interest ? ' selected' : '') + '>' + esc(x) + '</option>'; }).join('') + '</select></label>' +
       '<label for="' + id + 't">Best time to call<select id="' + id + 't" name="time">' + TIMES.map(function (x) { return '<option>' + x + '</option>'; }).join('') + '</select></label>' +
+      (o.extraFields || []).map(function (x) { return '<label for="' + id + x.name + '">' + esc(x.label) + (x.type === 'textarea' ? '<textarea id="' + id + x.name + '" name="' + x.name + '" rows="3"></textarea>' : '<input id="' + id + x.name + '" name="' + x.name + '">') + '</label>'; }).join('') +
       '<label class="pf-chk"><input type="checkbox" name="consent"><span>I agree to be contacted by Prosperity Life School. <a href="https://prosperitylifeschool.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> applies.</span></label>' +
       '<p class="pf-err" hidden>Please add your name, a valid mobile number and tick the box.</p>' +
       '<button class="btn lg" type="submit">' + esc(o.btn || el.dataset.btn || 'Book My Free Slot') + ' <svg class="ic"><use href="#i-arrow"/></svg></button>' +
@@ -102,6 +115,7 @@ window.PSL_CONFIG = {
         utm_source: q.get('utm_source') || '', utm_medium: q.get('utm_medium') || '', utm_campaign: q.get('utm_campaign') || '', fbclid: q.get('fbclid') || '',
         submitted_at: new Date().toISOString()
       };
+      (o.extraFields || []).forEach(function (x) { data[x.name] = (v(x.name).value || '').trim(); });
       if (o.extra) Object.keys(o.extra).forEach(function (k) { data[k] = o.extra[k]; });
       sendLead(data);
       var first = esc(name.split(' ')[0]);
@@ -112,7 +126,17 @@ window.PSL_CONFIG = {
     });
   }
   window.PSL = { renderForm: renderForm, sendLead: sendLead };
-  $$('.pform-mount').forEach(function (el) { renderForm(el); });
+  $$('.pform-mount').forEach(function (el) {
+    if (el.dataset.kind === 'diamond') {
+      renderForm(el, { interest: 'Diamond membership application', source: 'Diamond application', title: 'Apply for Diamond', sub: 'Diamond is by qualification. Tell us a little about yourself and our team will review your application and contact you.', btn: 'Submit My Application', extraFields: [{ name: 'profession', label: 'Your profession / business' }, { name: 'why_diamond', label: 'Why do you want to join Diamond?', type: 'textarea' }] });
+    } else { renderForm(el); }
+  });
+  /* membership buttons: use the Drive link when set, else keep the fallback href */
+  $$('[data-link]').forEach(function (a) {
+    var u = ((window.PSL_CONFIG || {}).LINKS || {})[a.dataset.link];
+    if (u) { a.href = u; a.target = '_blank'; a.rel = 'noopener'; }
+    else if (a.hasAttribute('data-pdf')) { a.style.display = 'none'; }
+  });
 
   /* ---------- home: 2-question path finder, then the SAME shared form ---------- */
   var wb = $('#wzBody');
