@@ -90,8 +90,8 @@ window.PSL_CONFIG = {
   }
 
   /* ---------- reels (videos are built into the page) ---------- */
-  function reelSrc(n) { return 'assets/reels/reel-' + n + '.mp4'; }
-  function prevSrc(n) { return 'assets/reels/preview-' + n + '.mp4'; }
+  function reelSrc(n) { return (window.PSL_REELS && PSL_REELS.full && PSL_REELS.full[n]) || 'assets/reels/reel-' + n + '.mp4'; }
+  function prevSrc(n) { return (window.PSL_REELS && PSL_REELS.prev && PSL_REELS.prev[n]) || 'assets/reels/preview-' + n + '.mp4'; }
   var lazyV = $$('video[data-reel]');
   if ('IntersectionObserver' in window) {
     var lo = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.src = prevSrc(e.target.dataset.reel); lo.unobserve(e.target); } }); }, { rootMargin: '300px' });
@@ -104,7 +104,7 @@ window.PSL_CONFIG = {
   var rm = $('#rmodal'), rvid = $('#rvid');
   function closeReel() { if (!rm || rm.hidden) return; rm.hidden = true; rvid.pause(); rvid.removeAttribute('src'); document.body.style.overflow = ''; }
   function openReel(card) {
-    if (!rm) return; var n = card.dataset.n || card.querySelector('video').dataset.reel;
+    if (!rm) return; if (window.PSL_NO_FULL) { window.open(C.INSTAGRAM, '_blank', 'noopener'); return; } var n = card.dataset.n || card.querySelector('video').dataset.reel;
     rvid.onerror = function () { rm.hidden = true; rvid.removeAttribute('src'); window.open(C.INSTAGRAM, '_blank', 'noopener'); };
     rvid.src = reelSrc(n); rm.hidden = false; document.body.style.overflow = 'hidden'; var p = rvid.play(); if (p && p.catch) p.catch(function () { });
   }
