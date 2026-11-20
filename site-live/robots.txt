@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /prosperity-thank-you.html
+Disallow: /retirement-booking-form.html
+
+Sitemap: https://www.prosperitylifeschool.com/sitemap.xml

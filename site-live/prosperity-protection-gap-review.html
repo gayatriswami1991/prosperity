@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Review your life, health, income, retirement and financial protection gaps with a complimentary Protection Clarity Call from Prosperity Life School." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --navy:#013601;
+    --navy-deep:#002A01;
+    --emerald:#006600;
+    --emerald-2:#0A7A2A;
+    --gold:#C9A227;
+    --gold-bright:#E4C158;
+    --gold-deep:#E4C158;
+    --cream:#F5F1E6;
+    --ink:#F5F1E6;
+    --ink-soft:rgba(245,241,230,0.8);
+    --ink-soft-2:rgba(245,241,230,0.58);
+    --soft:rgba(245,241,230,0.78);
+    --soft-2:rgba(245,241,230,0.56);
+    --line:rgba(201,162,39,0.38);
+    --wa:#25D366;
+    --max:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;width:100%;overflow-x:hidden;}
+  body{margin:0;width:100%;overflow-x:hidden;background:var(--navy);color:var(--ink);font-family:'Manrope',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--ink);margin:0;}
+  p{margin:0;color:var(--ink-soft);}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 30px;width:100%;}
+  @media(max-width:600px){ .wrap{padding:0 20px;} }
+  @media(max-width:400px){ .wrap{padding:0 16px;} }
+  section{padding:72px 0;}
+  @media(max-width:760px){ section{padding:52px 0;} }
+  .bg-navy{background:var(--navy);}
+  .bg-emerald{background:var(--emerald);}
+  .bg-deep{background:var(--navy-deep);}
+  .eyebrow{font-family:'Manrope',sans-serif;font-size:13px;font-weight:800;color:var(--gold-deep);letter-spacing:.03em;display:block;margin-bottom:12px;text-transform:uppercase;}
+  .final .eyebrow{color:var(--gold-bright);}
+  .center{text-align:center;}
+  /* ONE consistent button style for every CTA */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy-deep);
+    font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;padding:17px 30px;border-radius:8px;
+    border:2px solid var(--gold);cursor:pointer;text-decoration:none;transition:.18s ease;
+  }
+  .btn:hover{background:var(--gold-bright);border-color:var(--gold-bright);transform:translateY(-1px);}
+  .btn.outline{background:transparent;color:var(--gold-bright);border-color:var(--gold);}
+  .btn.outline:hover{background:rgba(226,177,92,0.1);}
+  .btn.full{width:100%;justify-content:center;}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+  @media(max-width:480px){ .cta-row .btn{flex:1 1 100%;} }
+  .cta-row.center{justify-content:center;}
+  /* NAV */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(12,38,26,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand img{width:44px;height:44px;border-radius:50%;box-shadow:0 0 0 2px rgba(228,193,88,0.5), 0 0 14px rgba(228,193,88,0.25);}
+  .brand .word{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--ink);font-weight:700;line-height:1.15;}
+  .brand .word small{display:block;font-family:'Manrope',sans-serif;font-size:9px;letter-spacing:.13em;color:var(--ink-soft-2);font-weight:700;}
+  .nav .btn{
+    padding:14px 26px;font-size:14.5px;
+    box-shadow:0 0 0 0 rgba(226,177,92,0.5);
+    animation:navPulse 2.6s ease-in-out infinite;
+  }
+  @keyframes navPulse{
+    0%{box-shadow:0 0 0 0 rgba(226,177,92,0.45);}
+    70%{box-shadow:0 0 0 9px rgba(226,177,92,0);}
+    100%{box-shadow:0 0 0 0 rgba(226,177,92,0);}
+  }
+  @media(prefers-reduced-motion: reduce){ .nav .btn{animation:none;} }
+  @media(max-width:480px){
+    .nav .wrap{height:64px;gap:8px;}
+    .brand{gap:8px;}
+    .brand img{width:34px;height:34px;}
+    .brand .word{font-size:14.5px;}
+    .brand .word small{font-size:7.5px;letter-spacing:.09em;}
+    .nav .btn{padding:10px 14px;font-size:12px;gap:0;}
+  }
+  @media(max-width:360px){
+    .brand .word small{display:none;}
+  }
+  /* HERO — asymmetric split, distinct from the Clarity Call template */
+  .hero{background:radial-gradient(ellipse at 100% 0%, var(--emerald-2) -10%, var(--navy-deep) 60%);border-bottom:1px solid var(--line);padding:0;position:relative;overflow:hidden;}
+  .hero::before{
+    content:'';position:absolute;top:-10%;right:-6%;width:520px;height:520px;border-radius:50%;
+    border:1px solid rgba(228,193,88,0.18);pointer-events:none;
+  }
+  .hero::after{
+    content:'';position:absolute;top:8%;right:6%;width:340px;height:340px;border-radius:50%;
+    border:1px solid rgba(228,193,88,0.14);pointer-events:none;
+  }
+  .hero-wrap{position:relative;display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;padding:72px 30px 64px;max-width:1180px;margin:0 auto;}
+  @media(max-width:960px){ .hero-wrap{grid-template-columns:1fr;padding:52px 24px 44px;} }
+  .hero-copy{text-align:left;}
+  @media(max-width:960px){ .hero-copy{text-align:center;} }
+  .hero-badge-pill{
+    display:inline-block;font-size:13px;font-weight:800;color:var(--navy-deep);
+    background:linear-gradient(90deg, var(--gold) 0%, var(--gold-bright) 50%, var(--gold) 100%);
+    padding:9px 22px;border-radius:50px;
+  }
+  .hero-kicker{margin-top:18px;font-size:16px;color:rgba(245,241,230,0.82);font-weight:600;}
+  .hero h1{margin-top:10px;font-size:40px;line-height:1.2;max-width:620px;color:var(--cream);}
+  .hero h1 .hl{color:var(--gold-bright);}
+  @media(max-width:960px){ .hero h1{max-width:none;margin-left:auto;margin-right:auto;} }
+  @media(max-width:560px){ .hero h1{font-size:27px;} }
+  .hero-checkline{margin-top:18px;font-size:16.5px;color:rgba(245,241,230,0.85);max-width:520px;line-height:1.55;}
+  @media(max-width:960px){ .hero-checkline{margin-left:auto;margin-right:auto;} }
+  .hero-pills{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-start;}
+  @media(max-width:960px){ .hero-pills{justify-content:center;} }
+  .hpill{
+    display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--cream);
+    background:rgba(245,241,230,0.06);border:1px solid var(--line);border-radius:50px;padding:9px 16px;
+  }
+  .hpill .ok{width:19px;height:19px;border-radius:50%;background:#2dcb7d;color:#06210f;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .hero-cta-row{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+  @media(max-width:960px){ .hero-cta-row{justify-content:center;} }
+  .hero-fine{margin-top:14px;font-size:12.5px;color:rgba(245,241,230,0.55);}
+  @media(max-width:960px){ .hero-fine{text-align:center;} }
+  .hero-side{display:flex;flex-direction:column;align-items:center;}
+  .video-thumb{
+    display:block;width:100%;max-width:280px;aspect-ratio:3/4;border-radius:18px;overflow:hidden;
+    border:3px solid var(--gold);flex-shrink:0;box-shadow:0 20px 40px -16px rgba(0,0,0,0.6);
+    cursor:pointer;position:relative;transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .video-thumb:hover{transform:translateY(-3px);}
+  .video-thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+  .video-thumb::after{
+    content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:56px;height:56px;border-radius:50%;background:rgba(5,15,12,0.5);
+    border:2px solid var(--cream);
+  }
+  .video-thumb::before{
+    content:'';position:absolute;top:50%;left:calc(50% + 4px);transform:translate(-50%,-50%);
+    z-index:1;border-style:solid;border-width:10px 0 10px 16px;
+    border-color:transparent transparent transparent var(--cream);
+  }
+  .hero-side .caption{margin-top:12px;font-size:12px;color:rgba(245,241,230,0.6);text-align:center;}
+  .hero-mini-card{
+    margin-top:20px;width:100%;max-width:280px;background:rgba(245,241,230,0.06);border:1px solid var(--line);
+    border-radius:14px;padding:18px 20px;
+  }
+  .hero-mini-card h3{font-size:15px;color:var(--cream);text-align:center;}
+  .hero-mini-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(245,241,230,0.1);font-size:13px;}
+  .hero-mini-row:last-child{border-bottom:none;}
+  .hero-mini-row span:first-child{color:rgba(245,241,230,0.6);}
+  .hero-mini-row span:last-child{color:var(--cream);font-weight:700;}
+  @media(max-width:480px){ .video-thumb{max-width:230px;} .hero-mini-card{max-width:230px;} }
+  /* PUNCHY CHECKLIST (does this sound familiar) */
+  .check-head{max-width:700px;margin:0 auto;text-align:center;}
+  .check-head h2{font-size:32px;}
+  .checklist{margin:44px auto 0;max-width:820px;display:flex;flex-direction:column;gap:4px;}
+  .check-item{
+    display:flex;align-items:flex-start;gap:16px;padding:20px 22px;background:rgba(226,177,92,0.06);
+    border:1px solid var(--line);border-radius:10px;
+  }
+  .check-item .mark{
+    flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--gold);color:var(--navy-deep);
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;
+  }
+  .check-item p{font-size:18px;font-weight:600;color:var(--ink);line-height:1.4;}
+  .check-foot{margin-top:32px;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--gold-deep);max-width:680px;margin-left:auto;margin-right:auto;}
+  /* WHAT YOU GET — bold cards */
+  .areas-head{max-width:680px;margin:0 auto;text-align:center;}
+  .areas-head h2{font-size:32px;}
+  .areas-grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  @media(max-width:900px){ .areas-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:520px){ .areas-grid{grid-template-columns:1fr;} }
+  .illus-wrap{display:flex;justify-content:center;margin:36px 0 8px;}
+  .illus-badge{
+    width:132px;height:132px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 35% 30%, rgba(228,193,88,0.16), rgba(228,193,88,0.03) 70%);
+    border:1.5px solid var(--line);box-shadow:0 14px 28px -14px rgba(0,0,0,0.5);
+  }
+  .illus-family{width:76px;height:auto;}
+  .illus-meeting-wrap{display:flex;justify-content:center;margin:0 auto 10px;}
+  .illus-meeting{width:64px;height:auto;}
+  .area-card{background:rgba(245,241,230,0.09);border:1px solid var(--line);border-radius:12px;padding:22px 20px;box-shadow:0 14px 26px -16px rgba(0,0,0,0.55);transition:transform .2s ease, box-shadow .2s ease;}
+  .area-card:hover{transform:translateY(-4px);box-shadow:0 18px 32px -14px rgba(0,0,0,0.6);}
+  .area-card .n{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold-deep);}
+  .area-card h4{margin-top:6px;font-family:'Manrope',sans-serif;font-weight:800;font-size:16.5px;color:var(--ink);}
+  .area-card p{margin-top:8px;font-size:13.5px;}
+  /* PERSONAS — bold */
+  .personas-head{max-width:680px;margin:0 auto;text-align:center;}
+  .head-avatar{
+    width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:top center;
+    margin:0 auto 16px;border:2px solid var(--gold);box-shadow:0 8px 18px -8px rgba(0,0,0,0.5);
+  }
+  .personas-head h2{font-size:32px;}
+  .persona-grid{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media(max-width:760px){ .persona-grid{grid-template-columns:1fr;} }
+  .persona-card{background:rgba(245,241,230,0.09);border:1px solid var(--line);border-radius:14px;padding:26px;}
+  .persona-card .tag{display:inline-block;font-size:12px;font-weight:800;color:var(--navy-deep);background:var(--gold);padding:4px 10px;border-radius:20px;}
+  .persona-card h3{margin-top:14px;font-size:22px;}
+  .persona-card p{margin-top:10px;font-size:15px;}
+  .persona-card .q{margin-top:14px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--gold-deep);}
+  /* REFRAME */
+  .reframe-head{max-width:700px;margin:0 auto;text-align:center;}
+  .reframe-head h2{font-size:32px;}
+  .reframe-head .was{margin-top:14px;font-size:15px;color:var(--ink-soft-2);text-decoration:line-through;}
+  .reframe-head .now{margin-top:6px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--gold-deep);}
+  .qgrid{margin:44px auto 0;max-width:900px;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:700px){ .qgrid{grid-template-columns:1fr;} }
+  .qcard{background:rgba(245,241,230,0.09);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;}
+  .qcard .n{font-family:'Cormorant Garamond',serif;color:var(--gold-deep);font-size:20px;flex-shrink:0;}
+  .qcard p{font-size:16px;font-weight:600;color:var(--ink);}
+  /* DIAGNOSIS FLOW */
+  .diag-head{max-width:680px;margin:0 auto;text-align:center;}
+  .diag-head h2{font-size:30px;}
+  .diag-flow{margin:44px auto 0;max-width:900px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+  .diag-step{flex:1;min-width:130px;text-align:center;}
+  .diag-step .circle{width:60px;height:60px;border-radius:50%;background:var(--gold);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:22px;}
+  .diag-step span{font-weight:700;font-size:14.5px;color:var(--ink);}
+  .diag-arrow{color:var(--gold-deep);font-size:20px;flex-shrink:0;}
+  @media(max-width:700px){ .diag-flow{flex-direction:column;} .diag-arrow{transform:rotate(90deg);} }
+  .diag-foot{margin-top:36px;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--gold-deep);}
+  /* PROCESS GRID (what happens on the call) */
+  .process-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:820px;margin-left:auto;margin-right:auto;}
+  @media(max-width:760px){ .process-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:480px){ .process-grid{grid-template-columns:1fr;} }
+  .process-card{background:rgba(245,241,230,0.05);border:1px solid var(--line);border-radius:14px;padding:24px 20px;text-align:center;box-shadow:0 14px 26px -16px rgba(0,0,0,0.55);transition:transform .2s ease, box-shadow .2s ease;}
+  .process-card:hover{transform:translateY(-4px);box-shadow:0 18px 32px -14px rgba(0,0,0,0.6);}
+  .process-card .pnum{
+    display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;
+    margin:0 auto 12px;background:var(--gold);color:var(--navy-deep);font-family:'Cormorant Garamond',serif;
+    font-weight:700;font-size:17px;
+  }
+  .process-card h4{font-family:'Manrope',sans-serif;font-size:16px;font-weight:800;color:var(--cream);}
+  .process-card p{margin-top:6px;font-size:13px;}
+  /* GEM */
+  .gem-head{max-width:680px;margin:0 auto;text-align:center;}
+  .gem-head h2{font-size:32px;}
+  .gem-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media(max-width:820px){ .gem-grid{grid-template-columns:1fr;} }
+  .gem-card{background:rgba(245,241,230,0.09);border:1px solid var(--line);border-radius:14px;padding:28px 24px;box-shadow:0 14px 26px -16px rgba(0,0,0,0.55);transition:transform .2s ease, box-shadow .2s ease;}
+  .gem-card:hover{transform:translateY(-4px);box-shadow:0 18px 32px -14px rgba(0,0,0,0.6);}
+  .gem-card .letter{font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--gold-deep);line-height:1;}
+  .gem-card h3{margin-top:10px;font-size:20px;}
+  .gem-card p{margin-top:10px;font-size:14.5px;}
+  .gem-card .tag{margin-top:12px;font-size:12.5px;color:var(--gold-deep);font-weight:800;}
+  .gem-sum{margin-top:36px;text-align:center;font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--ink);}
+  .gem-sum b{color:var(--gold-deep);}
+  /* ABOUT */
+  .about .wrap{display:grid;grid-template-columns:0.75fr 1.25fr;gap:50px;align-items:center;}
+  @media(max-width:900px){ .about .wrap{grid-template-columns:1fr;gap:30px;} }
+  .about-img{border-radius:16px;overflow:hidden;border:1px solid var(--line);max-height:520px;object-fit:cover;width:100%;box-shadow:0 20px 40px -18px rgba(0,0,0,0.6);}
+  .about h2{font-size:30px;}
+  .about .pull{margin-top:18px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--gold-deep);line-height:1.4;}
+  .about .story p{margin-top:14px;font-size:15px;}
+  .about-focus{margin-top:20px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:9px;}
+  .about-focus li{font-size:14px;color:var(--ink-soft);padding-left:22px;position:relative;line-height:1.5;}
+  .about-focus li::before{content:'✓';position:absolute;left:0;top:0;color:var(--gold-deep);font-weight:800;}
+  .cred-strip{margin-top:26px;display:flex;flex-wrap:wrap;gap:20px 28px;border-top:1px solid var(--line);padding-top:22px;}
+  .cred-strip div{font-size:12.5px;color:var(--ink-soft-2);}
+  .cred-strip b{display:block;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-deep);}
+  /* TESTIMONIALS SLIDER */
+  .testi-head{text-align:center;max-width:680px;margin:0 auto;}
+  .testi-head h2{font-size:30px;}
+  .slider-wrap{position:relative;margin-top:40px;}
+  .testi-track{
+    display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 32px)/3);gap:16px;
+    overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:6px;
+    scrollbar-width:none;
+  }
+  .testi-track::-webkit-scrollbar{display:none;}
+  @media(max-width:900px){ .testi-track{grid-auto-columns:calc((100% - 16px)/2);} }
+  @media(max-width:600px){ .testi-track{grid-auto-columns:88%;} }
+  .testi-card{scroll-snap-align:start;background:rgba(245,241,230,0.09);border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:0 14px 26px -16px rgba(0,0,0,0.55);}
+  .testi-card .stars{color:var(--gold-deep);}
+  .testi-card .quote{margin-top:8px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16.5px;}
+  .testi-card .who{margin-top:14px;font-size:12.5px;color:var(--gold-deep);font-weight:700;}
+  .slider-nav{display:flex;justify-content:center;gap:14px;margin-top:24px;}
+  .slider-nav button{
+    width:42px;height:42px;border-radius:50%;background:rgba(245,241,230,0.12);border:1px solid var(--line);
+    color:var(--gold-deep);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;
+    transition:.18s ease;
+  }
+  .slider-nav button:hover{background:var(--gold);color:var(--navy-deep);border-color:var(--gold);}
+  /* FIT */
+  .fit-head{max-width:680px;margin:0 auto;text-align:center;}
+  .fit-head h2{font-size:30px;}
+  .fit-grid{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media(max-width:760px){ .fit-grid{grid-template-columns:1fr;} }
+  .fit-col{border-radius:14px;padding:28px 26px;border:1px solid var(--line);background:rgba(245,241,230,0.09);}
+  .fit-col h3{font-size:19px;}
+  .fit-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(245,241,230,0.2);align-items:flex-start;}
+  .fit-item:last-child{border-bottom:none;}
+  .fit-item .mk{flex-shrink:0;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;}
+  .fit-item.yes .mk{background:#3EBD7E;color:#06210f;}
+  .fit-item.no .mk{background:#E06A5C;color:#2a0704;}
+  .fit-item p{font-size:14.5px;color:var(--ink);font-weight:500;}
+  /* FAQ */
+  .faq-head{max-width:680px;margin:0 auto;text-align:center;}
+  .faq-head h2{font-size:30px;}
+  .faq-list{margin-top:40px;max-width:880px;margin-left:auto;margin-right:auto;}
+  .faq-item{border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden;background:rgba(245,241,230,0.08);}
+  .faq-q{width:100%;background:none;border:none;color:var(--ink);text-align:left;padding:20px 22px;font-size:17px;font-weight:700;font-family:'Manrope',sans-serif;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+  .faq-q .icon{color:var(--gold-deep);font-size:20px;flex-shrink:0;transition:transform .25s ease;}
+  .faq-item.open .faq-q .icon{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--ink-soft);}
+  /* FINAL */
+  .final{background:linear-gradient(160deg, var(--emerald-2) 0%, var(--navy-deep) 100%);}
+  .final .wrap{display:grid;grid-template-columns:1.1fr 0.9fr;gap:44px;align-items:center;}
+  @media(max-width:900px){ .final .wrap{grid-template-columns:1fr;gap:30px;} }
+  .final h2{font-size:32px;line-height:1.22;color:#F5F1E6;}
+  .final .lede{margin-top:16px;font-size:15.5px;max-width:520px;color:rgba(245,241,230,0.82);}
+  .final .cta-row{margin-top:26px;}
+  .final .expect{margin-top:32px;border-top:1px solid var(--line);padding-top:20px;}
+  .final .expect p.lbl{font-size:12.5px;font-weight:800;color:var(--gold-bright);letter-spacing:.03em;}
+  .final .expect ul{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;}
+  .final .expect li{font-size:13.5px;color:rgba(245,241,230,0.78);padding:3px 0;}
+  @media(max-width:480px){ .final .expect ul{grid-template-columns:1fr;} }
+  .final-img{border-radius:16px;overflow:hidden;border:1px solid var(--line);}
+  @media(max-width:900px){ .final-img{max-width:300px;margin:0 auto;} }
+  footer{padding:36px 0;background:var(--navy-deep);color:rgba(245,241,230,0.6);}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;line-height:1.7;}
+  footer b{color:rgba(245,241,230,0.85);}
+  .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:200;background:var(--navy-deep);padding:12px 16px;display:none;align-items:center;justify-content:center;gap:10px;box-shadow:0 -8px 24px rgba(0,0,0,0.35);border-top:1px solid var(--line);}
+  .sticky-cta.show{display:flex;}
+  .sticky-cta .btn{flex:1;justify-content:center;padding:13px 8px;font-size:13px;}
+  /* WALKAWAY */
+  .walk-head{max-width:700px;margin:0 auto;text-align:center;}
+  .walk-head h2{font-size:30px;}
+  .walk-grid{margin:40px auto 0;max-width:880px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media(max-width:640px){ .walk-grid{grid-template-columns:1fr;} }
+  .walk-item{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;background:rgba(245,241,230,0.09);border:1px solid var(--line);border-radius:10px;box-shadow:0 10px 20px -14px rgba(0,0,0,0.5);transition:transform .18s ease;}
+  .walk-item:hover{transform:translateY(-2px);}
+  .walk-item .mk{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--gold);color:var(--navy-deep);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+  .walk-item p{font-size:15.5px;color:var(--cream);font-weight:600;}
+  .walk-foot{margin-top:26px;text-align:center;font-size:13.5px;color:var(--ink-soft-2);font-style:italic;max-width:640px;margin-left:auto;margin-right:auto;}
+  ::selection{background:var(--gold);color:#221604;}
+  /* BUTTON EFFECTS */
+  .btn{transition:background .18s ease, border-color .18s ease, transform .16s ease, box-shadow .2s ease;}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(226,177,92,0.45);}
+  .btn:active{transform:translateY(0);box-shadow:none;}
+  .btn-pulse{animation:ctaPulse 2.4s ease-in-out infinite;}
+  @keyframes ctaPulse{
+    0%{box-shadow:0 0 0 0 rgba(226,177,92,0.45);}
+    70%{box-shadow:0 0 0 12px rgba(226,177,92,0);}
+    100%{box-shadow:0 0 0 0 rgba(226,177,92,0);}
+  }
+  @media(prefers-reduced-motion: reduce){ .btn-pulse{animation:none;} }
+  /* SCROLL-REVEAL */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media(prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;transition:none;} }
+  /* JOURNEY TIMELINE */
+  .journey-track{margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0;}
+  .journey-node{font-size:13.5px;font-weight:700;color:var(--ink);background:rgba(245,241,230,0.09);border:1px solid var(--line);border-radius:50px;padding:9px 16px;white-space:nowrap;}
+  .journey-arrow{color:var(--gold-deep);font-size:16px;margin:0 6px;flex-shrink:0;}
+  @media(max-width:700px){ .journey-track{gap:8px;} .journey-arrow{display:none;} .journey-node{font-size:12.5px;padding:8px 13px;} }
+  /* AUDIENCE CARDS (personalise by audience) */
+  .audience-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media(max-width:900px){ .audience-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:560px){ .audience-grid{grid-template-columns:1fr;} }
+  .audience-card{
+    background:rgba(245,241,230,0.05);border:1px solid var(--line);border-left:4px solid var(--gold);
+    border-radius:12px;padding:24px 22px;box-shadow:0 14px 26px -16px rgba(0,0,0,0.55);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .audience-card:hover{transform:translateY(-4px);box-shadow:0 18px 32px -14px rgba(0,0,0,0.6);}
+  .audience-card .au-num{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold-deep);}
+  .audience-card h3{margin-top:8px;font-size:19px;color:var(--cream);}
+  .audience-card p{margin-top:10px;font-size:14px;line-height:1.5;}
+  /* DIAGNOSTIC LIST */
+  .diag-list{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:760px;margin-left:auto;margin-right:auto;}
+  @media(max-width:600px){ .diag-list{grid-template-columns:1fr;} }
+  .diag-list-item{display:flex;align-items:center;gap:14px;background:rgba(245,241,230,0.07);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:16px;font-weight:700;color:var(--cream);box-shadow:0 10px 20px -14px rgba(0,0,0,0.5);transition:transform .18s ease;}
+  .diag-list-item:hover{transform:translateY(-2px);}
+  .diag-list-item .dot{width:26px;height:26px;border-radius:50%;background:var(--gold);color:var(--navy-deep);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  /* ICON CIRCLES */
+  /* SCENARIO / AREA CARD TOP ACCENTS */
+  .scenario-card{border-top:4px solid var(--line);}
+  .scenario-card.cons{border-top-color:#4FACFE;}
+  .scenario-card.mod{border-top-color:var(--emerald-2);}
+  .scenario-card.accident{border-top-color:#E8752F;}
+  .scenario-card.growth{border-top-color:var(--gold);}
+/* FINAL VISUAL REFINEMENTS */
+.hero{background:linear-gradient(135deg,#013601 0%,#006600 62%,#0A7A2A 100%);border-bottom:none;padding:18px 0 22px;}
+.hero::before{top:-25%;right:-8%;width:560px;height:560px;border-color:rgba(255,255,255,.10);}
+.hero::after{top:14%;right:8%;width:360px;height:360px;border-color:rgba(255,255,255,.08);}
+.hero-wrap{grid-template-columns:1.08fr .92fr;gap:38px;padding:54px 30px 50px;max-width:1240px;}
+.hero-copy{background:rgba(0,42,1,.28);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:34px 38px;box-shadow:0 24px 55px rgba(0,0,0,.18);}
+.hero h1{font-size:44px;line-height:1.12;}
+.hero-side{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:24px;box-shadow:0 24px 55px rgba(0,0,0,.18);}
+.video-thumb{max-width:310px;border-radius:16px;border-width:2px;}
+.hero-mini-card{max-width:310px;background:rgba(0,42,1,.35);border-color:rgba(255,255,255,.16);}
+@media(max-width:960px){.hero-wrap{padding:34px 20px}.hero-copy{padding:28px 24px}.hero-side{padding:20px}.hero h1{font-size:36px;}}
+@media(max-width:560px){.hero h1{font-size:29px}.hero-copy{padding:24px 20px}.hero{padding-top:8px}}
+.diag-list{margin-top:38px;max-width:980px;grid-template-columns:repeat(3,1fr);gap:14px;}
+.diag-list-item{min-height:76px;align-items:flex-start;padding:17px 18px;line-height:1.4;}
+@media(max-width:800px){.diag-list{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.diag-list{grid-template-columns:1fr;}}
+.retirement-factors{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:980px;margin-left:auto;margin-right:auto;}
+.retirement-factor{padding:15px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(0,102,0,.20);font-size:15px;font-weight:700;color:var(--cream);display:flex;gap:10px;align-items:center;}
+.retirement-factor b{color:var(--gold-bright);font-size:13px;}
+@media(max-width:700px){.retirement-factors{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.retirement-factors{grid-template-columns:1fr;}}
+.persona-grid{grid-template-columns:repeat(6,1fr);gap:16px;}
+.persona-card{padding:24px 20px;min-height:190px;}
+.persona-card:nth-child(1),.persona-card:nth-child(2),.persona-card:nth-child(3){grid-column:span 2;}
+.persona-card:nth-child(4){grid-column:2 / span 2;}
+.persona-card:nth-child(5){grid-column:4 / span 2;}
+.personas-head .head-avatar{display:none;}
+@media(max-width:900px){.persona-grid{grid-template-columns:1fr 1fr}.persona-card:nth-child(n){grid-column:auto}.persona-card{min-height:0;}}
+@media(max-width:560px){.persona-grid{grid-template-columns:1fr;} .audience-grid{grid-template-columns:1fr;}}
+.audience-grid{grid-template-columns:repeat(6,1fr);gap:16px;}
+.audience-card{min-height:190px;}
+.audience-card:nth-child(1),.audience-card:nth-child(2),.audience-card:nth-child(3){grid-column:span 2;}
+.audience-card:nth-child(4){grid-column:2 / span 2;}
+.audience-card:nth-child(5){grid-column:4 / span 2;}
+@media(max-width:900px){.audience-grid{grid-template-columns:1fr 1fr}.audience-card:nth-child(n){grid-column:auto}.audience-card{min-height:0;}}
+@media(max-width:560px){.audience-grid{grid-template-columns:1fr;}}
+.illus-meeting-wrap{display:none;}
+.process-grid{grid-template-columns:repeat(3,1fr);max-width:1000px;gap:16px;}
+.process-card{min-height:180px;display:flex;flex-direction:column;justify-content:center;padding:26px 22px;background:rgba(0,102,0,.18);}
+.process-card h4{font-size:17px;}
+.process-card p{font-size:14px;line-height:1.5;}
+@media(max-width:760px){.process-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.process-grid{grid-template-columns:1fr;}}
+.about-img{max-height:none;height:auto;object-fit:contain;object-position:center top;background:#002A01;}
+.testi-head .head-avatar{display:none;}
+.testi-head{padding-top:4px;}
+.final{background:linear-gradient(145deg,#006600 0%,#013601 72%,#002A01 100%);}
+.final .expect{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px 22px;}
+.apply-bonus{margin-top:30px;padding:22px 24px;border-radius:16px;background:rgba(0,102,0,.20);border:1px solid var(--line);}
+.apply-bonus ul{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:9px 24px;}
+.apply-bonus li{font-size:14px;color:var(--cream);padding-left:22px;position:relative;}
+.apply-bonus li:before{content:'✓';position:absolute;left:0;color:var(--gold-bright);font-weight:800;}
+.apply-extra{margin-top:14px;font-size:13.5px;color:var(--ink-soft-2);}
+@media(max-width:560px){.apply-bonus ul{grid-template-columns:1fr;}}
+.section-lede{margin-top:14px;color:var(--ink-soft);max-width:700px;margin-left:auto;margin-right:auto;}
+/* FINAL VISUAL REFINEMENTS */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:#F7F3E8;
+  border-bottom:1px solid rgba(1,54,1,.14);
+  box-shadow:0 4px 18px rgba(0,0,0,.06);
+  backdrop-filter:blur(8px);
+}
+.nav .wrap{height:82px;max-width:1240px;padding:0 30px;}
+.brand .word{color:#013601;}
+.brand .word small{color:rgba(1,54,1,.58);}
+.brand img{box-shadow:0 0 0 1px rgba(201,162,39,.55),0 4px 14px rgba(0,0,0,.08);}
+.nav .btn{background:#D5A82A;color:#082408;border-color:#D5A82A;animation:none;box-shadow:none;}
+.nav .btn:hover{background:#E2B53F;border-color:#E2B53F;}
+.hero{
+  background:linear-gradient(135deg,#013601 0%,#006600 58%,#0A4B13 100%);
+  border-bottom:0;
+  padding:42px 0 56px;
+}
+.hero::before{top:-20%;right:-8%;width:560px;height:560px;border-color:rgba(228,193,88,.12);}
+.hero::after{top:18%;right:7%;width:360px;height:360px;border-color:rgba(228,193,88,.09);}
+.hero-wrap{
+  max-width:1180px;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  padding:0 30px;
+  align-items:stretch;
+}
+.hero-copy,.hero-side{
+  min-height:590px;
+  border:1px solid rgba(228,193,88,.24);
+  border-radius:22px;
+  background:rgba(0,36,0,.22);
+  box-shadow:0 22px 50px rgba(0,0,0,.12);
+}
+.hero-copy{
+  padding:54px 48px 48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.hero-side{
+  padding:24px;
+  justify-content:center;
+}
+.hero h1{font-size:40px;max-width:560px;}
+.hero-checkline{max-width:560px;}
+.hero-pills{max-width:560px;}
+.video-thumb{
+  width:250px;
+  max-width:250px;
+  height:334px;
+  aspect-ratio:auto;
+  border-radius:16px;
+  border-width:2px;
+}
+.video-thumb img{object-fit:cover;object-position:center center;}
+.hero-mini-card{max-width:250px;width:100%;margin-top:16px;padding:16px 18px;}
+.hero-side .caption{margin-top:9px;}
+/* remove unnecessary decorative icon spacing */
+.areas-head + .areas-grid{margin-top:34px;}
+.illus-wrap{display:none!important;}
+/* Retirement factors: 3 across + 2 centred */
+.retirement-factors{
+  max-width:980px;
+  margin:40px auto 0;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:12px;
+}
+.retirement-factor{
+  grid-column:span 2;
+  min-height:56px;
+  display:flex;align-items:center;gap:10px;
+  padding:15px 18px;
+  border:1px solid rgba(201,162,39,.55);
+  border-radius:12px;
+  background:rgba(1,54,1,.34);
+  color:var(--cream);
+  font-size:15px;font-weight:700;
+}
+.retirement-factor:nth-child(4){grid-column:2 / span 2;}
+.retirement-factor:nth-child(5){grid-column:4 / span 2;}
+.retirement-factor b{color:#E4C158;font-size:18px;}
+/* Audience: balanced 3 + 2 layout */
+.audience-grid{grid-template-columns:repeat(6,1fr);gap:18px;max-width:1060px;margin-left:auto;margin-right:auto;}
+.audience-card{grid-column:span 2;min-height:170px;}
+.audience-card:nth-child(4){grid-column:2 / span 2;}
+.audience-card:nth-child(5){grid-column:4 / span 2;}
+/* Call process: clean 3 x 2 cards */
+.process-grid{max-width:980px;grid-template-columns:repeat(3,1fr);gap:18px;}
+.process-card{min-height:180px;display:flex;flex-direction:column;justify-content:center;}
+/* About image: never crop the top of the portrait */
+.about-img{max-height:none;height:auto;object-fit:contain;object-position:center top;background:#013601;}
+.about .wrap{align-items:start;}
+@media(max-width:960px){
+  .hero-wrap{grid-template-columns:1fr;}
+  .hero-copy,.hero-side{min-height:auto;}
+  .hero-copy{padding:44px 34px;}
+  .hero-side{padding:28px 20px 34px;}
+}
+@media(max-width:760px){
+  .nav .wrap{height:72px;padding:0 20px;}
+  .nav .btn{padding:11px 16px;font-size:12px;}
+  .brand .word{font-size:16px;}
+  .hero{padding:24px 0 42px;}
+  .hero-wrap{padding:0 18px;}
+  .hero h1{font-size:32px;}
+  .retirement-factors,.audience-grid{grid-template-columns:1fr;}
+  .retirement-factor,.retirement-factor:nth-child(4),.retirement-factor:nth-child(5),.audience-card,.audience-card:nth-child(4),.audience-card:nth-child(5){grid-column:auto;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:520px){
+  .hero-copy{padding:34px 24px;}
+  .hero h1{font-size:28px;}
+  .video-thumb{width:220px;max-width:220px;height:294px;}
+  .hero-mini-card{max-width:220px;}
+  .process-grid{grid-template-columns:1fr;}
+}
+/* TWO-TONE PALETTE — one dark green, one light ivory (edit values here) */
+:root{ --dark:#013601; --dark-deep:#002A01; --light:#F4EFE0; --light-ink:#0B2A0B; }
+body{background:var(--dark);}
+section.bg-emerald,section.bg-navy{background:var(--dark);}
+.hero{background:linear-gradient(135deg,#013601 0%,#006600 100%);}
+.final{background:linear-gradient(145deg,#006600 0%,#013601 70%,#002A01 100%);}
+footer,.sticky-cta{background:var(--dark-deep);}
+.retirement-factor{background:rgba(255,255,255,.07);}
+.process-card{background:rgba(255,255,255,.06);}
+.apply-bonus{background:rgba(255,255,255,.07);}
+.about-img{background:transparent;}
+/* light sections: 1,3,5,7,9 */
+body > section:nth-of-type(odd):not(.final){
+  background:var(--light);
+  --ink:var(--light-ink); --cream:var(--light-ink);
+  --ink-soft:rgba(11,42,11,.78); --ink-soft-2:rgba(11,42,11,.6);
+  --gold-deep:#7A5F0B; --gold-bright:#7A5F0B; --line:rgba(1,54,1,.22);
+  color:var(--light-ink);
+}
+body > section:nth-of-type(odd):not(.final) :is(.area-card,.persona-card,.audience-card,.qcard,.gem-card,.testi-card,.fit-col,.faq-item,.walk-item,.diag-list-item,.process-card,.retirement-factor,.journey-node,.hero-mini-card){
+  background:#fff;box-shadow:0 10px 22px -14px rgba(1,54,1,.35);color:var(--light-ink);
+}
+body > section:nth-of-type(odd):not(.final) .retirement-factor b{color:#7A5F0B;}
+body > section:nth-of-type(odd):not(.final) .fit-item{border-bottom-color:rgba(1,54,1,.15);}
+body > section:nth-of-type(odd):not(.final) .slider-nav button{background:#fff;}
+body > section:nth-of-type(odd):not(.final) h1,
+body > section:nth-of-type(odd):not(.final) h2,
+body > section:nth-of-type(odd):not(.final) h3,
+body > section:nth-of-type(odd):not(.final) h4{color:var(--light-ink);}
+body > section:nth-of-type(odd):not(.final) p{color:var(--ink-soft);}
+body > section:nth-of-type(odd):not(.final) .btn{color:#082408;}
+body > section:nth-of-type(odd):not(.final) .btn.outline{color:#013601;border-color:#013601;}
+.scenario-card.cons,.scenario-card.mod,.scenario-card.accident,.scenario-card.growth{border-top-color:#C9A227;}
+body > section:nth-of-type(odd):not(.final) .scenario-card{border-top-color:#013601;}
+</style>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+<symbol id="i-plan" viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M9 9h6M9 13h6M9 17h3"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M3 17h18M6 17a6 6 0 0112 0M12 4v3M4.9 8.9l2 1.4M19.1 8.9l-2 1.4"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></symbol>
+<symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3M3 12v5c0 1.7 2.7 3 6 3"/><ellipse cx="16" cy="14" rx="5" ry="2.6"/><path d="M11 14v4c0 1.4 2.2 2.6 5 2.6s5-1.2 5-2.6v-4"/></symbol>
+<symbol id="i-kids" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 20v-2a5 5 0 015-5h2a5 5 0 015 5v2"/><circle cx="18" cy="9" r="2"/><path d="M17 14.2a4 4 0 014 3.8v2"/></symbol>
+<symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 13h18"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20v-1.5A5 5 0 018 14h2a5 5 0 015 4.5V20M16 14.2A4.2 4.2 0 0121 18v2"/></symbol>
+<symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5M8 7h7"/></symbol>
+<symbol id="i-mind" viewBox="0 0 24 24"><path d="M12 3a6 6 0 00-4 10.5V17h8v-3.5A6 6 0 0012 3z"/><path d="M9.5 20.5h5M10 17v1.5M14 17v1.5"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 7a2 2 0 012-2h12v4"/><rect x="3" y="8" width="18" height="12" rx="2"/><circle cx="16.5" cy="14" r="1.2"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5M3 17.5l9 5 9-5" opacity=".6"/></symbol>
+<symbol id="i-build" viewBox="0 0 24 24"><path d="M4 21V5l8-2v18M12 9h8v12M7 8h2M7 12h2M7 16h2M15 13h2M15 17h2"/></symbol>
+<symbol id="i-school" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.2-.7-2.700-1.100-4.400-3.800-4.600-4-.1-.2-1.100-1.400-1.100-2.700 0-1.300.7-1.900.9-2.200.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500.2.600.800 2 .900 2.100.1.100.1.300 0 .5-.1.200-.2.300-.3.500l-.4.500c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.100 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.400z"/></symbol>
+<symbol id="b-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol><symbol id="b-yt" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol><symbol id="b-fb" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol><symbol id="b-ig" viewBox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol><symbol id="b-li" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol></defs>
+</svg>
+<div class="psl-topbar"><div class="psl-wrap">
+<div class="psl-l"><a href="tel:+918904820166"><svg class="psl-ic" style="width:15px;height:15px"><use href="#i-phone"/></svg>+91 8904820166</a><a href="mailto:maria@prosperitylifeschool.com"><svg class="psl-ic" style="width:15px;height:15px"><use href="#i-mail"/></svg>maria@prosperitylifeschool.com</a></div>
+<div class="psl-tr"><label for="langSel" class="psl-sr">Language</label><svg class="psl-ic" style="width:15px;height:15px"><use href="#i-chat"/></svg><select id="langSel" translate="no" class="notranslate" aria-label="Translate this page"><option value="">🌐 English</option><option value="kn">ಕನ್ನಡ Kannada</option><option value="gom">कोंकणी Konkani</option><option value="hi">हिन्दी Hindi</option><option value="ml">മലയാളം Malayalam</option><option value="ta">தமிழ் Tamil</option><option value="te">తెలుగు Telugu</option><option value="mr">मराठी Marathi</option><option value="ar">العربية Arabic</option></select></div><div id="google_translate_element" class="psl-gt-hide" translate="no"></div>
+<span class="psl-tag">Financial Wisdom for a Blessed Life</span>
+</div></div>
+<div class="psl-header" role="banner">
+<div class="psl-wrap">
+<a class="psl-brand" href="https://www.prosperitylifeschool.com/" aria-label="Prosperity Life School home"><img src="assets/img/logo-transparent.png" alt="Prosperity Life School logo"><span class="psl-w notranslate" translate="no">Prosperity Life School<small>LEARN · GROW · PROSPER</small></span></a>
+<ul class="psl-nav" id="nav">
+<li><a href="https://www.prosperitylifeschool.com/">Home</a></li>
+<li><a href="https://www.prosperitylifeschool.com/about.html">About</a></li>
+<li><button type="button" aria-expanded="false">Programs<svg class="psl-chev"><use href="#i-chev"/></svg></button>
+<div class="psl-sub"><a href="https://www.prosperitylifeschool.com/programs.html">All Programs</a><a href="https://www.prosperitylifeschool.com/prosperity-clarity-call-v5.html">Prosperity Clarity Call<small>Free 1-to-1 clarity</small></a><a href="https://www.prosperitylifeschool.com/prosperity-retirement-clarity-call.html">Retirement Clarity Call</a><a href="https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html">Protection Gap Review</a><a href="https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html">Advisor Career Readiness</a></div></li>
+<li><a href="https://www.prosperitylifeschool.com/community.html">Join Community</a></li>
+<li><a href="https://www.prosperitylifeschool.com/youtube.html">YouTube</a></li>
+<li><a href="https://www.prosperitylifeschool.com/contact.html">Contact</a></li>
+</ul>
+<div class="psl-hdr-cta"><a class="psl-btn psl-outline psl-sm psl-call" href="https://www.prosperitylifeschool.com/contact.html">Book a Call</a><a class="psl-btn psl-sm" href="https://www.prosperitylifeschool.com/prosperity-clarity-call-v5.html">Take Free Assessment</a>
+<button class="psl-burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+</div>
+<div class="psl-mnav-cta"><a class="psl-btn psl-outline" href="https://www.prosperitylifeschool.com/contact.html">Book a Call</a><a class="psl-btn" href="https://www.prosperitylifeschool.com/prosperity-clarity-call-v5.html">Take Free Assessment</a></div>
+</div>
+<!-- SECTION 1: HERO -->
+<header class="hero">
+<div class="hero-wrap">
+<div class="hero-copy">
+<span class="hero-badge-pill">Free 30-Minute Protection Gap Review</span>
+<p class="hero-kicker">Most people don't find out until it's too late.</p>
+<h1>You Bought Insurance.<br/><span class="hl">But Are You Actually Protected?</span></h1>
+<p class="hero-checkline">One free call reveals exactly where your Life, Health, Accident and Retirement protection has gaps — before you need it to work.</p>
+<div class="hero-pills">
+<div class="hpill"><span class="ok">✓</span>Working Professionals</div>
+<div class="hpill"><span class="ok">✓</span>Entrepreneurs</div>
+<div class="hpill"><span class="ok">✓</span>NRIs &amp; Complex Families</div>
+</div>
+<div class="hero-cta-row">
+<a class="btn btn-pulse" href="#apply">Book My Free Protection Clarity Call</a>
+</div>
+<p class="hero-fine">Personalised diagnostic · No obligation · Education first</p>
+</div>
+<div class="hero-side">
+<a aria-label="Watch the intro video" class="video-thumb" href="https://www.prosperitylifeschool.com/youtube.html" >
+<img alt="Dr Maria Pramila Dsouza — watch the intro video" src="assets/lp/b7979a9f6b.jpg" width="560" height="747"/>
+</a>
+<p class="caption">▶ Watch the 10-min intro before you apply</p>
+<div class="hero-mini-card">
+<h3>Dr Maria Pramila Dsouza</h3>
+<div class="hero-mini-row"><span>Role</span><span>Chartered Wealth Manager</span></div>
+<div class="hero-mini-row"><span>Format</span><span>Private 1-to-1</span></div>
+<div class="hero-mini-row"><span>Duration</span><span>30 mins</span></div>
+<div class="hero-mini-row"><span>Fee</span><span>Complimentary</span></div>
+</div>
+</div>
+</div>
+</header>
+<!-- SECTION 3: THE PROBLEM -->
+<section class="bg-emerald" id="areas">
+<div class="wrap">
+<div class="areas-head">
+<span class="eyebrow">The real problem</span>
+<h2 style="font-size:34px;">Having Policies Is Not the Same as Having a Protection Plan.</h2>
+</div>
+<div class="areas-grid">
+<div class="area-card scenario-card cons"><h4>Life</h4><p>Would your existing protection actually support liabilities, family expenses, parents and children's future goals?</p></div>
+<div class="area-card scenario-card mod"><h4>Health</h4><p>Do you know what's personally controlled versus employer-dependent — and the important conditions in your policies?</p></div>
+<div class="area-card scenario-card accident"><h4>Accident / Disability</h4><p>If earning ability were interrupted, what would continue paying the family's financial commitments?</p></div>
+<div class="area-card scenario-card growth"><h4>Retirement</h4><p>Have you calculated what today's lifestyle could cost by retirement — and how long your corpus may need to last?</p></div>
+</div>
+<p style="text-align:center;margin-top:36px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--cream);max-width:680px;margin-left:auto;margin-right:auto;">The problem is often not "no insurance." The problem is not knowing whether everything works together.</p>
+<div style="margin-top:36px;text-align:center;"><a class="btn btn-pulse" href="#apply">Book My Complimentary Protection Clarity Call</a></div>
+</div>
+</section>
+<!-- SECTION 4: LIFE CHANGED -->
+<section class="bg-navy">
+<div class="wrap">
+<div class="check-head">
+<span class="eyebrow">Life changed</span>
+<h2>Your Life Changed. Did Your Protection Change With It?</h2>
+<p style="margin-top:16px;color:var(--ink-soft);max-width:600px;margin-left:auto;margin-right:auto;">A policy purchased years ago may have been selected when your income, liabilities, family responsibilities and future goals looked very different.</p>
+</div>
+<div class="journey-track">
+<span class="journey-node">First Job</span><span class="journey-arrow">→</span>
+<span class="journey-node">Income Growth</span><span class="journey-arrow">→</span>
+<span class="journey-node">Marriage</span><span class="journey-arrow">→</span>
+<span class="journey-node">Children</span><span class="journey-arrow">→</span>
+<span class="journey-node">Home Loan</span><span class="journey-arrow">→</span>
+<span class="journey-node">Parents</span><span class="journey-arrow">→</span>
+<span class="journey-node">Business</span><span class="journey-arrow">→</span>
+<span class="journey-node">Global Responsibilities</span><span class="journey-arrow">→</span>
+<span class="journey-node">Retirement</span>
+</div>
+<div style="margin-top:36px;text-align:center;"><a class="btn btn-pulse" href="#apply">Review My Current Protection</a></div>
+</div>
+</section>
+<!-- SECTION 5: DIAGNOSTIC REVEAL -->
+<section class="bg-emerald">
+<div class="wrap">
+<div class="check-head">
+<span class="eyebrow">The diagnostic</span>
+<h2>What If You Could See Your Entire Protection Picture on One Screen?</h2>
+</div>
+<div class="diag-list">
+<div class="diag-list-item"><span class="dot">✓</span>Life protection requirement</div>
+<div class="diag-list-item"><span class="dot">✓</span>Existing life cover</div>
+<div class="diag-list-item"><span class="dot">✓</span>Potential protection gap</div>
+<div class="diag-list-item"><span class="dot">✓</span>Health protection structure</div>
+<div class="diag-list-item"><span class="dot">✓</span>Accident &amp; income continuity</div>
+<div class="diag-list-item"><span class="dot">✓</span>Emergency fund</div>
+<div class="diag-list-item"><span class="dot">✓</span>Children’s future goals</div>
+<div class="diag-list-item"><span class="dot">✓</span>Retirement corpus</div>
+<div class="diag-list-item"><span class="dot">✓</span>Risk profile — Conservative / Moderate / Growth</div>
+</div>
+<p style="text-align:center;margin-top:36px;font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);">We don't begin with <em style="color:var(--gold-deep);font-style:italic;">"Which policy do you want?"</em></p>
+<p style="text-align:center;margin-top:8px;font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);">We begin with <em style="color:var(--gold-deep);font-style:italic;">"What do your numbers say?"</em></p>
+<p style="text-align:center;margin-top:18px;font-size:13.5px;color:var(--ink-soft-2);">Prosperity Protection &amp; Retirement Diagnostic Planner™</p>
+</div>
+</section>
+<!-- SECTION 6: RETIREMENT CURIOSITY -->
+<section class="bg-navy">
+<div class="wrap">
+<div class="check-head">
+<span class="eyebrow">A common question</span>
+<h2>Is ₹1 Crore Enough for Retirement? What About ₹2 Crore?</h2>
+<p style="margin-top:16px;color:var(--ink-soft);max-width:600px;margin-left:auto;margin-right:auto;">The answer depends on much more than the corpus number.</p>
+</div>
+<div class="retirement-factors"><div class="retirement-factor"><b>✓</b>Inflation</div><div class="retirement-factor"><b>✓</b>Tax</div><div class="retirement-factor"><b>✓</b>Withdrawal Rate</div><div class="retirement-factor"><b>✓</b>Investment Return</div><div class="retirement-factor"><b>✓</b>How Long It Must Last</div></div>
+<div class="gem-grid" style="margin-top:40px;">
+<div class="gem-card scenario-card cons"><p class="letter" style="font-size:26px;">Conservative</p><p style="margin-top:10px;">Illustrative, editable assumptions — not a promised outcome.</p></div>
+<div class="gem-card scenario-card mod"><p class="letter" style="font-size:26px;">Moderate</p><p style="margin-top:10px;">Illustrative, editable assumptions — not a promised outcome.</p></div>
+<div class="gem-card scenario-card growth"><p class="letter" style="font-size:26px;">Growth</p><p style="margin-top:10px;">Illustrative, editable assumptions — not a promised outcome.</p></div>
+</div>
+<div style="margin-top:36px;text-align:center;"><a class="btn btn-pulse" href="#apply">Show Me My Retirement Numbers</a></div>
+</div>
+</section>
+<!-- SECTION 7: PERSONALISE BY AUDIENCE -->
+<section class="bg-emerald">
+<div class="wrap">
+<div class="personas-head">
+<span class="eyebrow">Your protection picture changes with your life</span>
+<h2 style="font-size:32px;">Which Profile Is Closest to You?</h2><p class="section-lede">Your financial protection needs can change with your income, family responsibilities, business interests, location and retirement goals. See which profile feels closest to your current situation.</p>
+</div>
+<div class="audience-grid">
+<div class="audience-card"><span class="au-num">01</span><h3>Working Professional</h3><p>Life · Employer vs Personal Health · Accident/Disability · Loans · EPF/NPS · Retirement.</p></div>
+<div class="audience-card"><span class="au-num">02</span><h3>Independent Professional</h3><p>Life · Health · Income Continuity · Accident · Professional Risk · Retirement.</p></div>
+<div class="audience-card"><span class="au-num">03</span><h3>Entrepreneur / Business Owner</h3><p>Family · Founder/Key Person · Employees · Assets · Liabilities · Business Continuity · Succession.</p></div>
+<div class="audience-card"><span class="au-num">04</span><h3>NRI / Global Indian</h3><p>India + Overseas Protection · Parents · Liabilities · Health · Retirement · Return-to-India · Succession.</p></div>
+<div class="audience-card"><span class="au-num">05</span><h3>Higher-Complexity Family</h3><p>Protection · Liabilities · Healthcare · Retirement Lifestyle · Business Interests · Liquidity · Succession.</p></div>
+</div>
+<p style="text-align:center;margin-top:28px;font-size:13.5px;color:var(--ink-soft-2);">Parenthood is a life-stage overlay that naturally applies across these profiles, not a separate category.</p>
+</div>
+</section>
+<!-- SECTION 8: WHAT HAPPENS ON THE CALL -->
+<section class="bg-navy">
+<div class="wrap">
+<div class="check-head">
+<span class="eyebrow">This is not a policy-pitch call</span>
+<h2>What Happens on the Protection Clarity Call?</h2>
+</div>
+<div class="process-grid">
+<div class="process-card"><span class="pnum">01</span><h4>Understand</h4><p>Your current situation and priorities</p></div>
+<div class="process-card"><span class="pnum">02</span><h4>Review</h4><p>Existing policies and coverage</p></div>
+<div class="process-card"><span class="pnum">03</span><h4>Calculate</h4><p>Real protection and retirement numbers</p></div>
+<div class="process-card"><span class="pnum">04</span><h4>Identify</h4><p>Gaps that need attention</p></div>
+<div class="process-card"><span class="pnum">05</span><h4>Prioritise</h4><p>What matters first, second, later</p></div>
+<div class="process-card"><span class="pnum">06</span><h4>Explore</h4><p>Suitable next steps, if any</p></div>
+</div>
+<p style="text-align:center;margin-top:36px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--gold-deep);">Diagnosis first. Solution second.</p>
+<div style="margin-top:30px;text-align:center;"><a class="btn btn-pulse" href="#apply">Book My 1-to-1 Protection Clarity Call</a></div>
+</div>
+</section>
+<!-- SECTION 9: WHAT YOU WALK AWAY WITH -->
+<section class="bg-emerald">
+<div class="wrap">
+<div class="walk-head">
+<span class="eyebrow">What you receive</span>
+<h2>Leave With Clarity — Not Another Pile of Brochures.</h2>
+<p style="margin-top:14px;color:var(--ink-soft);">Your Personal Protection &amp; Retirement Snapshot™ includes:</p>
+</div>
+<div class="walk-grid">
+<div class="walk-item"><span class="mk">✓</span><p>Life Protection Analysis</p></div>
+<div class="walk-item"><span class="mk">✓</span><p>Health Protection Review</p></div>
+<div class="walk-item"><span class="mk">✓</span><p>Accident / Income Protection Review</p></div>
+<div class="walk-item"><span class="mk">✓</span><p>Retirement Readiness</p></div>
+<div class="walk-item"><span class="mk">✓</span><p>Risk Profile — Conservative / Moderate / Growth</p></div>
+<div class="walk-item"><span class="mk">✓</span><p>Top Priority Areas</p></div>
+<div class="walk-item"><span class="mk">✓</span><p>30 / 90 / 365-Day Action Plan</p></div>
+<div class="walk-item"><span class="mk">✓</span><p>Business / NRI considerations, where applicable</p></div>
+</div>
+</div>
+</section>
+<hr class="rule-line"/>
+<!-- SECTION 10: ABOUT / AUTHORITY -->
+<section class="bg-navy about">
+<div class="wrap">
+<img alt="Dr Maria Pramila Dsouza" class="about-img" src="assets/lp/1ed74e4b46.jpg" width="720" height="1202" loading="lazy" decoding="async"/>
+<div>
+<span class="eyebrow">Who will guide you</span>
+<h2>Dr Maria Pramila Dsouza</h2>
+<p class="pull">"My role is not to begin with a product. It is to first help you understand your financial protection picture."</p>
+<div class="story">
+<p>Chartered Wealth Manager &amp; Prosperity Mentor, Founder of Prosperity Life School — an education and implementation ecosystem built around financial awareness, protection, wealth and long-term prosperity.</p>
+<p>Over 15+ years, Dr Maria has guided working professionals, entrepreneurs, NRIs and complex families through the same question: not "which policy should I buy," but "does everything I already own actually work together." That diagnostic-first approach is the foundation of every Protection Clarity Call.</p>
+</div>
+<ul class="about-focus">
+<li>Life, health, accident, income and retirement protection reviewed together — not in isolation</li>
+<li>Plain-language guidance with no jargon and no pressure to decide during the call</li>
+<li>Practical next steps only where a genuine protection or planning gap is identified</li>
+</ul>
+<div class="cred-strip">
+<div><b>Ph.D.</b>Finance</div>
+<div><b>15+ yrs</b>Personal finance</div>
+<div><b>12,000+</b>People educated</div>
+<div><b>500+</b>Client families</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 11: CLIENT EXPERIENCES -->
+<section class="bg-emerald">
+<div class="wrap">
+<div class="testi-head">
+<span class="eyebrow">In their words</span>
+<h2>What Families Say After Getting Clarity</h2>
+</div>
+<div class="slider-wrap">
+<div class="testi-track" id="testiTrack2">
+<div class="testi-card"><div class="stars">★★★★★</div><p class="quote">"I finally understood what my policies actually covered."</p><p class="who">Mr Ravi · Entrepreneur, Bangalore</p></div>
+<div class="testi-card"><div class="stars">★★★★★</div><p class="quote">"We discovered areas we had never reviewed."</p><p class="who">Dr Jeevan · Japan</p></div>
+<div class="testi-card"><div class="stars">★★★★★</div><p class="quote">"The explanation went beyond simply comparing premiums."</p><p class="who">Mr Anil Dmello · Muscat</p></div>
+<div class="testi-card"><div class="stars">★★★★★</div><p class="quote">"We understood what needed attention first."</p><p class="who">Mr Naveen · UAE</p></div>
+<div class="testi-card"><div class="stars">★★★★★</div><p class="quote">"I now know where my protection and retirement planning stand."</p><p class="who">Mr Raghu · IT Professional, Mumbai</p></div>
+</div>
+<div class="slider-nav">
+<button aria-label="Previous" onclick="document.getElementById('testiTrack2').scrollBy({left:-340,behavior:'smooth'})" type="button">‹</button>
+<button aria-label="Next" onclick="document.getElementById('testiTrack2').scrollBy({left:340,behavior:'smooth'})" type="button">›</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 12: FAQ + FINAL CTA -->
+<section class="bg-navy">
+<div class="wrap">
+<div class="faq-head">
+<span class="eyebrow">Before you buy another policy</span>
+<h2 style="font-size:32px;">Insurance Gap Analysis: Understand Your Protection Gap First</h2>
+</div>
+<div class="faq-list"><div class="faq-item"><button class="faq-q"><span>How much term insurance do I need?</span><span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">There is no one-size rule. It depends on your income, liabilities, dependents, goals and existing cover. A good first step is to list what your family would need to stay financially secure, then compare it with the cover you already have.</div></div></div><div class="faq-item"><button class="faq-q"><span>What are health insurance waiting periods and room rent limits?</span><span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A waiting period is the time before certain conditions or treatments are covered. A room rent limit caps the daily room charge your policy pays for, and can reduce other claim payments if you choose a costlier room. Check the policy wording and ask the insurer in writing.</div></div></div><div class="faq-item"><button class="faq-q"><span>What is an insurance gap analysis?</span><span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">It is a review that compares your life, health and accident cover with your responsibilities, so you can see where protection may be missing before you need it.</div></div></div>
+<div class="faq-item">
+<button class="faq-q"><span>I already have insurance. Is this still useful?</span><span class="icon">+</span></button>
+<div class="faq-a"><div class="faq-a-inner">Yes. The review is designed to examine how your existing protection aligns with your current responsibilities.</div></div>
+</div>
+<div class="faq-item">
+<button class="faq-q"><span>I have company Health Insurance.</span><span class="icon">+</span></button>
+<div class="faq-a"><div class="faq-a-inner">Employer benefits can be included alongside personally controlled protection.</div></div>
+</div>
+<div class="faq-item">
+<button class="faq-q"><span>Will I be asked to buy a policy?</span><span class="icon">+</span></button>
+<div class="faq-a"><div class="faq-a-inner">The call begins with analysis. Any solution discussion follows the identified need and suitability.</div></div>
+</div>
+<div class="faq-item">
+<button class="faq-q"><span>I am an NRI. Can I take the call?</span><span class="icon">+</span></button>
+<div class="faq-a"><div class="faq-a-inner">Yes. The diagnostic can include relevant India and overseas responsibilities.</div></div>
+</div>
+<div class="faq-item">
+<button class="faq-q"><span>I own a business.</span><span class="icon">+</span></button>
+<div class="faq-a"><div class="faq-a-inner">Relevant business-protection areas can be reviewed in addition to personal/family protection.</div></div>
+</div>
+<div class="faq-item">
+<button class="faq-q"><span>What should I bring?</span><span class="icon">+</span></button>
+<div class="faq-a"><div class="faq-a-inner">Existing policy details, approximate income and expenses, liabilities and investment/retirement information where available.</div></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL -->
+<section class="final" id="apply">
+<div class="wrap">
+<div>
+<span class="eyebrow">Begin here</span>
+<h2>Before You Buy Another Insurance Policy, Understand Your Protection Gap.</h2>
+<p class="lede">Complete the short application below so your current situation, priorities and protection questions can be understood before the call. If the conversation is a suitable fit, our team will help you schedule your complimentary 1-to-1 Protection Clarity Call.</p>
+<div class="form-embed"><h3>Book Your Free Call</h3><p class="ph">Takes under a minute. Our team will confirm your slot on WhatsApp or by phone.</p><iframe class="umang-form" src="https://dashboard.umangdigital.co.in/form/contact-form-mtwhdjkv" title="Prosperity Life School contact form" width="100%" height="600" frameborder="0" style="border:none;" loading="lazy" referrerpolicy="unsafe-url"></iframe></div>
+<div class="apply-bonus">
+<p class="lbl">BONUS — BEFORE YOUR CALL</p>
+<ul>
+<li>Complete the Prosperity Protection Awareness Check™</li><li>Gather existing life, health and other policy details</li><li>Note approximate monthly income, expenses and major financial commitments</li><li>List home, education, business or other major liabilities</li><li>Bring investment and retirement information where available</li><li>Write down the questions or concerns you most want clarity on</li><li>No account credentials, passwords or OTPs are needed</li><li>The review is diagnostic and educational — not a commitment to buy a product</li></ul>
+<p class="apply-extra">The more complete your information, the more focused the conversation can be.</p></div>
+</div>
+<div class="final-img">
+<img alt="Dr Maria Pramila Dsouza" src="assets/lp/cde9aaf63c.jpg" width="720" height="1202" loading="lazy" decoding="async"/>
+</div>
+</div>
+</section>
+<div class="lp-disc"><div class="lp-disc-in"><b>Prosperity Life School</b> Dr Maria Pramila Dsouza · Chartered Wealth Manager &amp; Prosperity Mentor · Educational and diagnostic only. This page does not guarantee claims, returns, tax outcomes or eligibility. Final recommendations follow individual/business need analysis, insurer policy terms, eligibility, suitability and applicable regulatory/tax/legal requirements. Cross-border matters should be coordinated with appropriately qualified professionals.</div></div><div class="psl-footer" role="contentinfo">
+<div class="psl-wrap">
+<div class="psl-fgrid2">
+<div class="psl-fb"><a class="psl-brand" href="https://www.prosperitylifeschool.com/"><img src="assets/img/logo-transparent.png" alt="Prosperity Life School logo"><span class="psl-w notranslate" translate="no">Prosperity Life School<small>LEARN · GROW · PROSPER</small></span></a>
+<p class="psl-about-s">Financial education, financial planning, wealth creation, protection, retirement and multiple sources of income.</p>
+<div class="psl-soc2" aria-label="Follow Prosperity Life School"><a class="psl-s-wa" href="https://wa.me/918904820166" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><use href="#b-wa"/></svg></a><a class="psl-s-yt" href="https://www.youtube.com/@drmariapramila" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><use href="#b-yt"/></svg></a><a class="psl-s-ig" href="https://www.instagram.com/drmariapramila/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#b-ig"/></svg></a><a class="psl-s-li" href="https://www.linkedin.com/in/drmariapramila/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><use href="#b-li"/></svg></a></div></div>
+<div><h4>Explore</h4><ul><li><a href="https://www.prosperitylifeschool.com/">Home</a></li><li><a href="https://www.prosperitylifeschool.com/about.html">About Dr Maria</a></li><li><a href="https://www.prosperitylifeschool.com/programs.html">Programs</a></li><li><a href="https://www.prosperitylifeschool.com/community.html">Join Community</a></li><li><a href="https://www.prosperitylifeschool.com/youtube.html">YouTube</a></li><li><a href="https://www.prosperitylifeschool.com/contact.html">Contact</a></li></ul></div>
+<div><h4>Programs</h4><ul><li><a href="https://www.prosperitylifeschool.com/prosperity-clarity-call-v5.html">Prosperity Clarity Call</a></li><li><a href="https://www.prosperitylifeschool.com/prosperity-retirement-clarity-call.html">Retirement Clarity Call</a></li><li><a href="https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html">Protection Gap Review</a></li><li><a href="https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html">Advisor Career Readiness</a></li></ul></div>
+<div class="psl-contact"><h4>Contact</h4><ul>
+<li><svg><use href="#i-phone"/></svg><a href="tel:+918904820166">WhatsApp / Call +91 8904820166</a></li>
+<li><svg><use href="#i-mail"/></svg><a href="mailto:maria@prosperitylifeschool.com">maria@prosperitylifeschool.com</a></li>
+<li><svg><use href="#i-pin"/></svg><span>Bengaluru &amp; Mangaluru · Online across India and the Gulf</span></li></ul></div>
+</div>
+<div class="psl-fbot" id="legal">
+<div class="psl-tg">Financial Wisdom for a Blessed Life</div>
+<p class="psl-disc"><b>Disclaimer:</b> Prosperity Life School provides financial education only. Nothing on this site is investment advice or a promise of returns. Member results are individual and depend on their own effort and choices. Educational content on this website is for general awareness and should not be treated as personalised investment, tax or legal advice. Financial products and investments are subject to applicable terms, eligibility, regulations and risks, including market risks; read all scheme documents carefully.</p>
+<div class="psl-row"><span>© Prosperity Life School 2026</span><span><a href="https://prosperitylifeschool.com/privacy-policy">Privacy Policy</a><a href="https://www.prosperitylifeschool.com/contact.html#legal">Terms &amp; Conditions</a><a href="https://www.prosperitylifeschool.com/contact.html#legal">Disclaimer</a></span></div>
+</div>
+</div>
+</div>
+<div class="sticky-cta" id="stickyCta">
+<a class="btn full" href="#apply">Book My Complimentary Protection Clarity Call</a>
+</div>
+<script>
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+    });
+  });
+  var sticky = document.getElementById('stickyCta');
+  window.addEventListener('scroll', function(){
+    if (window.innerWidth > 720) return;
+    var pastHero = window.scrollY > 420;
+    var nearApply = document.getElementById('apply').getBoundingClientRect().top < window.innerHeight;
+    sticky.classList.toggle('show', pastHero && !nearApply);
+  });
+  (function(){
+    var revealTargets = document.querySelectorAll('section, .final');
+    revealTargets.forEach(function(el){ el.classList.add('reveal'); });
+    if ('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting){
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+      revealTargets.forEach(function(el){ io.observe(el); });
+    } else {
+      revealTargets.forEach(function(el){ el.classList.add('in-view'); });
+    }
+  })();
+</script>
+<script src="assets/js/hf.js" defer></script>
+</body>
+<title>Insurance Gap Analysis | Free Protection Gap Review for Families</title>
+<meta name="description" content="Check your insurance gaps with a free 1-to-1 Protection Gap Review. Understand term insurance, health insurance waiting periods and room rent limits with Dr Maria.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html">
+<meta name="theme-color" content="#011D43">
+<meta name="author" content="Dr Maria Pramila Dsouza">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+<meta property="og:site_name" content="Prosperity Life School">
+<meta property="og:locale" content="en_IN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Insurance Gap Analysis | Free Protection Gap Review for Families">
+<meta property="og:description" content="Check your insurance gaps with a free 1-to-1 Protection Gap Review. Understand term insurance, health insurance waiting periods and room rent limits with Dr Maria.">
+<meta property="og:url" content="https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html">
+<meta property="og:image" content="https://www.prosperitylifeschool.com/assets/img/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dr Maria Pramila Dsouza, Prosperity Life School">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Insurance Gap Analysis | Free Protection Gap Review for Families">
+<meta name="twitter:description" content="Check your insurance gaps with a free 1-to-1 Protection Gap Review. Understand term insurance, health insurance waiting periods and room rent limits with Dr Maria.">
+<meta name="twitter:image" content="https://www.prosperitylifeschool.com/assets/img/og-share.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","EducationalOrganization","ProfessionalService"],"@id":"https://www.prosperitylifeschool.com/#organization","name":"Prosperity Life School","url":"https://www.prosperitylifeschool.com/","logo":{"@type":"ImageObject","url":"https://www.prosperitylifeschool.com/assets/img/logo.png"},"image":"https://www.prosperitylifeschool.com/assets/img/og-share.jpg","description":"Financial education, financial planning, retirement, protection and income-skills programs for families in India and the Gulf.","email":"maria@prosperitylifeschool.com","telephone":"+918904820166","founder":{"@id":"https://www.prosperitylifeschool.com/#drmaria"},"address":[{"@type":"PostalAddress","addressLocality":"Bengaluru","addressRegion":"Karnataka","addressCountry":"IN"},{"@type":"PostalAddress","addressLocality":"Mangaluru","addressRegion":"Karnataka","addressCountry":"IN"}],"areaServed":[{"@type":"City","name":"Bengaluru"},{"@type":"City","name":"Mangaluru"},{"@type":"Country","name":"India"},{"@type":"Place","name":"Gulf countries"}],"contactPoint":{"@type":"ContactPoint","telephone":"+918904820166","email":"maria@prosperitylifeschool.com","contactType":"customer service","availableLanguage":["English","Kannada","Tulu","Konkani"]},"sameAs":["https://www.youtube.com/@drmariapramila","https://www.instagram.com/drmariapramila/","https://www.linkedin.com/in/drmariapramila/"]},{"@type":"Person","@id":"https://www.prosperitylifeschool.com/#drmaria","name":"Dr Maria Pramila Dsouza","jobTitle":"Chartered Wealth Manager and Financial Coach","url":"https://www.prosperitylifeschool.com/about.html","image":"https://www.prosperitylifeschool.com/assets/img/dr-maria-office.jpg","worksFor":{"@id":"https://www.prosperitylifeschool.com/#organization"},"knowsLanguage":["English","Kannada","Tulu","Konkani"],"knowsAbout":["Financial planning","Retirement planning","Insurance and protection","Financial literacy","Wealth creation","Multiple sources of income"],"sameAs":["https://www.youtube.com/@drmariapramila","https://www.instagram.com/drmariapramila/","https://www.linkedin.com/in/drmariapramila/"]},{"@type":"WebSite","@id":"https://www.prosperitylifeschool.com/#website","url":"https://www.prosperitylifeschool.com/","name":"Prosperity Life School","inLanguage":"en-IN","publisher":{"@id":"https://www.prosperitylifeschool.com/#organization"}},{"@type":"WebPage","@id":"https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html#webpage","url":"https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html","name":"Insurance Gap Analysis | Free Protection Gap Review for Families","description":"Check your insurance gaps with a free 1-to-1 Protection Gap Review. Understand term insurance, health insurance waiting periods and room rent limits with Dr Maria.","inLanguage":"en-IN","isPartOf":{"@id":"https://www.prosperitylifeschool.com/#website"},"about":{"@id":"https://www.prosperitylifeschool.com/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.prosperitylifeschool.com/assets/img/og-share.jpg"},"breadcrumb":{"@id":"https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.prosperitylifeschool.com/"},{"@type":"ListItem","position":2,"name":"Protection Gap Review","item":"https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html"}]},{"@type":"FAQPage","@id":"https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html#faq","mainEntity":[{"@type":"Question","name":"How much term insurance do I need?","acceptedAnswer":{"@type":"Answer","text":"There is no one-size rule. It depends on your income, liabilities, dependents, goals and existing cover. A good first step is to list what your family would need to stay financially secure, then compare it with the cover you already have."}},{"@type":"Question","name":"What are health insurance waiting periods and room rent limits?","acceptedAnswer":{"@type":"Answer","text":"A waiting period is the time before certain conditions or treatments are covered. A room rent limit caps the daily room charge your policy pays for, and can reduce other claim payments if you choose a costlier room. Check the policy wording and ask the insurer in writing."}},{"@type":"Question","name":"What is an insurance gap analysis?","acceptedAnswer":{"@type":"Answer","text":"It is a review that compares your life, health and accident cover with your responsibilities, so you can see where protection may be missing before you need it."}},{"@type":"Question","name":"I already have insurance. Is this still useful?","acceptedAnswer":{"@type":"Answer","text":"Yes. The review is designed to examine how your existing protection aligns with your current responsibilities."}},{"@type":"Question","name":"I have company Health Insurance.","acceptedAnswer":{"@type":"Answer","text":"Employer benefits can be included alongside personally controlled protection."}},{"@type":"Question","name":"Will I be asked to buy a policy?","acceptedAnswer":{"@type":"Answer","text":"The call begins with analysis. Any solution discussion follows the identified need and suitability."}},{"@type":"Question","name":"I am an NRI. Can I take the call?","acceptedAnswer":{"@type":"Answer","text":"Yes. The diagnostic can include relevant India and overseas responsibilities."}},{"@type":"Question","name":"I own a business.","acceptedAnswer":{"@type":"Answer","text":"Relevant business-protection areas can be reviewed in addition to personal/family protection."}},{"@type":"Question","name":"What should I bring?","acceptedAnswer":{"@type":"Answer","text":"Existing policy details, approximate income and expenses, liabilities and investment/retirement information where available."}}]},{"@type":"Service","name":"Insurance gap analysis and protection review for families in India","serviceType":"Insurance gap analysis and protection review for families in India","description":"Check your insurance gaps with a free 1-to-1 Protection Gap Review. Understand term insurance, health insurance waiting periods and room rent limits with Dr Maria.","url":"https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html","provider":{"@id":"https://www.prosperitylifeschool.com/#organization"},"areaServed":[{"@type":"Country","name":"India"},{"@type":"Place","name":"Gulf countries"}],"@id":"https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html#service"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"><style id="psl-hf">.psl-topbar,.psl-header,.psl-footer,.psl-wa,.psl-stick{font-family:'Poppins',Arial,sans-serif;font-size:16px;line-height:1.65;color:#0F2342;text-align:left;-webkit-font-smoothing:antialiased}:where(.psl-topbar,.psl-header,.psl-footer) *{box-sizing:border-box}:where(.psl-topbar,.psl-header,.psl-footer) a{text-decoration:none}:where(.psl-topbar,.psl-header,.psl-footer) ul{margin:0;padding:0;list-style:none}:where(.psl-topbar,.psl-header,.psl-footer) :is(p,h4,li){margin:0}:where(.psl-topbar,.psl-header,.psl-footer) :is(img){max-width:100%;display:block;height:auto}:where(.psl-topbar,.psl-header,.psl-footer) :is(select,button){font-family:inherit}:where(.psl-topbar,.psl-header,.psl-footer) :is(p,li,span,div,h4){color:inherit}.psl-header .psl-sub a{display:block}body{top:0!important}.skiptranslate iframe,.goog-te-banner-frame,#goog-gt-tt,.goog-te-balloon-frame{display:none!important}.goog-text-highlight{background:none!important;box-shadow:none!important}.psl-gt-hide,#google_translate_element{display:none}.psl-toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#011D43;color:#fff;padding:12px 20px;border-radius:50px;font-size:14px;z-index:900}.psl-wrap{max-width:1200px;margin:0 auto;padding:0 28px}@media(max-width:600px){.psl-wrap{padding:0 20px}}.psl-sr{position:absolute;left:-9999px}.psl-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15.5px 'Poppins',Arial,sans-serif;padding:15px 28px;border-radius:50px;border:2px solid #D09C32;background:#D09C32;color:#001330;text-decoration:none;cursor:pointer;transition:background .2s,transform .18s,box-shadow .2s,color .2s,border-color .2s;text-align:center}.psl-btn:hover{background:#E8BC5A;border-color:#E8BC5A;transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(208,156,50,.7)}.psl-btn.psl-outline{background:transparent;border-color:#011D43;color:#011D43}.psl-btn.psl-outline:hover{background:#011D43;color:#fff;box-shadow:none}.psl-btn.psl-sm{padding:11px 20px;font-size:14px}.psl-btn svg{width:18px;height:18px;transition:transform .2s}.psl-btn:hover svg{transform:translateX(4px)}.psl-ic{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.psl-topbar{background:#001330;color:rgba(255,255,255,.82);font-size:13px}.psl-topbar .psl-wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:9px;padding-bottom:9px}.psl-topbar a{text-decoration:none;display:inline-flex;gap:8px;align-items:center}.psl-topbar a:hover{color:#E8BC5A}.psl-topbar .psl-l{display:flex;gap:22px;flex-wrap:wrap}.psl-topbar .psl-tag{color:#E8BC5A;font-weight:600;letter-spacing:.04em}@media(max-width:820px){.psl-topbar .psl-tag{display:none}.psl-topbar .psl-wrap{justify-content:center}}@media(max-width:520px){.psl-topbar{display:none}}.psl-header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #E3E8F0}.psl-header .psl-wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;height:82px;max-width:1320px}.psl-brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}.psl-brand img{width:52px;height:52px;border-radius:50%}.psl-brand .psl-w{font-weight:700;font-size:17px;line-height:1.15;color:#011D43}.psl-brand .psl-w small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.16em;color:#8F6A17;margin-top:3px}.psl-nav{display:flex;align-items:center;gap:2px}.psl-nav>li{position:relative}.psl-nav>li>a,.psl-nav>li>button{display:flex;align-items:center;gap:5px;padding:10px 11px;border:0;background:none;font:600 14.5px 'Poppins',Arial,sans-serif;color:#0F2342;text-decoration:none;cursor:pointer;border-radius:10px;white-space:nowrap}.psl-nav>li>a:hover,.psl-nav>li>button:hover,.psl-nav>li:focus-within>button{color:#8F6A17;background:#FBF1DA}.psl-nav .psl-chev{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.4;transition:transform .2s}.psl-sub{position:absolute;left:0;top:100%;min-width:260px;background:#fff;border:1px solid #E3E8F0;border-radius:14px;box-shadow:0 22px 48px -26px rgba(1,29,67,.45);padding:10px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.18s;z-index:50}.psl-nav>li:hover>.psl-sub,.psl-nav>li:focus-within>.psl-sub,.psl-nav>li.psl-open>.psl-sub{opacity:1;visibility:visible;transform:none}.psl-nav>li:hover .psl-chev,.psl-nav>li.psl-open .psl-chev{transform:rotate(180deg)}.psl-sub a{display:block;padding:10px 14px;border-radius:9px;text-decoration:none;font-size:14px;font-weight:500;color:#0F2342}.psl-sub a small{display:block;font-size:12px;color:#4B5B75;font-weight:400}.psl-sub a:hover{background:#FBF1DA;color:#011D43}.psl-hdr-cta{display:flex;gap:10px;align-items:center}.psl-burger{display:none;width:46px;height:46px;border-radius:12px;border:1px solid #E3E8F0;background:#fff;cursor:pointer;align-items:center;justify-content:center;color:#011D43}.psl-burger svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}@media(min-width:901px){.psl-header .psl-wrap{height:auto;flex-wrap:wrap;padding-top:12px;padding-bottom:0;row-gap:0}.psl-brand{order:1}.psl-hdr-cta{order:2}.psl-nav{order:3;width:100%;justify-content:center;margin-top:10px;border-top:1px solid #E3E8F0;padding:4px 0}.psl-nav>li>a,.psl-nav>li>button{font-size:14.5px;padding:11px 14px}.psl-hdr-cta .psl-call{display:inline-flex}}@media(max-width:900px){.psl-burger{display:flex}.psl-hdr-cta .psl-btn{display:none}.psl-header .psl-wrap{height:70px}.psl-brand img{width:44px;height:44px}.psl-brand .psl-w{font-size:15px}.psl-nav{position:fixed;inset:70px 0 0 0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:12px 20px 110px;overflow-y:auto;transform:translateX(100%);transition:transform .28s;border-top:1px solid #E3E8F0}.psl-nav.psl-open{transform:none}.psl-nav>li>a,.psl-nav>li>button{width:100%;justify-content:space-between;padding:16px 6px;font-size:16.5px;border-bottom:1px solid #E3E8F0;border-radius:0}.psl-sub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;padding:0 0 6px 10px;display:none;background:none;min-width:0}.psl-nav>li.psl-open>.psl-sub{display:block}.psl-sub a{padding:12px 8px;font-size:15px}.psl-mnav-cta{display:flex!important}}.psl-mnav-cta{display:none;position:fixed;left:0;right:0;bottom:0;padding:12px 20px 16px;background:#fff;border-top:1px solid #E3E8F0;gap:10px;z-index:101}.psl-mnav-cta .psl-btn{flex:1;padding:14px 10px;font-size:14.5px}.psl-mnav-cta{transform:translateY(120%);transition:transform .28s}@media(min-width:901px){.psl-mnav-cta{display:none!important}}.psl-footer{background:#001330;color:rgba(255,255,255,.72);padding:70px 0 0;font-size:14px}.psl-footer h4{color:#fff;font-size:14.5px;letter-spacing:.06em;margin-bottom:16px;text-transform:uppercase}.psl-footer li{padding:5px 0}.psl-footer a{text-decoration:none}.psl-footer a:hover{color:#E8BC5A}.psl-footer .psl-brand .psl-w{color:#fff}.psl-footer .psl-about-s{margin-top:16px;max-width:340px;line-height:1.7}.psl-footer .psl-contact li{display:flex;gap:10px;align-items:flex-start}.psl-footer .psl-contact svg{width:18px;height:18px;stroke:#E8BC5A;fill:none;stroke-width:1.8;margin-top:3px;flex-shrink:0}.psl-fbot{margin-top:50px;border-top:1px solid rgba(255,255,255,.12);padding:26px 0 90px}.psl-fbot .psl-tg{color:#E8BC5A;font-weight:600;letter-spacing:.06em;margin-bottom:14px}.psl-fbot .psl-disc{font-size:12.2px;line-height:1.75;color:rgba(255,255,255,.56);max-width:980px}.psl-fbot .psl-row{margin-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}.psl-fbot .psl-row a{margin-right:18px;text-decoration:underline}@media(min-width:1061px){.psl-fbot{padding-bottom:30px}}.psl-hdr-cta .psl-btn:not(.psl-outline){animation:pulseg 3s infinite}.psl-soc2{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}.psl-soc2 a{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;transition:.2s;box-shadow:0 8px 18px -8px rgba(0,0,0,.6)}.psl-soc2 a:hover{transform:translateY(-4px) scale(1.06)}.psl-soc2 svg{width:24px;height:24px;fill:#fff}.psl-s-wa{background:#25D366}.psl-s-yt{background:#FF0000}.psl-s-li{background:#0A66C2}.psl-s-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}.psl-tr{display:flex;align-items:center;gap:8px;color:#E8BC5A}.psl-tr select{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(232,188,90,.5);border-radius:50px;padding:5px 12px;font:600 13px 'Poppins',Arial,sans-serif;cursor:pointer}.psl-tr select option{color:#011D43;background:#fff}@media(max-width:520px){.psl-topbar{display:block!important}.psl-topbar .psl-wrap{justify-content:flex-end;padding-top:6px;padding-bottom:6px}.psl-topbar .psl-l,.psl-topbar .psl-tag{display:none}}@media(min-width:901px){.psl-header .psl-wrap{height:82px;flex-wrap:nowrap;padding-top:0;padding-bottom:0}.psl-nav{order:0;width:auto;margin:0;border-top:0;padding:0;justify-content:flex-start}.psl-hdr-cta{order:0}.psl-nav>li>a,.psl-nav>li>button{font-size:15px;padding:11px 14px}}.psl-fgrid2{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:36px}@media(max-width:900px){.psl-fgrid2{grid-template-columns:1fr 1fr}.psl-fgrid2 .psl-fb{grid-column:1/-1}}@media(max-width:520px){.psl-fgrid2{grid-template-columns:1fr}}@media(min-width:901px){.psl-brand{order:0!important}.psl-nav{order:1!important;margin-left:auto}.psl-hdr-cta{order:2!important}}.psl-gt-hide{position:absolute;left:-9999px;top:0;width:1px;height:1px;overflow:hidden}.psl-call>*{min-width:0}@media(max-width:560px){.psl-btn{padding:14px 20px}.psl-wrap{padding-left:18px;padding-right:18px}.psl-footer .psl-contact a{word-break:break-word}.psl-brand .psl-w{font-size:14px}.psl-tr select{max-width:150px}}@media(max-width:380px){.psl-brand .psl-w small{display:none}}.psl-nav>li>a,.psl-nav>li>button,.psl-sub a{min-height:44px}.psl-mnav-cta{visibility:hidden}@media(min-width:901px){.psl-mnav-cta{display:none!important}}@keyframes pulseg{0%{box-shadow:0 0 0 0 rgba(208,156,50,.55)}70%{box-shadow:0 0 0 16px rgba(208,156,50,0)}100%{box-shadow:0 0 0 0 rgba(208,156,50,0)}}@keyframes fin{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}@keyframes fy{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-26px) rotate(14deg)}}@keyframes ul{to{transform:scaleX(1)}}
+.form-embed{background:#fff;border-radius:18px;padding:22px 18px 14px;box-shadow:0 20px 44px -24px rgba(0,0,0,.45);margin:22px 0;min-width:0;color:#0F2342;font-family:'Manrope',Arial,sans-serif}
+.form-embed h3{margin:0 0 4px;font-size:22px;color:#011D43;line-height:1.2;font-family:inherit}
+.form-embed .ph{margin:0 0 12px;color:#4B5B75;font-size:14.5px;line-height:1.5}
+.umang-form{display:block;width:100%;height:600px;border:0}
+@media(max-width:560px){.umang-form{height:700px}.form-embed{padding:16px 10px 10px}}
+.lp-disc{background:#001330;color:rgba(255,255,255,.62);font:400 12.5px/1.75 'Poppins',Arial,sans-serif}
+.lp-disc-in{max-width:1200px;margin:0 auto;padding:22px 28px 0}
+.lp-disc b{color:#E8BC5A}
+.faq-q{text-align:left}
+</style></head></html>

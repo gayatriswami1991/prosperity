@@ -1,0 +1,11 @@
+
+/* ===== SEO / live-site additions ===== */
+.h1kw{display:block;font-size:.3em;line-height:1.35;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.82;margin-bottom:14px}
+@media(max-width:600px){.h1kw{font-size:.36em;letter-spacing:.1em}}
+.form-embed{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px 22px 18px;box-shadow:var(--shadow);min-width:0}
+.form-embed h3{font-size:24px;color:var(--navy)}
+.form-embed .ph{margin:6px 0 14px;color:var(--ink-soft);font-size:15px}
+.umang-form{display:block;width:100%;height:600px;border:0;background:transparent}
+@media(max-width:560px){.umang-form{height:700px}.form-embed{padding:18px 12px 12px}}
+.wz-form .form-embed{box-shadow:none;border:0;padding:0}
+.faqs details summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}

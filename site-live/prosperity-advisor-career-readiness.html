@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#0B1D3A; --dark-deep:#07142B; --green:#1F4C8F;
+  --light:#F6F1E7; --light-ink:#0B1D3A;
+  --gold:#D4A72C; --gold-bright:#EBC862; --gold-deep:#7A5A08;
+  --cream:#F5F1E6; --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;width:100%;overflow-x:hidden}
+body{margin:0;width:100%;overflow-x:hidden;background:var(--dark);color:var(--cream);font-family:'Manrope',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:700;margin:0;color:inherit}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 30px;width:100%}
+@media(max-width:600px){.wrap{padding:0 20px}}
+section{padding:78px 0}
+@media(max-width:760px){section{padding:56px 0}}
+.D{background:var(--dark);color:var(--cream);--ink:var(--cream);--soft:rgba(245,241,230,.8);--accent:var(--gold-bright);--line:rgba(212,167,44,.4);--card:rgba(255,255,255,.07)}
+.L{background:var(--light);color:var(--light-ink);--ink:var(--light-ink);--soft:rgba(11,42,11,.78);--accent:var(--gold-deep);--line:rgba(11,29,58,.2);--card:#fff}
+.center{text-align:center}
+.eyebrow{display:block;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.sec-head{max-width:760px;margin:0 auto 44px;text-align:center}
+.sec-head h2{font-size:38px;line-height:1.15}
+.sec-head p{margin-top:14px;color:var(--soft)}
+@media(max-width:600px){.sec-head h2{font-size:29px}}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:#07142B;font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;padding:17px 30px;border-radius:8px;border:2px solid var(--gold);cursor:pointer;text-decoration:none;transition:background .18s,transform .16s,box-shadow .2s}
+.btn:hover{background:var(--gold-bright);border-color:var(--gold-bright);transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(212,167,44,.55)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:rgba(245,241,230,.5)}
+.btn.ghost:hover{background:rgba(255,255,255,.1);box-shadow:none}
+.L .btn.ghost{color:var(--dark);border-color:var(--dark)}
+.btn-pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(212,167,44,.5)}70%{box-shadow:0 0 0 12px rgba(212,167,44,0)}100%{box-shadow:0 0 0 0 rgba(212,167,44,0)}}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.cta-row.center{justify-content:center}
+.micro{margin-top:14px;font-size:12.5px;color:var(--soft);opacity:.85}
+@media(max-width:480px){.cta-row .btn{flex:1 1 100%}}
+@media(prefers-reduced-motion:reduce){.btn-pulse{animation:none}}
+/* NAV (same as Protection Gap Review) */
+.nav{position:sticky;top:0;z-index:100;background:#F7F3E8;border-bottom:1px solid rgba(11,29,58,.14);box-shadow:0 4px 18px rgba(0,0,0,.06);backdrop-filter:blur(8px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:82px;max-width:1240px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:44px;height:44px;border-radius:50%;box-shadow:0 0 0 1px rgba(212,167,44,.55),0 4px 14px rgba(0,0,0,.08)}
+.brand .word{font-family:'Cormorant Garamond',serif;font-size:18px;color:#0B1D3A;font-weight:700;line-height:1.15}
+.brand .word small{display:block;font-family:'Manrope',sans-serif;font-size:9px;letter-spacing:.13em;color:rgba(11,29,58,.58);font-weight:700}
+.nav .btn{padding:14px 26px;font-size:14.5px;background:#D4A72C;color:#07142B;border-color:#D4A72C}
+.nav .btn:hover{background:#E2B53F;border-color:#E2B53F}
+@media(max-width:760px){.nav .wrap{height:72px;padding:0 20px}.nav .btn{padding:11px 16px;font-size:12px}.brand .word{font-size:16px}}
+@media(max-width:480px){.nav .wrap{height:64px;gap:8px}.brand img{width:34px;height:34px}.brand .word{font-size:14.5px}.brand .word small{font-size:7.5px}.nav .btn{padding:10px 12px;font-size:11.5px}}
+@media(max-width:360px){.brand .word small{display:none}}
+/* TRUST STRIP */
+.strip{background:var(--gold);color:#07142B;font-size:13px;font-weight:800;text-align:center;padding:9px 16px;letter-spacing:.02em}
+.strip span{margin:0 10px;opacity:.5}
+@media(max-width:700px){.strip{font-size:11.5px;line-height:1.5}.strip span{display:none}.strip i{display:block;font-style:normal}}
+/* HERO */
+.hero{background:linear-gradient(135deg,#07142B 0%,#14305C 100%);padding:70px 0 74px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-22%;right:-8%;width:560px;height:560px;border-radius:50%;border:1px solid rgba(228,193,88,.14)}
+.hero::after{content:'';position:absolute;top:12%;right:5%;width:360px;height:360px;border-radius:50%;border:1px solid rgba(228,193,88,.1)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr;gap:38px}.hero{padding:44px 0 52px}}
+.pill{display:inline-block;font-size:13px;font-weight:800;color:#07142B;background:linear-gradient(90deg,var(--gold),var(--gold-bright),var(--gold));padding:9px 20px;border-radius:50px}
+.hero h1{font-size:50px;line-height:1.08;margin-top:20px}
+.hero h1 em{font-style:normal;color:var(--gold-bright)}
+@media(max-width:960px){.hero h1{font-size:38px}}
+@media(max-width:560px){.hero h1{font-size:30px}}
+.hero .lede{margin-top:20px;font-size:17px;color:rgba(245,241,230,.88);max-width:560px}
+.hero .cta-row{margin-top:30px}
+.hero-chips{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;background:rgba(255,255,255,.07);border:1px solid rgba(212,167,44,.38);border-radius:50px;padding:8px 15px}
+.chip b{width:18px;height:18px;border-radius:50%;background:#2dcb7d;color:#06210f;font-size:10px;display:flex;align-items:center;justify-content:center}
+.hero-visual{position:relative;max-width:470px;margin:0 auto;width:100%}
+.hero-photo{border-radius:22px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 30px 60px -22px rgba(0,0,0,.65);aspect-ratio:4/5}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.float-card{position:absolute;left:-34px;bottom:34px;width:250px;background:#fff;color:var(--light-ink);border-radius:16px;padding:16px 18px;box-shadow:0 22px 44px -16px rgba(0,0,0,.55);animation:bob 5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){.float-card{animation:none}}
+@media(max-width:560px){.float-card{left:10px;bottom:-26px;width:220px}.hero-visual{margin-bottom:28px}}
+.float-card .tag{font-size:10.5px;font-weight:800;letter-spacing:.07em;color:var(--gold-deep);text-transform:uppercase}
+.float-card .score{display:flex;align-items:baseline;gap:6px;margin:2px 0 8px}
+.float-card .score b{font-family:'Cormorant Garamond',serif;font-size:40px;line-height:1;color:var(--dark)}
+.float-card .score span{font-size:12px;font-weight:700}
+.mini-bar{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;margin-top:5px}
+.mini-bar i{flex:1;height:6px;border-radius:6px;background:rgba(11,29,58,.12);overflow:hidden;display:block}
+.mini-bar i u{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--gold));border-radius:6px;text-decoration:none}
+.mini-bar span{width:84px}
+.badge-play{position:absolute;right:-14px;top:30px;display:flex;align-items:center;gap:10px;background:var(--dark-deep);border:1px solid var(--gold);border-radius:50px;padding:8px 18px 8px 8px;font-size:12.5px;font-weight:800;text-decoration:none;box-shadow:0 14px 30px -12px rgba(0,0,0,.6)}
+.badge-play i{width:36px;height:36px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.badge-play i::before{content:'';border-style:solid;border-width:7px 0 7px 11px;border-color:transparent transparent transparent #07142B;margin-left:3px}
+@media(max-width:560px){.badge-play{right:8px;top:16px}}
+/* AUDIENCE SELECTOR */
+.aud-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:900px){.aud-tabs{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.aud-tabs{grid-template-columns:1fr}}
+.aud{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:22px 20px;text-align:left;cursor:pointer;font:inherit;color:inherit;transition:transform .2s,border-color .2s,box-shadow .2s}
+.aud:hover{transform:translateY(-4px)}
+.aud.on{border-color:var(--dark);box-shadow:0 0 0 3px rgba(212,167,44,.55),0 18px 30px -18px rgba(11,29,58,.5);background:#fff}
+.aud .code{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--dark);color:var(--gold-bright);font-weight:800;font-size:13px;align-items:center;justify-content:center}
+.aud h3{font-size:21px;margin-top:12px;color:var(--light-ink)}
+.aud p{font-size:14px;margin-top:8px;color:var(--soft)}
+.aud-panel{margin-top:26px;background:var(--dark);color:var(--cream);border-radius:20px;padding:34px 36px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;box-shadow:0 26px 50px -26px rgba(11,29,58,.7)}
+@media(max-width:800px){.aud-panel{grid-template-columns:1fr;padding:26px 22px}}
+.aud-panel .k{font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--gold-bright)}
+.aud-panel h3{font-size:27px;margin-top:6px;line-height:1.2}
+.aud-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.aud-panel li{padding-left:26px;position:relative;font-size:15px;color:rgba(245,241,230,.9)}
+.aud-panel li::before{content:'✓';position:absolute;left:0;color:var(--gold-bright);font-weight:800}
+.aud-panel .btn{margin-top:20px}
+/* PROBLEM */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:980px;margin:0 auto}
+@media(max-width:760px){.vs{grid-template-columns:1fr}}
+.vs-col{border-radius:18px;padding:30px 28px;border:1px solid var(--line);background:var(--card)}
+.vs-col.good{border-color:var(--gold);background:linear-gradient(160deg,rgba(212,167,44,.18),rgba(255,255,255,.05))}
+.vs-col h3{font-size:24px}
+.vs-col .lab{font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.vs-col ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px}
+.vs-col li{position:relative;padding-left:30px;font-size:15px;color:var(--soft)}
+.vs-col li::before{content:'✕';position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#E06A5C;color:#2a0704;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.vs-col.good li::before{content:'✓';background:var(--gold);color:#07142B}
+.quote{max-width:720px;margin:36px auto 0;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:23px;color:var(--accent)}
+.problem-lede{max-width:760px;margin:0 auto 38px;text-align:center;color:var(--soft)}
+/* VSL */
+.vsl{display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:center}
+@media(max-width:900px){.vsl{grid-template-columns:1fr}}
+.player{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/9;background:radial-gradient(circle at 30% 20%,#1F4C8F,#07142B);border:3px solid var(--dark);box-shadow:0 30px 56px -26px rgba(11,29,58,.75);display:block;text-decoration:none;color:var(--cream)}
+.player img{position:absolute;right:0;bottom:0;height:100%;width:44%;object-fit:cover;object-position:top center;opacity:.95;mask-image:linear-gradient(90deg,transparent,#000 40%)}
+.player .ttl{position:absolute;left:24px;top:46%;transform:translateY(-50%);max-width:46%}
+.player .ttl small{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--gold-bright);text-transform:uppercase}
+.player .ttl b{display:block;font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1.15;margin-top:6px}
+.player .pl{position:absolute;left:24px;bottom:22px;display:flex;align-items:center;gap:12px;font-size:13px;font-weight:800}
+.player .pl i{width:54px;height:54px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;animation:pulse 2.4s infinite}
+.player .pl i::before{content:'';border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #07142B;margin-left:4px}
+@media(max-width:560px){.player .ttl b{font-size:19px}.player .ttl{left:16px}.player .pl{left:16px;bottom:14px}}
+.chapters{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:11px}
+.chapters li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--soft)}
+.chapters b{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--dark);color:var(--gold-bright);font-size:12px;display:flex;align-items:center;justify-content:center}
+.vsl h2{font-size:36px;line-height:1.15}
+@media(max-width:600px){.vsl h2{font-size:28px}}
+.vsl .btn{margin-top:24px}
+/* QUICK CHECK */
+.qc{max-width:820px;margin:0 auto;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:24px;padding:34px 36px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+@media(max-width:600px){.qc{padding:24px 18px}}
+.qc-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px;font-weight:800;color:var(--gold-bright)}
+.qc-prog{height:8px;border-radius:8px;background:rgba(255,255,255,.12);margin-top:12px;overflow:hidden}
+.qc-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-bright));transition:width .4s}
+.qc-q{min-height:150px;margin-top:28px}
+.qc-q .dim{font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--gold-bright)}
+.qc-q h3{font-size:28px;line-height:1.25;margin-top:8px}
+@media(max-width:600px){.qc-q h3{font-size:22px}.qc-q{min-height:170px}}
+.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:6px}
+@media(max-width:560px){.scale{gap:6px}}
+.scale button{font:inherit;cursor:pointer;background:rgba(255,255,255,.08);border:1.5px solid var(--line);color:var(--cream);border-radius:14px;padding:14px 4px 10px;transition:.18s}
+.scale button:hover{background:var(--gold);color:#07142B;border-color:var(--gold);transform:translateY(-3px)}
+.scale button b{display:block;font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1}
+.scale button span{display:block;font-size:10.5px;font-weight:700;margin-top:6px;opacity:.85;line-height:1.25}
+.qc-back{margin-top:18px;background:none;border:none;color:rgba(245,241,230,.7);font:inherit;font-size:13px;cursor:pointer;text-decoration:underline}
+.qc-result{display:none}
+.res-head{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.ring{--p:0;width:150px;height:150px;border-radius:50%;background:conic-gradient(var(--gold-bright) calc(var(--p)*1%),rgba(255,255,255,.12) 0);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ring div{width:118px;height:118px;border-radius:50%;background:var(--dark);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring b{font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1}
+.ring span{font-size:11px;font-weight:700;opacity:.75}
+.res-head h3{font-size:30px;line-height:1.15;color:var(--gold-bright)}
+.res-head p{margin-top:8px;color:rgba(245,241,230,.85);font-size:15px}
+.res-bars{margin-top:26px;display:grid;gap:12px}
+.rb{display:grid;grid-template-columns:190px 1fr 34px;gap:12px;align-items:center;font-size:13.5px;font-weight:700}
+@media(max-width:560px){.rb{grid-template-columns:110px 1fr 28px;font-size:12px}}
+.rb i{height:10px;border-radius:10px;background:rgba(255,255,255,.12);overflow:hidden;display:block}
+.rb u{display:block;height:100%;width:0;border-radius:10px;background:linear-gradient(90deg,#2dcb7d,var(--gold-bright));transition:width .8s;text-decoration:none}
+.res-note{margin-top:22px;padding:16px 18px;border-radius:12px;background:rgba(212,167,44,.14);border:1px solid var(--line);font-size:14px}
+.qc-result .cta-row{margin-top:24px}
+.qc-fine{margin-top:18px;font-size:12px;color:rgba(245,241,230,.65)}
+/* DIMENSIONS */
+.dims{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+@media(max-width:1000px){.dims{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.dims{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.dims{grid-template-columns:1fr}}
+.dim-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--dark);border-radius:14px;padding:22px 18px;box-shadow:0 14px 26px -18px rgba(11,29,58,.45);transition:transform .2s}
+.dim-card:hover{transform:translateY(-5px)}
+.dim-card .n{font-family:'Cormorant Garamond',serif;font-size:36px;line-height:1;color:var(--gold-deep)}
+.dim-card h4{font-family:'Manrope',sans-serif;font-size:16px;font-weight:800;margin-top:8px;color:var(--light-ink)}
+.dim-card p{font-size:13.5px;margin-top:6px;color:var(--soft)}
+.dims-cta{margin-top:36px}
+/* TIMELINE */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;max-width:1060px;margin:0 auto}
+.steps::before{content:'';position:absolute;top:30px;left:10%;right:10%;height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 8px,transparent 8px 16px)}
+@media(max-width:800px){.steps{grid-template-columns:1fr;gap:22px;max-width:480px}.steps::before{top:0;bottom:0;left:30px;right:auto;width:2px;height:auto;background:repeating-linear-gradient(180deg,var(--gold) 0 8px,transparent 8px 16px)}}
+.step{text-align:center;padding:0 10px;position:relative}
+.step .no{width:60px;height:60px;border-radius:50%;background:var(--gold);color:#07142B;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 0 0 6px var(--dark)}
+.step h4{font-family:'Manrope',sans-serif;font-size:16px;font-weight:800}
+.step p{font-size:13.5px;margin-top:6px;color:var(--soft)}
+@media(max-width:800px){.step{text-align:left;display:grid;grid-template-columns:60px 1fr;gap:16px;align-items:start;padding:0}.step .no{margin:0}.step h4{margin-top:4px}}
+/* DIFFERENT */
+.diff-top{text-align:center;max-width:820px;margin:0 auto 40px}
+.diff-top h2{font-size:46px;line-height:1.1;color:var(--light-ink)}
+.diff-top h2 em{font-style:normal;color:var(--green);border-bottom:4px solid var(--gold)}
+@media(max-width:600px){.diff-top h2{font-size:32px}}
+.diff-top p{margin-top:16px;color:var(--soft)}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.skills{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.skills{grid-template-columns:1fr}}
+.skill{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px;box-shadow:0 14px 26px -18px rgba(11,29,58,.4);position:relative;overflow:hidden}
+.skill::after{content:'';position:absolute;right:-24px;top:-24px;width:80px;height:80px;border-radius:50%;background:rgba(212,167,44,.16)}
+.skill h4{font-family:'Manrope',sans-serif;font-size:16.5px;font-weight:800;color:var(--dark)}
+.skill p{font-size:14px;margin-top:6px;color:var(--soft)}
+.support{margin-top:34px;background:var(--dark);color:var(--cream);border-radius:20px;padding:30px 34px}
+.support h3{font-size:25px;color:var(--gold-bright)}
+.support ul{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 30px}
+@media(max-width:700px){.support ul{grid-template-columns:1fr}.support{padding:24px 20px}}
+.support li{position:relative;padding-left:26px;font-size:14.5px}
+.support li::before{content:'✓';position:absolute;left:0;color:var(--gold-bright);font-weight:800}
+/* PROGRESSION */
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:end;max-width:1000px;margin:0 auto}
+@media(max-width:760px){.ladder{grid-template-columns:1fr;align-items:stretch}}
+.rung{border-radius:16px;padding:24px 20px;background:rgba(255,255,255,.07);border:1px solid var(--line);position:relative}
+.rung:nth-child(1){min-height:200px}.rung:nth-child(2){min-height:240px}.rung:nth-child(3){min-height:280px}.rung:nth-child(4){min-height:320px;background:linear-gradient(170deg,rgba(212,167,44,.3),rgba(255,255,255,.06));border-color:var(--gold)}
+@media(max-width:760px){.rung:nth-child(n){min-height:0}}
+.rung .lv{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-bright)}
+.rung h3{font-size:25px;margin-top:6px}
+.rung p{font-size:14px;margin-top:10px;color:rgba(245,241,230,.85)}
+.rung .arr{position:absolute;right:16px;top:16px;font-size:20px;color:var(--gold-bright)}
+.fine{margin-top:26px;text-align:center;font-size:13.5px;max-width:700px;margin-left:auto;margin-right:auto;font-style:italic;color:rgba(245,241,230,.78)}
+/* FOUNDER */
+.founder{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center}
+@media(max-width:900px){.founder{grid-template-columns:1fr;gap:30px}}
+.founder-img{border-radius:20px;overflow:hidden;border:2px solid var(--dark);box-shadow:0 30px 56px -26px rgba(11,29,58,.7);aspect-ratio:397/457;position:relative;background:#14305C}.founder-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}@media(max-width:900px){.founder-img{max-width:420px;width:100%;margin:0 auto}}
+.founder h2{font-size:38px;line-height:1.12;color:var(--light-ink)}
+.founder .pull{margin-top:16px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--gold-deep);line-height:1.4}
+.founder p.t{margin-top:14px;color:var(--soft)}
+.proof{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:560px){.proof{grid-template-columns:1fr}}
+.proof div{background:var(--dark);color:var(--cream);border-radius:14px;padding:16px 14px;text-align:center}
+.proof b{display:block;font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--gold-bright);line-height:1}
+.proof span{font-size:12.5px;opacity:.85}
+.founder .vary{margin-top:14px;font-size:12.5px;color:var(--soft);font-style:italic}
+.founder .cta-row{margin-top:22px}.founder .btn{margin-top:0;padding:16px 22px;font-size:15px}.proof span{line-height:1.35;display:block}
+/* SUITABILITY */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:980px;margin:0 auto}
+@media(max-width:760px){.fit{grid-template-columns:1fr}}
+.fit-col{border-radius:18px;padding:28px 26px;border:1px solid var(--line);background:var(--card)}
+.fit-col.yes{border-color:#3EBD7E}
+.fit-col h3{font-size:24px}
+.fit-col ul{list-style:none;margin:14px 0 0;padding:0}
+.fit-col li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(245,241,230,.15);font-size:15px}
+.fit-col li:last-child{border-bottom:none}
+.fit-col li b{flex-shrink:0;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px}
+.fit-col.yes li b{background:#3EBD7E;color:#06210f}
+.fit-col.no li b{background:#E06A5C;color:#2a0704}
+.fit-col.no{border-color:rgba(224,106,92,.6)}
+/* FAQ */
+.faq{max-width:880px;margin:0 auto}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden;background:#fff}
+.faq-q{width:100%;background:none;border:none;color:var(--light-ink);text-align:left;padding:20px 22px;font-size:17px;font-weight:700;font-family:'Manrope',sans-serif;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .icon{color:var(--gold-deep);font-size:22px;flex-shrink:0;transition:transform .25s}
+.faq-item.open .faq-q .icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s}
+.faq-a-inner{padding:0 22px 20px;font-size:15px;color:var(--soft)}
+/* FINAL */
+.final{background:linear-gradient(145deg,#1F4C8F 0%,#0B1D3A 65%,#07142B 100%);color:var(--cream);--soft:rgba(245,241,230,.82);--accent:var(--gold-bright)}
+.final-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:stretch}
+@media(max-width:900px){.final-grid{grid-template-columns:1fr;gap:30px}}
+.final h2{font-size:42px;line-height:1.12}
+@media(max-width:600px){.final h2{font-size:30px}}
+.final .lede{margin-top:16px;max-width:540px;color:var(--soft)}
+.final .cta-row{margin-top:28px}
+.final-list{margin-top:26px;padding:20px 22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px}
+.final-list p.l{font-size:12.5px;font-weight:800;letter-spacing:.05em;color:var(--gold-bright);text-transform:uppercase}
+.final-list ul{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}
+@media(max-width:520px){.final-list ul{grid-template-columns:1fr}}
+.final-list li{font-size:14px;padding-left:22px;position:relative}
+.final-list li::before{content:'✓';position:absolute;left:0;color:var(--gold-bright);font-weight:800}
+.final-img{border-radius:20px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 30px 56px -24px rgba(0,0,0,.7);position:relative;min-height:560px}.final-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+@media(max-width:900px){.final-img{min-height:0;aspect-ratio:676/900;max-width:420px;width:100%;margin:0 auto}}
+/* FOOTER (same as Protection Gap Review) */
+footer{padding:36px 0;background:var(--dark-deep);color:rgba(245,241,230,.6)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;line-height:1.7}
+footer b{color:rgba(245,241,230,.85)}
+footer .links{margin-top:8px}
+footer .links a{margin-right:14px;text-decoration:underline}
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:200;background:var(--dark-deep);padding:12px 16px;display:none;box-shadow:0 -8px 24px rgba(0,0,0,.35);border-top:1px solid rgba(212,167,44,.38)}
+.sticky-cta.show{display:flex}
+.sticky-cta .btn{flex:1;padding:13px 8px;font-size:13.5px}
+::selection{background:var(--gold);color:#221604}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.reveal.in-view{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+/* ---- v2 additions ---- */
+.cta-stack{margin-top:30px;display:grid;gap:14px;max-width:520px}
+.btn.big{font-size:18px;padding:20px 30px;border-radius:12px}
+.btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(5px)}
+.btn-video{display:flex;align-items:center;gap:16px;text-align:left;background:rgba(255,255,255,.1);border:1.5px solid rgba(235,200,98,.7);border-radius:12px;padding:12px 20px 12px 12px;color:var(--cream);cursor:pointer;font:inherit;transition:.2s}
+.btn-video:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+.btn-video i{flex-shrink:0;width:54px;height:54px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;animation:pulse 2.2s infinite}
+.btn-video i::before{content:'';border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #07142B;margin-left:4px}
+.btn-video b{display:block;font-size:16px}.btn-video small{display:block;font-size:12.5px;opacity:.8;margin-top:2px}
+.textlink{display:inline-block;margin-top:12px;font-size:14px;font-weight:700;color:var(--gold-bright);text-decoration:underline;text-underline-offset:4px}
+.hero-photo{cursor:pointer;position:relative;aspect-ratio:639/553;background:#14305C}
+.hero-photo img{object-position:center top}
+.hp-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,20,43,0) 45%,rgba(7,20,43,.86) 100%)}
+.hp-play{position:absolute;left:18px;bottom:18px;transform:none}
+.hp-play i{display:flex;width:68px;height:68px;border-radius:50%;background:var(--gold);align-items:center;justify-content:center;box-shadow:0 0 0 10px rgba(212,167,44,.28);animation:ring 2s infinite;transition:transform .2s}
+.hero-photo:hover .hp-play i{transform:scale(1.1)}
+.hp-play i::before{content:'';border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent #07142B;margin-left:5px}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(212,167,44,.6)}70%{box-shadow:0 0 0 26px rgba(212,167,44,0)}100%{box-shadow:0 0 0 0 rgba(212,167,44,0)}}
+.hp-cap{position:absolute;left:100px;right:16px;bottom:20px}
+.hp-cap b{display:block;font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1.1}.hp-cap span{font-size:12.5px;opacity:.9}
+.float-card{left:auto;right:-30px;top:-34px;bottom:auto}
+@media(max-width:560px){.float-card{left:auto;right:6px;top:-30px;bottom:auto;width:190px;padding:12px 14px}.hp-play i{width:58px;height:58px}.hp-cap{left:84px}.hp-cap b{font-size:21px}}
+.hero-visual{max-width:500px;margin-bottom:20px;margin-top:34px}
+.btn.js-book{position:relative}
+/* video strip */
+.vstrip{background:var(--gold);color:#07142B;padding:18px 0}
+.vstrip .wrap{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;text-align:center}
+.vstrip p{font-weight:800;font-size:16px}
+.vstrip .btn{background:#07142B;color:var(--gold-bright);border-color:#07142B;padding:12px 24px;font-size:14.5px}
+.vstrip .btn:hover{background:#14305C;border-color:#14305C}
+/* slot picker */
+.slot{margin-top:26px;background:#fff;color:var(--light-ink);border-radius:20px;padding:26px 26px 24px;box-shadow:0 30px 60px -26px rgba(0,0,0,.6)}
+.slot h3{font-size:25px;line-height:1.15}
+.slot .sub{font-size:13.5px;color:rgba(11,29,58,.7);margin-top:4px}
+.slot .lbl{font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--gold-deep);margin:18px 0 8px}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.sc{font:inherit;cursor:pointer;background:#F6F1E7;border:1.5px solid rgba(11,29,58,.18);color:var(--light-ink);border-radius:12px;padding:9px 14px;font-size:13.5px;font-weight:700;line-height:1.25;transition:.15s;text-align:center}
+.sc small{display:block;font-weight:600;font-size:11px;opacity:.7}
+.sc:hover{border-color:var(--gold)}
+.sc.on{background:#0B1D3A;color:var(--gold-bright);border-color:#0B1D3A}
+.slot .btn{width:100%;margin-top:20px}
+.slot .sel{margin-top:12px;font-size:13px;text-align:center;font-weight:700;color:#0B1D3A;min-height:20px}
+.slot .fine2{margin-top:6px;font-size:11.5px;text-align:center;color:rgba(11,29,58,.6)}
+/* sticky */
+.sticky-cta{gap:10px}
+.sticky-cta .btn{flex:1.4}.sticky-cta .btn.vid-b{flex:1;background:rgba(255,255,255,.1);color:var(--cream);border-color:rgba(235,200,98,.7)}
+.float-book{position:fixed;right:22px;bottom:22px;z-index:150;display:none}
+.float-book.show{display:block}
+.float-book .btn{box-shadow:0 14px 34px -10px rgba(0,0,0,.6);padding:15px 24px}
+@media(max-width:720px){.float-book{display:none!important}}
+.vsl .player{cursor:pointer}
+.vsl .cta-row{margin-top:24px}
+.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;max-width:1040px;margin:0 auto 44px}
+@media(max-width:860px){.prob-grid{grid-template-columns:1fr;gap:28px}}
+.ill svg{width:100%;height:auto;display:block;filter:drop-shadow(0 26px 34px rgba(0,0,0,.35))}
+.D .prob-grid .problem-lede{margin:0;text-align:left;max-width:none}
+.D .prob-grid .quote{text-align:left;margin:22px 0 0;font-size:22px}
+.diff-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;margin-bottom:44px}
+@media(max-width:860px){.diff-grid{grid-template-columns:1fr;gap:28px}}
+.diff-grid .diff-top{text-align:left;margin:0;max-width:none}
+.diff-grid .ill svg{filter:drop-shadow(0 24px 30px rgba(11,29,58,.35))}
+.start-card{margin-top:26px;background:#fff;color:#0B1D3A;border-radius:20px;padding:26px;box-shadow:0 30px 60px -26px rgba(0,0,0,.6)}
+.start-card h3{font-size:26px;line-height:1.15}
+.start-card ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:9px}
+.start-card li{display:flex;gap:11px;align-items:center;font-size:14.5px;font-weight:600}
+.start-card li b{width:26px;height:26px;border-radius:50%;background:#0B1D3A;color:#EBC862;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.start-card .btn{width:100%;margin-top:20px}
+.start-card .fine2{margin-top:10px;font-size:12px;text-align:center;color:rgba(11,29,58,.6)}
+a.hero-photo{display:block;text-decoration:none;color:inherit}a.btn-video,a.player,a.btn{text-decoration:none}a.btn-video{color:var(--cream)}
+</style>
+<title>Become a Financial Advisor in India | Career Readiness Scorecard</title>
+<meta name="description" content="Thinking of becoming a financial advisor in India? Take the Career Readiness Scorecard and book a free clarity call. Insurance advisor career guidance by Dr Maria.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html">
+<meta name="theme-color" content="#011D43">
+<meta name="author" content="Dr Maria Pramila Dsouza">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+<meta property="og:site_name" content="Prosperity Life School">
+<meta property="og:locale" content="en_IN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Become a Financial Advisor in India | Career Readiness Scorecard">
+<meta property="og:description" content="Thinking of becoming a financial advisor in India? Take the Career Readiness Scorecard and book a free clarity call. Insurance advisor career guidance by Dr Maria.">
+<meta property="og:url" content="https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html">
+<meta property="og:image" content="https://www.prosperitylifeschool.com/assets/img/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dr Maria Pramila Dsouza, Prosperity Life School">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Become a Financial Advisor in India | Career Readiness Scorecard">
+<meta name="twitter:description" content="Thinking of becoming a financial advisor in India? Take the Career Readiness Scorecard and book a free clarity call. Insurance advisor career guidance by Dr Maria.">
+<meta name="twitter:image" content="https://www.prosperitylifeschool.com/assets/img/og-share.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","EducationalOrganization","ProfessionalService"],"@id":"https://www.prosperitylifeschool.com/#organization","name":"Prosperity Life School","url":"https://www.prosperitylifeschool.com/","logo":{"@type":"ImageObject","url":"https://www.prosperitylifeschool.com/assets/img/logo.png"},"image":"https://www.prosperitylifeschool.com/assets/img/og-share.jpg","description":"Financial education, financial planning, retirement, protection and income-skills programs for families in India and the Gulf.","email":"maria@prosperitylifeschool.com","telephone":"+918904820166","founder":{"@id":"https://www.prosperitylifeschool.com/#drmaria"},"address":[{"@type":"PostalAddress","addressLocality":"Bengaluru","addressRegion":"Karnataka","addressCountry":"IN"},{"@type":"PostalAddress","addressLocality":"Mangaluru","addressRegion":"Karnataka","addressCountry":"IN"}],"areaServed":[{"@type":"City","name":"Bengaluru"},{"@type":"City","name":"Mangaluru"},{"@type":"Country","name":"India"},{"@type":"Place","name":"Gulf countries"}],"contactPoint":{"@type":"ContactPoint","telephone":"+918904820166","email":"maria@prosperitylifeschool.com","contactType":"customer service","availableLanguage":["English","Kannada","Tulu","Konkani"]},"sameAs":["https://www.youtube.com/@drmariapramila","https://www.instagram.com/drmariapramila/","https://www.linkedin.com/in/drmariapramila/"]},{"@type":"Person","@id":"https://www.prosperitylifeschool.com/#drmaria","name":"Dr Maria Pramila Dsouza","jobTitle":"Chartered Wealth Manager and Financial Coach","url":"https://www.prosperitylifeschool.com/about.html","image":"https://www.prosperitylifeschool.com/assets/img/dr-maria-office.jpg","worksFor":{"@id":"https://www.prosperitylifeschool.com/#organization"},"knowsLanguage":["English","Kannada","Tulu","Konkani"],"knowsAbout":["Financial planning","Retirement planning","Insurance and protection","Financial literacy","Wealth creation","Multiple sources of income"],"sameAs":["https://www.youtube.com/@drmariapramila","https://www.instagram.com/drmariapramila/","https://www.linkedin.com/in/drmariapramila/"]},{"@type":"WebSite","@id":"https://www.prosperitylifeschool.com/#website","url":"https://www.prosperitylifeschool.com/","name":"Prosperity Life School","inLanguage":"en-IN","publisher":{"@id":"https://www.prosperitylifeschool.com/#organization"}},{"@type":"WebPage","@id":"https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html#webpage","url":"https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html","name":"Become a Financial Advisor in India | Career Readiness Scorecard","description":"Thinking of becoming a financial advisor in India? Take the Career Readiness Scorecard and book a free clarity call. Insurance advisor career guidance by Dr Maria.","inLanguage":"en-IN","isPartOf":{"@id":"https://www.prosperitylifeschool.com/#website"},"about":{"@id":"https://www.prosperitylifeschool.com/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.prosperitylifeschool.com/assets/img/og-share.jpg"},"breadcrumb":{"@id":"https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.prosperitylifeschool.com/"},{"@type":"ListItem","position":2,"name":"Advisor Career Readiness","item":"https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html"}]},{"@type":"FAQPage","@id":"https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html#faq","mainEntity":[{"@type":"Question","name":"How do I become a financial advisor in India?","acceptedAnswer":{"@type":"Answer","text":"Requirements depend on the products you want to advise on, such as insurance or mutual funds, and each has its own certification and regulatory steps. The readiness scorecard helps you check your fit before you commit. Regulations change, so confirm current rules with the relevant regulator."}},{"@type":"Question","name":"Is an insurance advisor career a good option in India?","acceptedAnswer":{"@type":"Answer","text":"It can suit people who enjoy teaching, building trust and long-term relationships. Income varies widely between individuals and is not guaranteed."}},{"@type":"Question","name":"How can I create multiple sources of income?","acceptedAnswer":{"@type":"Answer","text":"Begin with your skills, time and goals. A finance advisory career is one pathway among several, and the clarity call helps you judge whether it deserves a closer look."}},{"@type":"Question","name":"Do I need insurance experience?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Suitability, learning attitude and applicable eligibility are assessed first."}},{"@type":"Question","name":"Can I explore this with my current profession?","acceptedAnswer":{"@type":"Answer","text":"The clarity process can help determine compatibility with your present responsibilities."}},{"@type":"Question","name":"Is income guaranteed?","acceptedAnswer":{"@type":"Answer","text":"No. Outcomes depend on capability, activity, training, market conditions and applicable terms."}},{"@type":"Question","name":"Will training be provided?","acceptedAnswer":{"@type":"Answer","text":"Suitable candidates will receive information on relevant training, mentoring and certification."}},{"@type":"Question","name":"What happens after the scorecard?","acceptedAnswer":{"@type":"Answer","text":"You receive a result and, where appropriate, an invitation to a clarity call."}},{"@type":"Question","name":"Does the form guarantee selection?","acceptedAnswer":{"@type":"Answer","text":"No. The assessment and call determine mutual suitability."}},{"@type":"Question","name":"Where is the initial focus?","acceptedAnswer":{"@type":"Answer","text":"Bengaluru and Mangaluru, with later expansion possible."}},{"@type":"Question","name":"Is this a job offer?","acceptedAnswer":{"@type":"Answer","text":"No. This is a professional, performance-based pathway. It is not a salaried job, a fixed-income offer or a guaranteed-income scheme."}}]},{"@type":"Service","name":"Financial advisor career readiness assessment and guidance in India","serviceType":"Financial advisor career readiness assessment and guidance in India","description":"Thinking of becoming a financial advisor in India? Take the Career Readiness Scorecard and book a free clarity call. Insurance advisor career guidance by Dr Maria.","url":"https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html","provider":{"@id":"https://www.prosperitylifeschool.com/#organization"},"areaServed":[{"@type":"Country","name":"India"},{"@type":"Place","name":"Gulf countries"}],"@id":"https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html#service"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"><style id="psl-hf">.psl-topbar,.psl-header,.psl-footer,.psl-wa,.psl-stick{font-family:'Poppins',Arial,sans-serif;font-size:16px;line-height:1.65;color:#0F2342;text-align:left;-webkit-font-smoothing:antialiased}:where(.psl-topbar,.psl-header,.psl-footer) *{box-sizing:border-box}:where(.psl-topbar,.psl-header,.psl-footer) a{text-decoration:none}:where(.psl-topbar,.psl-header,.psl-footer) ul{margin:0;padding:0;list-style:none}:where(.psl-topbar,.psl-header,.psl-footer) :is(p,h4,li){margin:0}:where(.psl-topbar,.psl-header,.psl-footer) :is(img){max-width:100%;display:block;height:auto}:where(.psl-topbar,.psl-header,.psl-footer) :is(select,button){font-family:inherit}:where(.psl-topbar,.psl-header,.psl-footer) :is(p,li,span,div,h4){color:inherit}.psl-header .psl-sub a{display:block}body{top:0!important}.skiptranslate iframe,.goog-te-banner-frame,#goog-gt-tt,.goog-te-balloon-frame{display:none!important}.goog-text-highlight{background:none!important;box-shadow:none!important}.psl-gt-hide,#google_translate_element{display:none}.psl-toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#011D43;color:#fff;padding:12px 20px;border-radius:50px;font-size:14px;z-index:900}.psl-wrap{max-width:1200px;margin:0 auto;padding:0 28px}@media(max-width:600px){.psl-wrap{padding:0 20px}}.psl-sr{position:absolute;left:-9999px}.psl-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15.5px 'Poppins',Arial,sans-serif;padding:15px 28px;border-radius:50px;border:2px solid #D09C32;background:#D09C32;color:#001330;text-decoration:none;cursor:pointer;transition:background .2s,transform .18s,box-shadow .2s,color .2s,border-color .2s;text-align:center}.psl-btn:hover{background:#E8BC5A;border-color:#E8BC5A;transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(208,156,50,.7)}.psl-btn.psl-outline{background:transparent;border-color:#011D43;color:#011D43}.psl-btn.psl-outline:hover{background:#011D43;color:#fff;box-shadow:none}.psl-btn.psl-sm{padding:11px 20px;font-size:14px}.psl-btn svg{width:18px;height:18px;transition:transform .2s}.psl-btn:hover svg{transform:translateX(4px)}.psl-ic{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.psl-topbar{background:#001330;color:rgba(255,255,255,.82);font-size:13px}.psl-topbar .psl-wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:9px;padding-bottom:9px}.psl-topbar a{text-decoration:none;display:inline-flex;gap:8px;align-items:center}.psl-topbar a:hover{color:#E8BC5A}.psl-topbar .psl-l{display:flex;gap:22px;flex-wrap:wrap}.psl-topbar .psl-tag{color:#E8BC5A;font-weight:600;letter-spacing:.04em}@media(max-width:820px){.psl-topbar .psl-tag{display:none}.psl-topbar .psl-wrap{justify-content:center}}@media(max-width:520px){.psl-topbar{display:none}}.psl-header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #E3E8F0}.psl-header .psl-wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;height:82px;max-width:1320px}.psl-brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}.psl-brand img{width:52px;height:52px;border-radius:50%}.psl-brand .psl-w{font-weight:700;font-size:17px;line-height:1.15;color:#011D43}.psl-brand .psl-w small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.16em;color:#8F6A17;margin-top:3px}.psl-nav{display:flex;align-items:center;gap:2px}.psl-nav>li{position:relative}.psl-nav>li>a,.psl-nav>li>button{display:flex;align-items:center;gap:5px;padding:10px 11px;border:0;background:none;font:600 14.5px 'Poppins',Arial,sans-serif;color:#0F2342;text-decoration:none;cursor:pointer;border-radius:10px;white-space:nowrap}.psl-nav>li>a:hover,.psl-nav>li>button:hover,.psl-nav>li:focus-within>button{color:#8F6A17;background:#FBF1DA}.psl-nav .psl-chev{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.4;transition:transform .2s}.psl-sub{position:absolute;left:0;top:100%;min-width:260px;background:#fff;border:1px solid #E3E8F0;border-radius:14px;box-shadow:0 22px 48px -26px rgba(1,29,67,.45);padding:10px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.18s;z-index:50}.psl-nav>li:hover>.psl-sub,.psl-nav>li:focus-within>.psl-sub,.psl-nav>li.psl-open>.psl-sub{opacity:1;visibility:visible;transform:none}.psl-nav>li:hover .psl-chev,.psl-nav>li.psl-open .psl-chev{transform:rotate(180deg)}.psl-sub a{display:block;padding:10px 14px;border-radius:9px;text-decoration:none;font-size:14px;font-weight:500;color:#0F2342}.psl-sub a small{display:block;font-size:12px;color:#4B5B75;font-weight:400}.psl-sub a:hover{background:#FBF1DA;color:#011D43}.psl-hdr-cta{display:flex;gap:10px;align-items:center}.psl-burger{display:none;width:46px;height:46px;border-radius:12px;border:1px solid #E3E8F0;background:#fff;cursor:pointer;align-items:center;justify-content:center;color:#011D43}.psl-burger svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}@media(min-width:901px){.psl-header .psl-wrap{height:auto;flex-wrap:wrap;padding-top:12px;padding-bottom:0;row-gap:0}.psl-brand{order:1}.psl-hdr-cta{order:2}.psl-nav{order:3;width:100%;justify-content:center;margin-top:10px;border-top:1px solid #E3E8F0;padding:4px 0}.psl-nav>li>a,.psl-nav>li>button{font-size:14.5px;padding:11px 14px}.psl-hdr-cta .psl-call{display:inline-flex}}@media(max-width:900px){.psl-burger{display:flex}.psl-hdr-cta .psl-btn{display:none}.psl-header .psl-wrap{height:70px}.psl-brand img{width:44px;height:44px}.psl-brand .psl-w{font-size:15px}.psl-nav{position:fixed;inset:70px 0 0 0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:12px 20px 110px;overflow-y:auto;transform:translateX(100%);transition:transform .28s;border-top:1px solid #E3E8F0}.psl-nav.psl-open{transform:none}.psl-nav>li>a,.psl-nav>li>button{width:100%;justify-content:space-between;padding:16px 6px;font-size:16.5px;border-bottom:1px solid #E3E8F0;border-radius:0}.psl-sub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;padding:0 0 6px 10px;display:none;background:none;min-width:0}.psl-nav>li.psl-open>.psl-sub{display:block}.psl-sub a{padding:12px 8px;font-size:15px}.psl-mnav-cta{display:flex!important}}.psl-mnav-cta{display:none;position:fixed;left:0;right:0;bottom:0;padding:12px 20px 16px;background:#fff;border-top:1px solid #E3E8F0;gap:10px;z-index:101}.psl-mnav-cta .psl-btn{flex:1;padding:14px 10px;font-size:14.5px}.psl-mnav-cta{transform:translateY(120%);transition:transform .28s}@media(min-width:901px){.psl-mnav-cta{display:none!important}}.psl-footer{background:#001330;color:rgba(255,255,255,.72);padding:70px 0 0;font-size:14px}.psl-footer h4{color:#fff;font-size:14.5px;letter-spacing:.06em;margin-bottom:16px;text-transform:uppercase}.psl-footer li{padding:5px 0}.psl-footer a{text-decoration:none}.psl-footer a:hover{color:#E8BC5A}.psl-footer .psl-brand .psl-w{color:#fff}.psl-footer .psl-about-s{margin-top:16px;max-width:340px;line-height:1.7}.psl-footer .psl-contact li{display:flex;gap:10px;align-items:flex-start}.psl-footer .psl-contact svg{width:18px;height:18px;stroke:#E8BC5A;fill:none;stroke-width:1.8;margin-top:3px;flex-shrink:0}.psl-fbot{margin-top:50px;border-top:1px solid rgba(255,255,255,.12);padding:26px 0 90px}.psl-fbot .psl-tg{color:#E8BC5A;font-weight:600;letter-spacing:.06em;margin-bottom:14px}.psl-fbot .psl-disc{font-size:12.2px;line-height:1.75;color:rgba(255,255,255,.56);max-width:980px}.psl-fbot .psl-row{margin-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}.psl-fbot .psl-row a{margin-right:18px;text-decoration:underline}@media(min-width:1061px){.psl-fbot{padding-bottom:30px}}.psl-hdr-cta .psl-btn:not(.psl-outline){animation:pulseg 3s infinite}.psl-soc2{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}.psl-soc2 a{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;transition:.2s;box-shadow:0 8px 18px -8px rgba(0,0,0,.6)}.psl-soc2 a:hover{transform:translateY(-4px) scale(1.06)}.psl-soc2 svg{width:24px;height:24px;fill:#fff}.psl-s-wa{background:#25D366}.psl-s-yt{background:#FF0000}.psl-s-li{background:#0A66C2}.psl-s-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}.psl-tr{display:flex;align-items:center;gap:8px;color:#E8BC5A}.psl-tr select{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(232,188,90,.5);border-radius:50px;padding:5px 12px;font:600 13px 'Poppins',Arial,sans-serif;cursor:pointer}.psl-tr select option{color:#011D43;background:#fff}@media(max-width:520px){.psl-topbar{display:block!important}.psl-topbar .psl-wrap{justify-content:flex-end;padding-top:6px;padding-bottom:6px}.psl-topbar .psl-l,.psl-topbar .psl-tag{display:none}}@media(min-width:901px){.psl-header .psl-wrap{height:82px;flex-wrap:nowrap;padding-top:0;padding-bottom:0}.psl-nav{order:0;width:auto;margin:0;border-top:0;padding:0;justify-content:flex-start}.psl-hdr-cta{order:0}.psl-nav>li>a,.psl-nav>li>button{font-size:15px;padding:11px 14px}}.psl-fgrid2{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:36px}@media(max-width:900px){.psl-fgrid2{grid-template-columns:1fr 1fr}.psl-fgrid2 .psl-fb{grid-column:1/-1}}@media(max-width:520px){.psl-fgrid2{grid-template-columns:1fr}}@media(min-width:901px){.psl-brand{order:0!important}.psl-nav{order:1!important;margin-left:auto}.psl-hdr-cta{order:2!important}}.psl-gt-hide{position:absolute;left:-9999px;top:0;width:1px;height:1px;overflow:hidden}.psl-call>*{min-width:0}@media(max-width:560px){.psl-btn{padding:14px 20px}.psl-wrap{padding-left:18px;padding-right:18px}.psl-footer .psl-contact a{word-break:break-word}.psl-brand .psl-w{font-size:14px}.psl-tr select{max-width:150px}}@media(max-width:380px){.psl-brand .psl-w small{display:none}}.psl-nav>li>a,.psl-nav>li>button,.psl-sub a{min-height:44px}.psl-mnav-cta{visibility:hidden}@media(min-width:901px){.psl-mnav-cta{display:none!important}}@keyframes pulseg{0%{box-shadow:0 0 0 0 rgba(208,156,50,.55)}70%{box-shadow:0 0 0 16px rgba(208,156,50,0)}100%{box-shadow:0 0 0 0 rgba(208,156,50,0)}}@keyframes fin{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}@keyframes fy{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-26px) rotate(14deg)}}@keyframes ul{to{transform:scaleX(1)}}
+.form-embed{background:#fff;border-radius:18px;padding:22px 18px 14px;box-shadow:0 20px 44px -24px rgba(0,0,0,.45);margin:22px 0;min-width:0;color:#0F2342;font-family:'Manrope',Arial,sans-serif}
+.form-embed h3{margin:0 0 4px;font-size:22px;color:#011D43;line-height:1.2;font-family:inherit}
+.form-embed .ph{margin:0 0 12px;color:#4B5B75;font-size:14.5px;line-height:1.5}
+.umang-form{display:block;width:100%;height:600px;border:0}
+@media(max-width:560px){.umang-form{height:700px}.form-embed{padding:16px 10px 10px}}
+.lp-disc{background:#001330;color:rgba(255,255,255,.62);font:400 12.5px/1.75 'Poppins',Arial,sans-serif}
+.lp-disc-in{max-width:1200px;margin:0 auto;padding:22px 28px 0}
+.lp-disc b{color:#E8BC5A}
+.faq-q{text-align:left}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+<symbol id="i-plan" viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M9 9h6M9 13h6M9 17h3"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M3 17h18M6 17a6 6 0 0112 0M12 4v3M4.9 8.9l2 1.4M19.1 8.9l-2 1.4"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></symbol>
+<symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3M3 12v5c0 1.7 2.7 3 6 3"/><ellipse cx="16" cy="14" rx="5" ry="2.6"/><path d="M11 14v4c0 1.4 2.2 2.6 5 2.6s5-1.2 5-2.6v-4"/></symbol>
+<symbol id="i-kids" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 20v-2a5 5 0 015-5h2a5 5 0 015 5v2"/><circle cx="18" cy="9" r="2"/><path d="M17 14.2a4 4 0 014 3.8v2"/></symbol>
+<symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 13h18"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20v-1.5A5 5 0 018 14h2a5 5 0 015 4.5V20M16 14.2A4.2 4.2 0 0121 18v2"/></symbol>
+<symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5M8 7h7"/></symbol>
+<symbol id="i-mind" viewBox="0 0 24 24"><path d="M12 3a6 6 0 00-4 10.5V17h8v-3.5A6 6 0 0012 3z"/><path d="M9.5 20.5h5M10 17v1.5M14 17v1.5"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 7a2 2 0 012-2h12v4"/><rect x="3" y="8" width="18" height="12" rx="2"/><circle cx="16.5" cy="14" r="1.2"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5M3 17.5l9 5 9-5" opacity=".6"/></symbol>
+<symbol id="i-build" viewBox="0 0 24 24"><path d="M4 21V5l8-2v18M12 9h8v12M7 8h2M7 12h2M7 16h2M15 13h2M15 17h2"/></symbol>
+<symbol id="i-school" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.2-.7-2.700-1.100-4.400-3.800-4.600-4-.1-.2-1.100-1.400-1.100-2.700 0-1.300.7-1.900.9-2.200.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500.2.600.800 2 .900 2.100.1.100.1.300 0 .5-.1.200-.2.300-.3.500l-.4.500c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.100 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.400z"/></symbol>
+<symbol id="b-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol><symbol id="b-yt" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol><symbol id="b-fb" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol><symbol id="b-ig" viewBox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol><symbol id="b-li" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol></defs>
+</svg>
+<div class="psl-topbar"><div class="psl-wrap">
+<div class="psl-l"><a href="tel:+918904820166"><svg class="psl-ic" style="width:15px;height:15px"><use href="#i-phone"/></svg>+91 8904820166</a><a href="mailto:maria@prosperitylifeschool.com"><svg class="psl-ic" style="width:15px;height:15px"><use href="#i-mail"/></svg>maria@prosperitylifeschool.com</a></div>
+<div class="psl-tr"><label for="langSel" class="psl-sr">Language</label><svg class="psl-ic" style="width:15px;height:15px"><use href="#i-chat"/></svg><select id="langSel" translate="no" class="notranslate" aria-label="Translate this page"><option value="">🌐 English</option><option value="kn">ಕನ್ನಡ Kannada</option><option value="gom">कोंकणी Konkani</option><option value="hi">हिन्दी Hindi</option><option value="ml">മലയാളം Malayalam</option><option value="ta">தமிழ் Tamil</option><option value="te">తెలుగు Telugu</option><option value="mr">मराठी Marathi</option><option value="ar">العربية Arabic</option></select></div><div id="google_translate_element" class="psl-gt-hide" translate="no"></div>
+<span class="psl-tag">Financial Wisdom for a Blessed Life</span>
+</div></div>
+<div class="psl-header" role="banner">
+<div class="psl-wrap">
+<a class="psl-brand" href="https://www.prosperitylifeschool.com/" aria-label="Prosperity Life School home"><img src="assets/img/logo-transparent.png" alt="Prosperity Life School logo"><span class="psl-w notranslate" translate="no">Prosperity Life School<small>LEARN · GROW · PROSPER</small></span></a>
+<ul class="psl-nav" id="nav">
+<li><a href="https://www.prosperitylifeschool.com/">Home</a></li>
+<li><a href="https://www.prosperitylifeschool.com/about.html">About</a></li>
+<li><button type="button" aria-expanded="false">Programs<svg class="psl-chev"><use href="#i-chev"/></svg></button>
+<div class="psl-sub"><a href="https://www.prosperitylifeschool.com/programs.html">All Programs</a><a href="https://www.prosperitylifeschool.com/prosperity-clarity-call-v5.html">Prosperity Clarity Call<small>Free 1-to-1 clarity</small></a><a href="https://www.prosperitylifeschool.com/prosperity-retirement-clarity-call.html">Retirement Clarity Call</a><a href="https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html">Protection Gap Review</a><a href="https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html">Advisor Career Readiness</a></div></li>
+<li><a href="https://www.prosperitylifeschool.com/community.html">Join Community</a></li>
+<li><a href="https://www.prosperitylifeschool.com/youtube.html">YouTube</a></li>
+<li><a href="#apply">Contact</a></li>
+</ul>
+<div class="psl-hdr-cta"><a class="psl-btn psl-outline psl-sm psl-call" href="#apply">Book a Call</a><a class="psl-btn psl-sm" href="https://www.prosperitylifeschool.com/prosperity-clarity-call-v5.html">Take Free Assessment</a>
+<button class="psl-burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+</div>
+<div class="psl-mnav-cta"><a class="psl-btn psl-outline" href="#apply">Book a Call</a><a class="psl-btn" href="https://www.prosperitylifeschool.com/prosperity-clarity-call-v5.html">Take Free Assessment</a></div>
+</div>
+
+
+
+
+<div class="strip">Financial Advisor Career Readiness Assessment <span>•</span><i>Bengaluru and Mangaluru</i> <span>•</span><i>Structured Training and Mentoring</i></div>
+
+<header class="hero">
+<div class="wrap hero-grid">
+<div>
+<span class="pill">For professionals exploring financial advisory</span>
+<h1>Thinking About Financial Advisory? Find Out If You Are <em>Truly Ready</em> Before You Commit</h1>
+<p class="lede">Watch the 8-minute introduction, check your readiness in 1 minute, then talk it through with Dr Maria. Free, no obligation, and no income promises. Just clarity on whether this professional pathway fits you.</p>
+<div class="cta-stack">
+<a class="btn big js-book btn-pulse" href="#apply">Book My Free Clarity Call Slot <span class="arr">→</span></a>
+<a class="btn-video js-video" href="https://www.prosperitylifeschool.com/youtube.html"><i></i><span><b>Watch the 8 Minute Introduction</b><small>See if this pathway fits you, before you decide</small></span></a>
+</div>
+<p class="micro">Free · No obligation · No income promises · Clarity before commitment</p>
+<a class="textlink" href="#scorecard">Or take the 1-minute readiness check first →</a>
+<div class="hero-chips">
+<span class="chip"><b>✓</b>Readiness before commitment</span>
+<span class="chip"><b>✓</b>Training &amp; mentoring</span>
+<span class="chip"><b>✓</b>Ethical, needs-based approach</span>
+</div>
+</div>
+<div class="hero-visual">
+<a class="hero-photo js-video" href="https://www.prosperitylifeschool.com/youtube.html" aria-label="Watch the introduction video">
+<img alt="Dr Maria Pramila Dsouza" src="assets/lp/fed506502d.jpg" width="639" height="553">
+<div class="hp-shade"></div>
+<div class="hp-play"><i></i></div>
+<div class="hp-cap"><b>Watch Dr Maria explain</b><span>Is financial advisory right for you? · 8 min</span></div>
+</a>
+<div class="float-card">
+<div class="tag">Sample scorecard result</div>
+<div class="score"><b>78</b><span>/ 100 · Promising Potential</span></div>
+<div class="mini-bar"><span>Purpose</span><i><u style="width:85%"></u></i></div>
+<div class="mini-bar"><span>Communication</span><i><u style="width:78%"></u></i></div>
+<div class="mini-bar"><span>Learning</span><i><u style="width:90%"></u></i></div>
+<div class="mini-bar"><span>Consistency</span><i><u style="width:62%"></u></i></div>
+<div class="mini-bar"><span>Leadership</span><i><u style="width:70%"></u></i></div>
+</div>
+</div>
+</div>
+</header>
+
+<div class="vstrip"><div class="wrap"><p>Not sure yet? Watch the 8-minute introduction before you decide.</p><a class="btn js-video" href="https://www.prosperitylifeschool.com/youtube.html">▶ Watch the Video</a></div></div>
+
+<section class="L" id="audience">
+<div class="wrap">
+<div class="sec-head">
+<span class="eyebrow">Find yourself</span>
+<h2>Which Best Describes Your Current Situation? Start Your Advisor Career Check</h2>
+<p>Tap the card that fits you best. We will show what this pathway may mean for you.</p>
+</div>
+<div class="aud-tabs" id="audTabs">
+<button class="aud on" data-i="0" type="button"><span class="code">A1</span><h3>Existing advisor</h3><p>You want stronger positioning, follow-up systems or potential leadership development.</p></button>
+<button class="aud" data-i="1" type="button"><span class="code">A2</span><h3>Working professional</h3><p>You are exploring a structured, purpose-driven pathway alongside current responsibilities.</p></button>
+<button class="aud" data-i="2" type="button"><span class="code">A3</span><h3>Entrepreneur or self-employed</h3><p>You want to explore advisory as a complementary professional pathway.</p></button>
+<button class="aud" data-i="3" type="button"><span class="code">A4</span><h3>Career restart or flexible work</h3><p>You want confidence, learning, mentoring and a flexible pathway.</p></button>
+</div>
+<div class="aud-panel" id="audPanel">
+<div>
+<div class="k" id="apK">Does this sound familiar?</div>
+<h3 id="apH"></h3>
+<a class="btn js-book" href="#apply">Book My Free Clarity Call Slot</a>
+</div>
+<ul id="apL"></ul>
+</div>
+</div>
+</section>
+
+<section class="D" id="problem">
+<div class="wrap">
+<div class="sec-head">
+<span class="eyebrow">The real challenge</span>
+<h2>Potential Alone Is Not Enough Without the Right Preparation</h2>
+</div>
+<div class="prob-grid"><div class="ill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" role="img" aria-label="Illustration: an advisor explaining protection and retirement planning to a couple">
+<defs>
+<linearGradient id="ba" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14305C"/><stop offset="1" stop-color="#0B1D3A"/></linearGradient>
+<linearGradient id="bb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EBC862"/><stop offset="1" stop-color="#D4A72C"/></linearGradient>
+<clipPath id="cb"><rect x="6" y="6" width="508" height="368" rx="28"/></clipPath></defs><g clip-path="url(#cb)">
+<rect x="6" y="6" width="508" height="368" rx="28" fill="url(#ba)"/>
+<circle cx="260" cy="170" r="150" fill="#1F4C8F" opacity=".35"/><circle cx="260" cy="170" r="150" fill="none" stroke="#EBC862" stroke-opacity=".35" stroke-width="1.5"/>
+<!-- window -->
+<rect x="28" y="34" width="86" height="104" rx="8" fill="#07142B" opacity=".45"/><path d="M71 34V138M28 86H114" stroke="#F6F1E7" stroke-opacity=".25" stroke-width="2"/>
+<!-- floating cards -->
+<g font-family="Manrope,Arial,sans-serif" font-weight="800" font-size="11">
+<g transform="translate(176 40)"><rect width="104" height="46" rx="12" fill="#F6F1E7"/><circle cx="23" cy="23" r="12" fill="#0B1D3A"/><path d="M17 23 l5 5 l9 -10" stroke="#EBC862" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="42" y="27" fill="#0B1D3A">Protection</text></g>
+<g transform="translate(300 62)"><rect width="104" height="46" rx="12" fill="#F6F1E7"/><circle cx="23" cy="23" r="12" fill="#D4A72C"/><path d="M16 29 l6 -7 l4 4 l7 -9" stroke="#0B1D3A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="42" y="27" fill="#0B1D3A">Retirement</text></g>
+<g transform="translate(396 126)"><rect width="100" height="46" rx="12" fill="#F6F1E7"/><circle cx="23" cy="23" r="12" fill="#1F4C8F"/><circle cx="23" cy="23" r="5" fill="#F6F1E7"/><text x="42" y="27" fill="#0B1D3A">Goals</text></g>
+</g>
+<!-- shield centre -->
+<g transform="translate(222 100)"><path d="M0 0 L38 -12 L76 0 L76 40 C76 66 52 82 38 90 C24 82 0 66 0 40Z" fill="url(#bb)"/><path d="M22 40 L34 52 L56 28" fill="none" stroke="#07142B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+<!-- floor + table -->
+<rect x="6" y="318" width="508" height="56" rx="0" fill="#07142B" opacity=".6"/>
+<rect x="150" y="262" width="230" height="14" rx="7" fill="#EBC862"/><rect x="176" y="276" width="10" height="46" fill="#D4A72C"/><rect x="344" y="276" width="10" height="46" fill="#D4A72C"/>
+<!-- laptop + papers -->
+<rect x="196" y="244" width="64" height="18" rx="3" fill="#F6F1E7"/><rect x="188" y="260" width="80" height="4" rx="2" fill="#9fb0c9"/>
+<rect x="300" y="250" width="44" height="12" rx="2" fill="#F6F1E7"/><rect x="306" y="246" width="44" height="12" rx="2" fill="#dbe3ef"/>
+<!-- advisor (left) -->
+<g>
+<path d="M56 318 C56 262 80 238 112 238 C144 238 168 262 168 318Z" fill="#F6F1E7"/>
+<path d="M76 318 C76 276 90 252 112 250 C134 252 148 276 148 318Z" fill="#0B1D3A"/>
+<path d="M98 242 L112 270 L126 242" fill="#F6F1E7"/>
+<rect x="104" y="212" width="16" height="30" rx="7" fill="#E8B48A"/>
+<circle cx="112" cy="190" r="30" fill="#E8B48A"/>
+<path d="M80 188 C76 156 100 146 114 148 C140 148 150 170 144 192 C140 176 130 168 116 168 C100 168 88 174 80 188Z" fill="#1b1b2a"/>
+<circle cx="84" cy="180" r="8" fill="#1b1b2a"/><circle cx="142" cy="178" r="8" fill="#1b1b2a"/>
+<path d="M102 200 Q112 208 122 200" stroke="#9c4b3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="103" cy="188" r="2.2" fill="#1b1b2a"/><circle cx="121" cy="188" r="2.2" fill="#1b1b2a"/>
+<path d="M150 276 C176 274 196 262 214 250" stroke="#F6F1E7" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="218" cy="248" r="8" fill="#E8B48A"/>
+</g>
+<!-- husband -->
+<g>
+<path d="M300 322 C300 276 322 258 346 258 C372 258 392 276 392 322Z" fill="#1F4C8F"/>
+<rect x="338" y="230" width="16" height="30" rx="7" fill="#C98E63"/>
+<circle cx="346" cy="212" r="28" fill="#C98E63"/>
+<path d="M318 206 C316 182 334 176 348 177 C366 178 374 192 374 208 C368 196 358 192 346 192 C334 192 324 196 318 206Z" fill="#1b1b2a"/>
+<path d="M336 222 Q346 228 356 222" stroke="#6d3322" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="337" cy="210" r="2.2" fill="#1b1b2a"/><circle cx="355" cy="210" r="2.2" fill="#1b1b2a"/>
+</g>
+<!-- wife -->
+<g>
+<path d="M392 322 C392 280 408 262 430 262 C452 262 468 280 468 322Z" fill="#D4A72C"/>
+<rect x="422" y="236" width="14" height="28" rx="6" fill="#E8B48A"/>
+<circle cx="429" cy="218" r="26" fill="#E8B48A"/>
+<path d="M402 216 C398 188 416 180 430 181 C448 182 458 196 456 220 C452 204 442 198 430 198 C418 198 408 204 402 216Z" fill="#2a1a1a"/>
+<path d="M404 214 C396 236 400 256 408 266 C406 250 408 234 412 222Z" fill="#2a1a1a"/><path d="M456 218 C464 238 460 256 452 266 C456 250 454 234 450 222Z" fill="#2a1a1a"/>
+<path d="M420 228 Q429 234 438 228" stroke="#9c4b3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="421" cy="217" r="2.2" fill="#1b1b2a"/><circle cx="437" cy="217" r="2.2" fill="#1b1b2a"/>
+</g>
+</g></svg>
+</div><div><p class="problem-lede">Many capable people enter financial advisory with enthusiasm but without understanding the communication, consistency, ethics, systems and professional discipline the role requires. The right starting point is not a quick-income promise. It is an honest assessment of readiness.</p><p class="quote">The challenge is not always a lack of potential. It is often a lack of preparation, positioning, systems and appropriate guidance.</p><div class="cta-row" style="margin-top:22px"><a class="btn js-book" href="#apply">Check My Readiness &amp; Book a Call</a></div></div></div>
+<div class="vs">
+<div class="vs-col">
+<span class="lab">Starting unprepared</span>
+<h3>What often happens</h3>
+<ul>
+<li>Inconsistent activity causes frustration and early withdrawal.</li>
+<li>Product-first conversations weaken trust.</li>
+<li>Poor follow-up loses genuine opportunities.</li>
+<li>Insufficient training creates confusion about responsibilities.</li>
+<li>Unrealistic expectations damage confidence despite real potential.</li>
+</ul>
+</div>
+<div class="vs-col good">
+<span class="lab">Starting ready</span>
+<h3>What we help you build</h3>
+<ul>
+<li>A clear picture of your strengths and gaps before you commit.</li>
+<li>Ethical, needs-based client conversations.</li>
+<li>CRM, follow-up and referral systems you can run.</li>
+<li>Structured training, mentoring and community.</li>
+<li>Realistic expectations of a professional pathway.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="L" id="vsl">
+<div class="wrap vsl">
+<a class="player js-video" href="https://www.prosperitylifeschool.com/youtube.html" aria-label="Watch the introduction video">
+<img alt="" src="assets/lp/0f11f3e7c5.jpg" style="position:absolute;right:0;top:0;height:100%;width:62%;object-fit:cover;object-position:60% 18%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 38%);mask-image:linear-gradient(90deg,transparent,#000 38%)" width="639" height="553" loading="lazy" decoding="async">
+<div class="ttl"><small>8 minute introduction</small><b>Financial Advisory: Opportunity, Reality and Your Readiness</b></div>
+<div class="pl"><i></i>Play video</div>
+</a>
+<div>
+<span class="eyebrow">Before you decide</span>
+<h2>Understand What This Profession Really Requires</h2>
+<ul class="chapters">
+<li><b>1</b>Why some capable people struggle after entering advisory</li>
+<li><b>2</b>How the four audience pathways differ</li>
+<li><b>3</b>What professional training and support should include</li>
+<li><b>4</b>How to assess alignment with personal goals</li>
+<li><b>5</b>What an appropriate next step may look like</li>
+</ul>
+<div class="cta-row">
+<a class="btn js-video" href="https://www.prosperitylifeschool.com/youtube.html">▶ Watch the Video</a>
+<a class="btn ghost js-book" href="#apply">Book My Free Slot</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="D" id="scorecard">
+<div class="wrap">
+<div class="sec-head">
+<span class="eyebrow">Try it now · 1 minute</span>
+<h2>Get a Quick Preview of Your Career Readiness Score</h2>
+<p>Five honest statements, one for each readiness area. Rate each from 1 (not true yet) to 5 (very true).</p>
+</div>
+<div class="qc" id="qc">
+<div id="qcQuiz">
+<div class="qc-top"><span id="qcStep">Question 1 of 5</span><span>Free · No sign-up</span></div>
+<div class="qc-prog"><i id="qcBar"></i></div>
+<div class="qc-q"><div class="dim" id="qcDim"></div><h3 id="qcText"></h3></div>
+<div class="scale" id="qcScale">
+<button type="button" data-v="1"><b>1</b><span>Not true yet</span></button>
+<button type="button" data-v="2"><b>2</b><span>Rarely true</span></button>
+<button type="button" data-v="3"><b>3</b><span>Sometimes true</span></button>
+<button type="button" data-v="4"><b>4</b><span>Mostly true</span></button>
+<button type="button" data-v="5"><b>5</b><span>Very true</span></button>
+</div>
+<button class="qc-back" id="qcBack" type="button" style="visibility:hidden">← Previous question</button>
+</div>
+<div class="qc-result" id="qcResult">
+<div class="res-head">
+<div class="ring" id="ring"><div><b id="resScore">0</b><span>out of 100</span></div></div>
+<div><h3 id="resTitle"></h3><p id="resText"></p></div>
+</div>
+<div class="res-bars" id="resBars"></div>
+<div class="res-note" id="resNote"></div>
+<div class="cta-row">
+<a class="btn btn-pulse js-book" href="#apply">Book My Clarity Call Slot</a>
+<a class="btn ghost js-video" href="https://www.prosperitylifeschool.com/youtube.html">▶ Watch the Video</a><button class="btn ghost" id="qcRetry" type="button">Retake</button>
+</div>
+<p class="qc-fine">This is a short preview of the full 20-statement scorecard. It is for awareness only and is not a selection decision. Selection is not guaranteed.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="L" id="dimensions">
+<div class="wrap">
+<div class="sec-head">
+<span class="eyebrow">What the scorecard explores</span>
+<h2>Five Readiness Dimensions</h2>
+<p>The full scorecard has 20 statements across five areas. You receive a readiness score, category, strengths, development priorities and a recommended next step.</p>
+</div>
+<div class="dims">
+<div class="dim-card"><div class="n">01</div><h4>Purpose &amp; alignment</h4><p>Motivation, expectations and professional fit.</p></div>
+<div class="dim-card"><div class="n">02</div><h4>Communication &amp; relationships</h4><p>Listening, trust and needs-based conversation.</p></div>
+<div class="dim-card"><div class="n">03</div><h4>Learning &amp; discipline</h4><p>Training attitude, compliance and development.</p></div>
+<div class="dim-card"><div class="n">04</div><h4>Business consistency</h4><p>Follow-up, systems and resilience.</p></div>
+<div class="dim-card"><div class="n">05</div><h4>Leadership &amp; growth</h4><p>Responsibility and longer-term potential.</p></div>
+</div>
+<div class="cta-row center dims-cta"><a class="btn js-book" href="#apply">Book My Free Clarity Call Slot</a></div>
+</div>
+</section>
+
+<section class="D" id="next">
+<div class="wrap">
+<div class="sec-head">
+<span class="eyebrow">No guesswork</span>
+<h2>What Happens Next</h2>
+<p>A simple, transparent path from first step to a considered decision.</p>
+</div>
+<div class="steps">
+<div class="step"><div class="no">1</div><div><h4>Complete</h4><p>Answer the scorecard in approximately 5–7 minutes.</p></div></div>
+<div class="step"><div class="no">2</div><div><h4>Understand</h4><p>Review the result and development priorities.</p></div></div>
+<div class="step"><div class="no">3</div><div><h4>Discuss</h4><p>Book a clarity call if invited.</p></div></div>
+<div class="step"><div class="no">4</div><div><h4>Decide</h4><p>Evaluate alignment with goals and capacity.</p></div></div>
+<div class="step"><div class="no">5</div><div><h4>Develop</h4><p>Suitable candidates enter applicable training and onboarding.</p></div></div>
+</div>
+<div class="cta-row center" style="margin-top:44px"><a class="btn big js-book" href="#apply">Start Step 1: Book My Free Slot <span class="arr">→</span></a></div>
+</div>
+</section>
+
+<section class="L" id="different">
+<div class="wrap">
+<div class="diff-grid"><div class="diff-top"><span class="eyebrow">Why this pathway is different</span><h2>We Do Not Just Onboard. <em>We Develop.</em></h2><p>Prosperity Life School approaches financial advisory as a professional pathway, not a quick-income offer. Suitable participants develop the human, business and practical capabilities required to serve people responsibly.</p></div><div class="ill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-label="Illustration: a winding professional pathway from Explorer to Leader">
+<defs>
+<linearGradient id="ga" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14305C"/><stop offset="1" stop-color="#0B1D3A"/></linearGradient>
+<linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EBC862"/><stop offset="1" stop-color="#D4A72C"/></linearGradient>
+<clipPath id="ca"><rect x="6" y="6" width="508" height="348" rx="28"/></clipPath></defs><g clip-path="url(#ca)">
+<rect x="6" y="6" width="508" height="348" fill="url(#ga)"/>
+<circle cx="440" cy="70" r="46" fill="#1F4C8F" opacity=".5"/><circle cx="440" cy="70" r="30" fill="#EBC862" opacity=".9"/>
+<g fill="#F6F1E7" opacity=".5"><circle cx="70" cy="50" r="2.5"/><circle cx="120" cy="86" r="2"/><circle cx="250" cy="40" r="2"/><circle cx="330" cy="76" r="2.5"/><circle cx="395" cy="140" r="2"/><circle cx="60" cy="140" r="2"/></g>
+<path d="M0 300 C80 270 130 300 210 280 C300 258 340 290 430 255 C470 240 500 244 520 250 L520 360 L0 360Z" fill="#07142B" opacity=".55"/>
+<path d="M60 318 C150 318 170 260 230 258 C300 256 300 200 250 186 C200 172 180 134 260 120 C340 106 380 96 420 70" fill="none" stroke="#F6F1E7" stroke-width="9" stroke-linecap="round" opacity=".16"/>
+<path d="M60 318 C150 318 170 260 230 258 C300 256 300 200 250 186 C200 172 180 134 260 120 C340 106 380 96 420 70" fill="none" stroke="url(#gb)" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"/>
+<!-- milestones -->
+<g font-family="Manrope,Arial,sans-serif" font-weight="800" text-anchor="middle">
+<circle cx="70" cy="316" r="20" fill="#F6F1E7"/><text x="70" y="323" font-size="18" fill="#0B1D3A">1</text>
+<rect x="30" y="338" width="80" height="0" fill="none"/>
+<circle cx="232" cy="258" r="22" fill="#F6F1E7"/><text x="232" y="266" font-size="19" fill="#0B1D3A">2</text>
+<circle cx="258" cy="122" r="24" fill="#F6F1E7"/><text x="258" y="130" font-size="20" fill="#0B1D3A">3</text>
+<circle cx="420" cy="70" r="28" fill="url(#gb)"/><text x="420" y="79" font-size="24" fill="#07142B">4</text>
+</g>
+<g font-family="Manrope,Arial,sans-serif" font-weight="800" font-size="12.5" fill="#F6F1E7">
+<text x="70" y="352" text-anchor="middle">Explorer</text>
+<text x="232" y="300" text-anchor="middle">Trainee Advisor</text>
+<text x="258" y="164" text-anchor="middle">Professional</text>
+<text x="420" y="116" text-anchor="middle">Potential Leader</text>
+</g>
+<!-- flag -->
+<path d="M420 42 L420 18" stroke="#F6F1E7" stroke-width="3" stroke-linecap="round"/><path d="M420 18 L444 25 L420 33Z" fill="#EBC862"/>
+<!-- shield -->
+<g transform="translate(46 112)"><path d="M0 0 L38 -12 L76 0 L76 40 C76 66 52 82 38 90 C24 82 0 66 0 40Z" fill="#F6F1E7"/><path d="M8 6 L38 -4 L68 6 L68 40 C68 61 49 74 38 81 C27 74 8 61 8 40Z" fill="#14305C"/><path d="M22 40 L34 52 L56 28" fill="none" stroke="#EBC862" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<!-- compass -->
+<g transform="translate(366 236)"><circle r="34" fill="#F6F1E7"/><circle r="28" fill="#0B1D3A"/><path d="M0 -22 L7 0 L0 22 L-7 0Z" fill="#EBC862"/><path d="M0 -22 L7 0 L-7 0Z" fill="#F6F1E7"/><circle r="3.5" fill="#F6F1E7"/></g>
+<!-- books -->
+<g transform="translate(150 190)"><rect width="62" height="11" rx="2" fill="#EBC862"/><rect x="5" y="-11" width="52" height="11" rx="2" fill="#F6F1E7"/><rect x="9" y="-22" width="44" height="11" rx="2" fill="#1F4C8F"/></g>
+</g></svg>
+</div></div>
+<div class="skills">
+<div class="skill"><h4>Communication</h4><p>Listening, questioning, explaining and presenting.</p></div>
+<div class="skill"><h4>Client process</h4><p>Fact-finding, follow-up and service discipline.</p></div>
+<div class="skill"><h4>Business systems</h4><p>CRM, activity tracking and referrals.</p></div>
+<div class="skill"><h4>Digital capability</h4><p>Professional profile, content and online communication.</p></div>
+<div class="skill"><h4>Personal leadership</h4><p>Consistency, confidence and accountability.</p></div>
+<div class="skill"><h4>Ethical practice</h4><p>Needs-based education and regulatory conduct.</p></div>
+</div>
+<div class="support">
+<h3>Training and support you can expect</h3>
+<ul>
+<li>Structured orientation and role clarity</li>
+<li>Applicable product and protection education</li>
+<li>Conversation practice and scripts</li>
+<li>CRM and follow-up routines</li>
+<li>Personal-brand and digital guidance</li>
+<li>Mentoring, review and community support</li>
+<li>Leadership development for suitable candidates</li>
+<li>Readiness assessment before commitment</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="D" id="progression">
+<div class="wrap">
+<div class="sec-head">
+<span class="eyebrow">Career progression</span>
+<h2>A Pathway That Grows With You</h2>
+</div>
+<div class="ladder">
+<div class="rung"><span class="arr">↗</span><span class="lv">Step 1</span><h3>Explorer</h3><p>Understand the profession and assess readiness.</p></div>
+<div class="rung"><span class="arr">↗</span><span class="lv">Step 2</span><h3>Trainee Advisor</h3><p>Complete applicable learning, certification and guided practice.</p></div>
+<div class="rung"><span class="arr">↗</span><span class="lv">Step 3</span><h3>Professional Advisor</h3><p>Build disciplined education, service and follow-up systems.</p></div>
+<div class="rung"><span class="arr">↗</span><span class="lv">Step 4</span><h3>Potential Leader</h3><p>Suitable advisors may progress into mentoring, team development and wider responsibility.</p></div>
+</div>
+<div class="cta-row center" style="margin-top:34px"><a class="btn js-book" href="#apply">Explore My Pathway: Book a Slot</a></div>
+<p class="fine">Progression is not automatic. It depends on suitability, training completion, conduct, applicable requirements and performance.</p>
+</div>
+</section>
+
+<section class="L" id="mentor">
+<div class="wrap founder">
+<div class="founder-img"><img alt="Dr Maria Pramila Dsouza" src="assets/lp/667a4fe6d7.jpg" width="397" height="457" loading="lazy" decoding="async"></div>
+<div>
+<span class="eyebrow">Meet your mentor</span>
+<h2>Dr Maria Pramila Dsouza</h2>
+<p class="pull">We do not just onboard people. We identify readiness and develop professionals.</p>
+<p class="t">Dr Maria is a Chartered Wealth Manager and Prosperity Mentor whose journey from government teacher to global financial coach shapes a development-first approach grounded in education, ethics, communication and practical systems. She is the founder of Prosperity Life School, with experience in training, mentoring and leadership development.</p>
+<div class="proof">
+<div><b>15+</b><span>years in personal finance education</span></div>
+<div><b>12,000+</b><span>people educated</span></div>
+<div><b>500+</b><span>client families supported</span></div>
+</div>
+<p class="vary">Individual experiences and outcomes vary.</p>
+<div class="cta-row"><a class="btn js-book" href="#apply">Book a Call With Dr Maria</a><a class="btn ghost js-video" href="https://www.prosperitylifeschool.com/youtube.html">▶ Watch Her Introduction</a></div>
+</div>
+</div>
+</section>
+
+<section class="D" id="suitability">
+<div class="wrap">
+<div class="sec-head">
+<span class="eyebrow">Honest filter</span>
+<h2>Is This the Right Fit for You?</h2>
+<p>We would rather you know now than later.</p>
+</div>
+<div class="fit">
+<div class="fit-col yes">
+<h3>This may suit someone who</h3>
+<ul>
+<li><b>✓</b>Enjoys learning and communication</li>
+<li><b>✓</b>Will complete applicable requirements</li>
+<li><b>✓</b>Can follow a professional process</li>
+<li><b>✓</b>Values ethical conversations</li>
+<li><b>✓</b>Will build relationships over time</li>
+</ul>
+</div>
+<div class="fit-col no">
+<h3>It may not suit someone who</h3>
+<ul>
+<li><b>✕</b>Expects immediate or guaranteed income</li>
+<li><b>✕</b>Wants results without consistent activity</li>
+<li><b>✕</b>Will not follow regulations</li>
+<li><b>✕</b>Prefers pressure-based selling</li>
+<li><b>✕</b>Wants a passive-income scheme</li>
+</ul>
+</div>
+</div>
+<div class="cta-row center" style="margin-top:38px"><a class="btn js-book" href="#apply">This Sounds Like Me: Book My Slot</a></div>
+</div>
+</section>
+
+<section class="L" id="faq">
+<div class="wrap">
+<div class="sec-head">
+<span class="eyebrow">Questions answered</span>
+<h2>Become a Financial Advisor in India: Frequently Asked Questions</h2>
+</div>
+<div class="faq"><div class="faq-item"><button class="faq-q" type="button">How do I become a financial advisor in India?<span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Requirements depend on the products you want to advise on, such as insurance or mutual funds, and each has its own certification and regulatory steps. The readiness scorecard helps you check your fit before you commit. Regulations change, so confirm current rules with the relevant regulator.</div></div></div><div class="faq-item"><button class="faq-q" type="button">Is an insurance advisor career a good option in India?<span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">It can suit people who enjoy teaching, building trust and long-term relationships. Income varies widely between individuals and is not guaranteed.</div></div></div><div class="faq-item"><button class="faq-q" type="button">How can I create multiple sources of income?<span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Begin with your skills, time and goals. A finance advisory career is one pathway among several, and the clarity call helps you judge whether it deserves a closer look.</div></div></div>
+<div class="faq-item"><button class="faq-q" type="button">Do I need insurance experience?<span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Not necessarily. Suitability, learning attitude and applicable eligibility are assessed first.</div></div></div>
+<div class="faq-item"><button class="faq-q" type="button">Can I explore this with my current profession?<span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">The clarity process can help determine compatibility with your present responsibilities.</div></div></div>
+<div class="faq-item"><button class="faq-q" type="button">Is income guaranteed?<span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. Outcomes depend on capability, activity, training, market conditions and applicable terms.</div></div></div>
+<div class="faq-item"><button class="faq-q" type="button">Will training be provided?<span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Suitable candidates will receive information on relevant training, mentoring and certification.</div></div></div>
+<div class="faq-item"><button class="faq-q" type="button">What happens after the scorecard?<span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">You receive a result and, where appropriate, an invitation to a clarity call.</div></div></div>
+<div class="faq-item"><button class="faq-q" type="button">Does the form guarantee selection?<span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. The assessment and call determine mutual suitability.</div></div></div>
+<div class="faq-item"><button class="faq-q" type="button">Where is the initial focus?<span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Bengaluru and Mangaluru, with later expansion possible.</div></div></div>
+<div class="faq-item"><button class="faq-q" type="button">Is this a job offer?<span class="icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. This is a professional, performance-based pathway. It is not a salaried job, a fixed-income offer or a guaranteed-income scheme.</div></div></div>
+</div>
+<div class="cta-row center" style="margin-top:34px"><a class="btn js-book" href="#apply">Still Unsure? Book a Free Clarity Call</a><a class="btn ghost js-video" href="https://www.prosperitylifeschool.com/youtube.html">▶ Watch the Video</a></div>
+</div>
+</section>
+
+<section class="final" id="apply">
+<div class="wrap final-grid">
+<div>
+<span class="eyebrow" style="color:var(--gold-bright)">Your next step</span>
+<h2>Check Your Fit and Book Your Free Advisor Clarity Call</h2>
+<p class="lede">Discover your current readiness, identify the capabilities to develop and understand whether this professional pathway deserves a closer conversation.</p>
+<div class="start-card">
+<h3>Answer a few quick questions</h3>
+<ul>
+<li><b>1</b>Tell us where you are today</li>
+<li><b>2</b>Answer questions matched to your situation</li>
+<li><b>3</b>Share your details and preferred call time</li>
+<li><b>4</b>Get your clarity call arranged, free and with no obligation</li>
+</ul>
+<div class="form-embed"><h3>Book Your Free Call</h3><p class="ph">Takes under a minute. Our team will confirm your slot on WhatsApp or by phone.</p><iframe class="umang-form" src="https://dashboard.umangdigital.co.in/form/contact-form-mtwhdjkv" title="Prosperity Life School contact form" width="100%" height="600" frameborder="0" style="border:none;" loading="lazy" referrerpolicy="unsafe-url"></iframe></div>
+<p class="fine2">Prefer to understand first? <a href="https://www.prosperitylifeschool.com/youtube.html" class="js-video" style="text-decoration:underline;font-weight:700">Watch the 8-minute introduction</a></p>
+</div>
+<div class="final-list">
+<p class="l">What you receive</p>
+<ul>
+<li>Your readiness score and category</li>
+<li>Your strengths and development priorities</li>
+<li>A recommended next step</li>
+<li>An honest conversation about suitability</li>
+</ul>
+</div>
+<p class="micro">Approximately 5–7 minutes for the scorecard · Individual outcomes vary</p>
+</div>
+<div class="final-img"><img alt="Dr Maria Pramila Dsouza" src="assets/lp/c035999af0.jpg" width="676" height="1142" loading="lazy" decoding="async"></div>
+</div>
+</section>
+
+<div class="lp-disc"><div class="lp-disc-in"><b>Prosperity Life School</b> Dr Maria Pramila Dsouza · Chartered Wealth Manager &amp; Prosperity Mentor · This page provides information about a potential professional pathway. It does not guarantee selection, income, clients, business volume or career progression. Requirements and terms may vary by company, product, role and applicable regulation. Individual outcomes depend on multiple factors. By submitting the scorecard you consent to being contacted about this opportunity.</div></div><div class="psl-footer" role="contentinfo">
+<div class="psl-wrap">
+<div class="psl-fgrid2">
+<div class="psl-fb"><a class="psl-brand" href="https://www.prosperitylifeschool.com/"><img src="assets/img/logo-transparent.png" alt="Prosperity Life School logo"><span class="psl-w notranslate" translate="no">Prosperity Life School<small>LEARN · GROW · PROSPER</small></span></a>
+<p class="psl-about-s">Financial education, financial planning, wealth creation, protection, retirement and multiple sources of income.</p>
+<div class="psl-soc2" aria-label="Follow Prosperity Life School"><a class="psl-s-wa" href="https://wa.me/918904820166" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><use href="#b-wa"/></svg></a><a class="psl-s-yt" href="https://www.youtube.com/@drmariapramila" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><use href="#b-yt"/></svg></a><a class="psl-s-ig" href="https://www.instagram.com/drmariapramila/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#b-ig"/></svg></a><a class="psl-s-li" href="https://www.linkedin.com/in/drmariapramila/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><use href="#b-li"/></svg></a></div></div>
+<div><h4>Explore</h4><ul><li><a href="https://www.prosperitylifeschool.com/">Home</a></li><li><a href="https://www.prosperitylifeschool.com/about.html">About Dr Maria</a></li><li><a href="https://www.prosperitylifeschool.com/programs.html">Programs</a></li><li><a href="https://www.prosperitylifeschool.com/community.html">Join Community</a></li><li><a href="https://www.prosperitylifeschool.com/youtube.html">YouTube</a></li><li><a href="#apply">Contact</a></li></ul></div>
+<div><h4>Programs</h4><ul><li><a href="https://www.prosperitylifeschool.com/prosperity-clarity-call-v5.html">Prosperity Clarity Call</a></li><li><a href="https://www.prosperitylifeschool.com/prosperity-retirement-clarity-call.html">Retirement Clarity Call</a></li><li><a href="https://www.prosperitylifeschool.com/prosperity-protection-gap-review.html">Protection Gap Review</a></li><li><a href="https://www.prosperitylifeschool.com/prosperity-advisor-career-readiness.html">Advisor Career Readiness</a></li></ul></div>
+<div class="psl-contact"><h4>Contact</h4><ul>
+<li><svg><use href="#i-phone"/></svg><a href="tel:+918904820166">WhatsApp / Call +91 8904820166</a></li>
+<li><svg><use href="#i-mail"/></svg><a href="mailto:maria@prosperitylifeschool.com">maria@prosperitylifeschool.com</a></li>
+<li><svg><use href="#i-pin"/></svg><span>Bengaluru &amp; Mangaluru · Online across India and the Gulf</span></li></ul></div>
+</div>
+<div class="psl-fbot" id="legal">
+<div class="psl-tg">Financial Wisdom for a Blessed Life</div>
+<p class="psl-disc"><b>Disclaimer:</b> Prosperity Life School provides financial education only. Nothing on this site is investment advice or a promise of returns. Member results are individual and depend on their own effort and choices. Educational content on this website is for general awareness and should not be treated as personalised investment, tax or legal advice. Financial products and investments are subject to applicable terms, eligibility, regulations and risks, including market risks; read all scheme documents carefully.</p>
+<div class="psl-row"><span>© Prosperity Life School 2026</span><span><a href="https://prosperitylifeschool.com/privacy-policy">Privacy Policy</a><a href="https://www.prosperitylifeschool.com/contact.html#legal">Terms &amp; Conditions</a><a href="https://www.prosperitylifeschool.com/contact.html#legal">Disclaimer</a></span></div>
+</div>
+</div>
+</div>
+
+<div class="sticky-cta" id="stickyCta"><a class="btn vid-b js-video" href="https://www.prosperitylifeschool.com/youtube.html">▶ Watch</a><a class="btn js-book" href="#apply">Book My Free Slot</a></div>
+<div class="float-book" id="floatBook"><a class="btn js-book" href="#apply">Book My Free Clarity Call Slot</a></div>
+
+<script>
+
+(function(){
+  var fb=document.getElementById('floatBook');
+  window.addEventListener('scroll',function(){
+    var past=window.scrollY>700,near=document.getElementById('apply').getBoundingClientRect().top<window.innerHeight*0.8;
+    fb.classList.toggle('show',past&&!near);
+  });
+})();
+
+(function(){
+  /* audience selector */
+  var A=[
+    {h:'Working hard without reliable prospecting, CRM and follow-up.',l:['Build stronger professional positioning','Set up prospecting, CRM and follow-up systems','Sharpen needs-based client conversations','Explore potential leadership development']},
+    {h:'Unsure about time, training and professional requirements.',l:['See how this fits alongside your current role','Understand the training and certification steps','Get clarity on time commitment before you decide','Explore a structured, purpose-driven pathway']},
+    {h:'Has a network, but wants to protect relationships and credibility.',l:['Learn ethical, needs-based conversations','Protect trust while you add a new pathway','Build referral and follow-up systems','Explore advisory as a complementary profession']},
+    {h:'Needs confidence, structure, updated skills and mentoring.',l:['Restart with structured learning and support','Rebuild confidence with guided practice','Learn digital tools and client conversations','Explore a flexible professional pathway']}
+  ];
+  var tabs=document.querySelectorAll('.aud');
+  function setAud(i){
+    tabs.forEach(function(t,k){t.classList.toggle('on',k===i)});
+    document.getElementById('apH').textContent=A[i].h;
+    document.getElementById('apL').innerHTML=A[i].l.map(function(x){return '<li>'+x+'</li>'}).join('');
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){setAud(+t.dataset.i)})});
+  setAud(0);
+
+  /* quick check */
+  var Q=[
+    ['Purpose and alignment','I can treat this as professional work rather than a quick-income opportunity.'],
+    ['Communication and relationships','I listen carefully before suggesting or recommending a solution.'],
+    ['Learning and discipline','I am willing to complete the required training, examination, licensing or certification process.'],
+    ['Business consistency','I can follow up consistently without becoming aggressive or easily discouraged.'],
+    ['Leadership and growth','Over time, I may be interested in mentoring or developing other advisors.']
+  ];
+  var ans=[],cur=0;
+  var quiz=document.getElementById('qcQuiz'),res=document.getElementById('qcResult');
+  function show(){
+    document.getElementById('qcStep').textContent='Question '+(cur+1)+' of 5';
+    document.getElementById('qcBar').style.width=(cur/5*100)+'%';
+    document.getElementById('qcDim').textContent=Q[cur][0];
+    document.getElementById('qcText').textContent=Q[cur][1];
+    document.getElementById('qcBack').style.visibility=cur?'visible':'hidden';
+  }
+  function result(){
+    quiz.style.display='none';res.style.display='block';
+    var tot=ans.reduce(function(a,b){return a+b},0)*4;
+    var cat=tot>=80?['Strong Readiness to Explore','Your answers show strong alignment with a professional advisory pathway. A clarity call can help you test it against your goals.']:
+      tot>=60?['Promising Potential','You have a solid base. A few areas to develop could make a real difference. A clarity call can show you where to start.']:
+      tot>=40?['Build the Foundation First','There is potential here, with some foundations to build first. The full scorecard will show your development priorities.']:
+      ['Explore Before Deciding','Take time to learn more before committing. The introduction video and full scorecard are good next steps.'];
+    document.getElementById('resTitle').textContent=cat[0];
+    document.getElementById('resText').textContent=cat[1];
+    document.getElementById('resScore').textContent=tot;
+    var ring=document.getElementById('ring');ring.style.setProperty('--p',tot);
+    var names=['Purpose & alignment','Communication','Learning & discipline','Consistency','Leadership & growth'];
+    document.getElementById('resBars').innerHTML=ans.map(function(v,i){return '<div class="rb"><span>'+names[i]+'</span><i><u data-w="'+(v*20)+'"></u></i><span>'+v+'/5</span></div>'}).join('');
+    setTimeout(function(){document.querySelectorAll('#resBars u').forEach(function(u){u.style.width=u.dataset.w+'%'})},60);
+    var hi=0,lo=0;ans.forEach(function(v,i){if(v>ans[hi])hi=i;if(v<ans[lo])lo=i});
+    document.getElementById('resNote').innerHTML='<b>Strongest area:</b> '+names[hi]+'. <b>Focus area:</b> '+names[lo]+'. The full 20-statement scorecard gives your complete score, priorities and recommended next step.';
+  }
+  document.getElementById('qcScale').addEventListener('click',function(e){
+    var b=e.target.closest('button');if(!b)return;
+    ans[cur]=+b.dataset.v;cur++;
+    if(cur>=5){document.getElementById('qcBar').style.width='100%';result();}else show();
+  });
+  document.getElementById('qcBack').addEventListener('click',function(){if(cur>0){cur--;show();}});
+  document.getElementById('qcRetry').addEventListener('click',function(){ans=[];cur=0;res.style.display='none';quiz.style.display='block';show();});
+  show();
+
+  /* FAQ */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q=item.querySelector('.faq-q'),a=item.querySelector('.faq-a');
+    q.addEventListener('click',function(){
+      var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+      if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+    });
+  });
+
+  /* sticky CTA */
+  var sticky=document.getElementById('stickyCta');
+  window.addEventListener('scroll',function(){
+    if(window.innerWidth>720)return;
+    var past=window.scrollY>420,near=document.getElementById('apply').getBoundingClientRect().top<window.innerHeight;
+    sticky.classList.toggle('show',past&&!near);
+  });
+
+  /* reveal */
+  var t=document.querySelectorAll('section');
+  t.forEach(function(el){el.classList.add('reveal')});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+    t.forEach(function(el){io.observe(el)});
+  }else t.forEach(function(el){el.classList.add('in-view')});
+})();
+</script>
+<script src="assets/js/hf.js" defer></script>
+</body>
+</html>
