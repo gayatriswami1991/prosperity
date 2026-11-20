@@ -20,7 +20,7 @@ for p in pages:
     if len(h1) != 1: flag(p, 'H1 count')
     if not t or len(t.group(1)) > 75: flag(p, 'title length')
     if not d or (not noindex and not (70 <= len(d.group(1)) <= 165)): flag(p, 'description length')
-    exp = SITE + '/' if p == 'index.html' else SITE + '/' + p
+    exp = SITE + '/' if p == 'index.html' else SITE + '/' + p[:-5]
     if not can or can.group(1) != exp: flag(p, 'canonical')
     if not noindex and '<meta name="robots" content="index' not in s: flag(p, 'robots')
     if s.count('<title>') != 1: flag(p, 'multiple titles')
@@ -34,7 +34,9 @@ for p in pages:
         if re.match(r'^(https?:|mailto:|tel:|#|javascript:)', h) or h.startswith("'+") or h.startswith('assets/') or h == '': continue
         flag(p, 'relative link: ' + h)
     for h in re.findall(r'href="(https://www\.prosperitylifeschool\.com[^"#?]*)', s):
-        f = h.replace(SITE, '').lstrip('/') or 'index.html'
+        if h.endswith('.html'): flag(p, 'link still has .html: ' + h)
+        f = (h.replace(SITE, '').lstrip('/') or 'index') + ('' if h.replace(SITE, '').lstrip('/') == '' else '.html')
+        if f == 'index': f = 'index.html'
         if not os.path.exists('%s/%s' % (OUT, f)): flag(p, 'broken internal link ' + h)
     for a in re.findall(r'(?:src|poster|href)="(assets/[^"?#]+)"', s):
         if not os.path.exists('%s/%s' % (OUT, a)): flag(p, 'missing asset ' + a)
@@ -49,5 +51,11 @@ for p in pages:
         if h not in ids: flag(p, 'anchor #%s has no target' % h)
 for f in ('sitemap.xml', 'robots.txt', 'assets/css/styles.css', 'assets/js/hf.js', 'assets/js/site.js', 'assets/img/og-share.jpg'):
     if not os.path.exists('%s/%s' % (OUT, f)): flag(f, 'missing')
+for jf in ('hf', 'site'):
+    t = open('%s/assets/js/%s.js' % (OUT, jf), encoding='utf8').read()
+    if re.search(r"['\"](?:index|about|programs|community|youtube|contact|prosperity-[a-z0-9-]+)\.html", t): flag(jf + '.js', 'relative .html link in JS')
+for f in glob.glob(OUT + '/*.html'):
+    t = open(f, encoding='utf8').read()
+    if re.search(r'prosperitylifeschool\.com/[a-z0-9-]+\.html', t): flag(os.path.basename(f), '.html in absolute url (schema/meta)')
 print('ISSUES:', bad)
 sys.exit(1 if bad else 0)

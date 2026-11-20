@@ -24,7 +24,7 @@ def warn(m): problems.append(m); print('  WARN', m)
 def rd(p): return open(p, encoding='utf8').read()
 def wr(p, s):
     os.makedirs(os.path.dirname(p), exist_ok=True); open(p, 'w', encoding='utf8').write(s)
-def url(page): return SITE + '/' if page == 'index.html' else SITE + '/' + page
+def url(page): return SITE + '/' if page == 'index.html' else SITE + '/' + page[:-5]   # clean URLs: no .html
 def esc(s): return H.escape(s, quote=True)
 
 # ---------------------------------------------------------------- absolute internal links
@@ -32,7 +32,7 @@ LINK_RE = re.compile(r'(["\'])(?:\./)?(' + '|'.join(sorted(NAMES, key=len, rever
 def absolutize(s):
     def rep(m):
         n = m.group(2)
-        return m.group(1) + (SITE + '/' if n == 'index' else SITE + '/' + n + '.html')
+        return m.group(1) + (SITE + '/' if n == 'index' else SITE + '/' + n)
     s = LINK_RE.sub(rep, s)
     return s.replace(SITE + '/#', SITE + '/#')  # no-op, keeps '/#x' valid
 
@@ -60,7 +60,7 @@ ORG = {"@type": ["Organization", "EducationalOrganization", "ProfessionalService
        "contactPoint": {"@type": "ContactPoint", "telephone": "+918904820166", "email": "maria@prosperitylifeschool.com", "contactType": "customer service", "availableLanguage": ["English", "Kannada", "Tulu", "Konkani"]},
        "sameAs": SOCIAL}
 PERSON = {"@type": "Person", "@id": PERSON_ID, "name": "Dr Maria Pramila Dsouza", "jobTitle": "Chartered Wealth Manager and Financial Coach",
-          "url": SITE + "/about.html", "image": SITE + "/assets/img/dr-maria-office.jpg", "worksFor": {"@id": ORG_ID},
+          "url": SITE + "/about", "image": SITE + "/assets/img/dr-maria-office.jpg", "worksFor": {"@id": ORG_ID},
           "knowsLanguage": ["English", "Kannada", "Tulu", "Konkani"],
           "knowsAbout": ["Financial planning", "Retirement planning", "Insurance and protection", "Financial literacy", "Wealth creation", "Multiple sources of income"],
           "sameAs": SOCIAL}
@@ -167,7 +167,7 @@ def build_main():
             s = s.replace('</body>', '<template id="pslFormTpl">' + form_block('Book My Free Slot', 'Leave your details and we will confirm your slot. Takes under a minute.') + '</template>\n</body>')
         # scripts
         s = s.replace('<script src="assets/js/site.js" defer></script>', '<script src="assets/js/hf.js" defer></script>\n<script src="assets/js/site.js" defer></script>')
-        s = s.replace('<a class="pdf" href="#" data-link=', '<a class="pdf" href="%s/programs.html#memberships" hidden data-link=' % SITE)
+        s = s.replace('<a class="pdf" href="#" data-link=', '<a class="pdf" href="%s/programs#memberships" hidden data-link=' % SITE)
         # schema
         kind, extra = 'WebPage', None
         if meta['schema'] == 'about': kind, extra = 'AboutPage', {"mainEntity": {"@id": PERSON_ID}}
@@ -415,6 +415,7 @@ def build_assets():
     shutil.copytree(W + '/assets', A, ignore=shutil.ignore_patterns('main.js', 'small-*.mp4'))
     css = rd(W + '/assets/css/styles.css') + rd(os.path.dirname(__file__) + '/extra.css')
     wr(A + '/css/styles.css', css)
+    for n in ('hf', 'site'): wr(A + '/js/%s.js' % n, absolutize(rd(W + '/assets/js/%s.js' % n)))
     # share image 1200x630
     try:
         subprocess.run(['convert', '-size', '1200x630', 'gradient:#011D43-#001330', W + '/assets/img/dr-maria-office.jpg', '-resize', 'x630', '-gravity', 'east', '-composite',
@@ -430,12 +431,12 @@ def build_extras():
     urls = ''.join('  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>%s</changefreq><priority>%s</priority></url>\n' % (
         url(p), TODAY, 'weekly' if p in ('index.html', 'youtube.html') else 'monthly', pri.get(p, '0.8' if p.startswith('prosperity') else '0.7')) for p in pages)
     wr(OUT + '/sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + '</urlset>\n')
-    wr(OUT + '/robots.txt', 'User-agent: *\nAllow: /\nDisallow: /prosperity-thank-you.html\nDisallow: /retirement-booking-form.html\n\nSitemap: %s/sitemap.xml\n' % SITE)
+    wr(OUT + '/robots.txt', 'User-agent: *\nAllow: /\nDisallow: /prosperity-thank-you\nDisallow: /retirement-booking-form\n\nSitemap: %s/sitemap.xml\n' % SITE)
     wr(OUT + '/README.txt', """Prosperity Life School: LIVE website (www.prosperitylifeschool.com)
 
 UPLOAD: put ALL files and the assets/ folder (and .htaccess, which is hidden) in the root of the website (public_html).
 Pages (13): index, about, programs, community, youtube, contact + 4 ad landing pages + book-retirement-clarity-call,
-retirement-booking-form, prosperity-thank-you. Extra: sitemap.xml, robots.txt, .htaccess (https + www redirect, cache).
+retirement-booking-form, prosperity-thank-you. Extra: sitemap.xml, robots.txt, .htaccess (https + www redirect, clean URLs without .html, cache).
 
 FORM: every page uses the same Umang Digital form (iframe). To change it, edit FORM_URL in tools/build.py and rebuild.
 LINKS: membership / PDF links live in assets/js/site.js (PSL_CONFIG.LINKS). Empty = button goes to the Contact page.
@@ -450,6 +451,10 @@ RewriteCond %{HTTP_HOST} !^www\\. [NC]
 RewriteRule ^(.*)$ https://www.prosperitylifeschool.com/$1 [L,R=301]
 RewriteCond %{THE_REQUEST} \\s/index\\.html[\\s?] [NC]
 RewriteRule ^index\\.html$ / [L,R=301]
+RewriteCond %{THE_REQUEST} \\s/+([^\\s?]+)\\.html[\\s?] [NC]
+RewriteRule ^ /%1 [L,R=301]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^./]+)$ $1.html [L]
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
 </IfModule>
