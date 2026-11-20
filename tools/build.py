@@ -284,15 +284,16 @@ def scoped_css(css, markup):
     for _ in range(3): out = re.sub(r'var\((--[\w-]+)\)', lambda m: root.get(m.group(1), 'inherit').strip(), out)
     for name, (head, body) in kf.items():
         if name in out: out += head + '{' + body + '}'
-    R = ':where(.psl-topbar,.psl-header,.psl-footer)'
+    def each(tmpl):   # plain selectors only (no :where/:is), for strict builders
+        return ','.join(tmpl % r for r in ('.psl-topbar', '.psl-header', '.psl-footer'))
     base = (".psl-topbar,.psl-header,.psl-footer,.psl-wa,.psl-stick{font-family:'Poppins',Arial,sans-serif;font-size:16px;line-height:1.65;color:#0F2342;text-align:left;-webkit-font-smoothing:antialiased}"
-            + R + " *{box-sizing:border-box}"
-            + R + " a{text-decoration:none}"
-            + R + " ul{margin:0;padding:0;list-style:none}"
-            + R + " :is(p,h4,li){margin:0}"
-            + R + " :is(img){max-width:100%;display:block;height:auto}"
-            + R + " :is(select,button){font-family:inherit}"
-            + R + " :is(p,li,span,div,h4){color:inherit}"
+            + each('%s *') + "{box-sizing:border-box}"
+            + each('%s a') + "{text-decoration:none}"
+            + ".psl-topbar ul,.psl-header ul:not(.psl-nav),.psl-footer ul{margin:0;padding:0;list-style:none}"
+            + each('%s p') + ',' + each('%s h4') + ',' + each('%s li') + "{margin:0}"
+            + ".psl-header img,.psl-footer img{max-width:100%;display:block;height:auto}"
+            + each('%s select') + ',' + each('%s button') + "{font-family:inherit}"
+            + each('%s p') + ',' + each('%s li') + ',' + each('%s span') + ',' + each('%s div') + ',' + each('%s h4') + "{color:inherit}"
             ".psl-header .psl-sub a{display:block}"
             "body{top:0!important}.skiptranslate iframe,.goog-te-banner-frame,#goog-gt-tt,.goog-te-balloon-frame{display:none!important}.goog-text-highlight{background:none!important;box-shadow:none!important}"
             ".psl-gt-hide,#google_translate_element{display:none}"
