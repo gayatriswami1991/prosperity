@@ -1,44 +1,30 @@
-# Prosperity Life School: 20 target keywords (v1)
+# Prosperity Life School: 20 target keywords (v2, mapped to the pages that exist)
 
-**Honest note:** I have no access to Google Keyword Planner or any volume tool in this session, so these are chosen by search intent, relevance to the services in the client documents, and the reels and YouTube topics. Check volume and difficulty in Google Keyword Planner or Ubersuggest (free) before final lock. Order is by how close each is to a lead.
+No keyword-volume tool is available in this session. These are picked by search intent and fit with the live pages. Check volume in Google Keyword Planner before final lock.
+Rule: 1 primary keyword per page (title, meta, H1, first paragraph) + 2 to 3 secondary keywords (H2s, FAQ). No stuffing, no return/income promises.
 
-## A. Lead keywords (people ready to talk to someone)
-| # | Keyword | Page it belongs to |
-|---|---|---|
-| 1 | financial planner in Bangalore | Financial Planning, Contact |
-| 2 | financial planner in Mangalore (Mangaluru) | Financial Planning, Contact |
-| 3 | retirement planning India | Retirement hub (landing page) |
-| 4 | NRI financial planning India | NRI page |
-| 5 | NRI retirement planning India | NRI / Retirement |
-| 6 | comprehensive financial planning | Gold / Navigator page |
-| 7 | chartered wealth manager India | About Dr Maria |
-| 8 | financial coach India | Home, About |
-| 9 | become a financial advisor in India | Advisor landing page |
-| 10 | insurance advisor career India | Advisor landing page |
+| # | Keyword | Intent | Target page | Role |
+|---|---|---|---|---|
+| 1 | financial planner in Bangalore | Lead | index.html | Primary |
+| 2 | financial planner in Mangalore | Lead | contact.html | Primary |
+| 3 | financial planning for families India | Lead | prosperity-clarity-call-v5.html | Primary |
+| 4 | free financial clarity call | Lead | prosperity-clarity-call-v5.html | Secondary |
+| 5 | retirement planning India | Lead | prosperity-retirement-clarity-call.html | Primary |
+| 6 | how much money do I need to retire in India | Learn | prosperity-retirement-clarity-call.html | Secondary (FAQ) |
+| 7 | retirement planning for NRIs | Lead | prosperity-retirement-clarity-call.html | Secondary |
+| 8 | insurance gap analysis | Lead | prosperity-protection-gap-review.html | Primary |
+| 9 | how much term insurance do I need | Learn | prosperity-protection-gap-review.html | Secondary (FAQ) |
+| 10 | health insurance waiting period and room rent limit | Learn | prosperity-protection-gap-review.html | Secondary (FAQ) |
+| 11 | become a financial advisor in India | Lead | prosperity-advisor-career-readiness.html | Primary |
+| 12 | insurance advisor career India | Lead | prosperity-advisor-career-readiness.html | Secondary |
+| 13 | chartered wealth manager India | Trust | about.html | Primary |
+| 14 | financial coach India | Trust | about.html | Secondary |
+| 15 | personal finance course online India | Lead | programs.html | Primary |
+| 16 | Silver Gold Diamond membership financial education | Lead | programs.html | Secondary |
+| 17 | financial literacy community India | Lead | community.html | Primary |
+| 18 | financial literacy videos Kannada / money tips YouTube | Traffic | youtube.html | Primary |
+| 19 | SIP step-up calculator | Traffic | index.html (SIP tool) | Secondary |
+| 20 | how to create multiple sources of income | Traffic | index.html + advisor page | Secondary |
 
-## B. Education keywords (people learning, build the community)
-| # | Keyword | Page it belongs to |
-|---|---|---|
-| 11 | financial literacy course India | Financial Literacy hub |
-| 12 | financial literacy for kids | Ages 8-13 page |
-| 13 | personal finance course online India | Programs / Silver |
-| 14 | how much money do I need to retire in India | Blog + Retirement Number Calculator |
-| 15 | retirement corpus calculator | Calculator page |
-| 16 | how to create multiple sources of income | Multiple Income page |
-
-## C. Problem keywords (match your reels and YouTube, cheap to rank)
-| # | Keyword | Page it belongs to |
-|---|---|---|
-| 17 | health insurance waiting period and room rent limit | Protection blog / reel page |
-| 18 | how much term insurance do I need | Insurance Gap Calculator |
-| 19 | SIP step-up calculator | Wealth Creation + calculator |
-| 20 | gold jewellery vs gold investment | Blog (festival season reel) |
-
-## Also target (local language)
-Kannada: ಹಣಕಾಸು ಯೋಜನೆ (financial planning), ಹಣ ಉಳಿತಾಯ (saving money). Your Kannada YouTube videos (Money Mathu) can rank for these.
-
-## How to use them
-- One main keyword per page, in the H1, title, meta description and first paragraph. Do not stuff.
-- Home page targets the brand + "financial education and planning". Money keywords live on their own pages.
-- Every keyword in group C becomes a short blog post with the matching reel or YouTube video embedded, ending in a CTA to a landing page.
-- Never promise returns or outcomes in titles.
+Brand terms to protect: "Prosperity Life School", "Dr Maria Pramila".
+Later (blog, 4 posts a month): #9, #10, #19, "gold jewellery vs gold investment", each with its reel or YouTube video.
