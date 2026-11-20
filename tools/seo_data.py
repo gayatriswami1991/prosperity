@@ -96,6 +96,19 @@ MAIN = {
     'Insurance explained, retirement, money mindset, podcasts and interviews, a book launch, live workshops and tips for NRIs.'),
    ('Are the examples in the reels a promise of returns?',
     'No. Illustrations in reels are examples only. The content is educational and not investment advice.')]),
+ 'blog.html': dict(
+  title='Financial Planning Blog India | Money & Insurance Insights',
+  desc='Plain-language articles on financial planning, insurance, retirement and family money from Dr Maria Pramila Dsouza, Chartered Wealth Manager.',
+  kw='Financial Planning Blog India:',
+  schema='blog', crumb='Blog', h2=[],
+  faq_title='Blog: Frequently Asked Questions',
+  faq=[
+   ('What topics does the blog cover?',
+    'Financial planning, insurance and protection, retirement, SIPs and investing basics, family money habits and income skills, explained in plain language.'),
+   ('Are the articles investment advice?',
+    'No. The articles are educational and general in nature. They are not personalised investment, tax or legal advice or a promise of returns.'),
+   ('Can I suggest a topic?',
+    'Yes. Send your question through the Contact page or on WhatsApp and our team will consider it for a future article.')]),
  'contact.html': dict(
   title='Contact Prosperity Life School | Financial Planner Mangalore',
   desc='Contact Prosperity Life School and book a free call with Dr Maria Pramila Dsouza. Financial planner in Bangalore and Mangalore. WhatsApp +91 8904820166.',
@@ -174,7 +187,7 @@ LANDING = {
   kicker=None, crumb='Thank You', service=None, noindex=True, h2=[], faq=None),
 }
 
-PAGE_ORDER = ['index.html', 'about.html', 'programs.html', 'community.html', 'youtube.html', 'contact.html',
+PAGE_ORDER = ['index.html', 'about.html', 'programs.html', 'community.html', 'youtube.html', 'blog.html', 'contact.html',
               'prosperity-clarity-call-v5.html', 'prosperity-retirement-clarity-call.html',
               'prosperity-protection-gap-review.html', 'prosperity-advisor-career-readiness.html',
               'book-retirement-clarity-call.html']

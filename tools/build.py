@@ -10,7 +10,7 @@ from seo_data import *
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 W = ROOT + '/website'
 LAND = ROOT + '/site-final-landing'
-OUT = ROOT + '/site-live'
+OUT = ROOT + ('/_blog_demo' if os.environ.get('BLOG_DEMO') else '/site-live')
 FORM_URL = 'https://dashboard.umangdigital.co.in/form/contact-form-mtwhdjkv'
 GROUP_URL = ''          # WhatsApp community invite link (thank-you page falls back to a WhatsApp chat when empty)
 WA = 'https://wa.me/918904820166'
@@ -127,12 +127,61 @@ def parse_details(s):
     return [(H.unescape(re.sub('<[^>]+>', '', q)).strip(), H.unescape(re.sub('<[^>]+>', '', a)).strip())
             for q, a in re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p></details>', s, re.S)]
 
+
+# ---------------------------------------------------------------- blog
+def load_posts():
+    posts = json.load(open(os.path.dirname(__file__) + '/blogs.json', encoding='utf8'))
+    if os.environ.get('BLOG_DEMO'):   # preview only (never shipped): sample cards to review the design
+        posts = [{"title": "Sample article title goes here", "image": "assets/img/dr-maria-office.jpg", "date": "2026-11-18",
+                  "intro": "A short two-line introduction that tells the reader what this article will help them understand.", "url": SITE + "/blog"}] * 5
+    return sorted(posts, key=lambda p: p['date'], reverse=True)
+
+def fmt_date(d): return datetime.date.fromisoformat(d).strftime('%d %b %Y').lstrip('0')
+
+def blog_cards(posts, limit=None):
+    posts = posts[:limit] if limit else posts
+    if not posts:
+        return ('<div class="bempty"><h3>Our first articles are on the way</h3><p>Plain-language money insights from Dr Maria are coming soon. '
+                'Meanwhile, you can watch free videos and reels.</p><a class="btn" href="youtube.html">Watch Free Videos</a></div>')
+    out = ''
+    for p in posts:
+        u, t = esc(p['url']), esc(p['title'])
+        out += ('<article class="bcard"><a class="bimg" href="%s" target="_blank" rel="noopener"><img src="%s" alt="%s" loading="lazy" width="1200" height="675"></a>'
+                '<div class="bb"><time datetime="%s">%s</time><h3><a href="%s" target="_blank" rel="noopener">%s</a></h3><p>%s</p>'
+                '<a class="more" href="%s" target="_blank" rel="noopener">Read the article <svg class="ic"><use href="#i-arrow"/></svg></a></div></article>'
+                % (u, esc(p['image']), t, p['date'], fmt_date(p['date']), u, t, esc(p['intro']), u))
+    return '<div class="bgrid">%s</div>' % out
+
+def blog_main(posts):
+    return ('<main>\n<section class="phero" id="top"><div class="floaties" aria-hidden="true"><span class="fl f1">\u20b9</span><span class="fl f3">\u2726</span></div>\n'
+            '<div class="wrap" style="position:relative;z-index:1;text-align:center;max-width:860px"><span class="pill">Blog</span>'
+            '<h1>Money, Insurance and <em>Retirement Insights</em></h1>'
+            '<p class="lede" style="margin-left:auto;margin-right:auto">Short, plain-language articles from Dr Maria Pramila Dsouza to help your family make clearer money decisions.</p></div></section>\n'
+            '<section class="reveal" id="posts" style="padding-top:60px"><div class="wrap">\n<!-- BLOG POSTS: generated from tools/blogs.json. One card = <article class="bcard">...</article> -->\n'
+            + blog_cards(posts) + '\n<p class="fine" style="color:var(--ink-soft);text-align:center">Educational content, not investment advice.</p></div></section>\n'
+            '<section class="bg-mist reveal" id="start"><div class="wrap" style="text-align:center;max-width:760px"><h2>Prefer to Talk It Through?</h2>'
+            '<p class="muted" style="margin-top:12px">Book a free 1-to-1 conversation and bring your questions.</p>'
+            '<div class="cta-row center" style="margin-top:22px"><a class="btn lg" href="contact.html">Book a Free Call</a><a class="btn navy lg" href="community.html">Join the Community</a></div></div></section>\n</main>')
+
+def home_blog_section(posts):
+    return ('<section class="bg-cream reveal" id="blog"><div class="wrap"><div class="sec-head"><span class="eyebrow">From the blog</span>'
+            '<h2>Latest Money Insights</h2><p>Plain-language articles on insurance, retirement, SIPs and family money.</p></div>\n'
+            + blog_cards(posts, 3) + '\n<div class="cta-row center" style="margin-top:30px"><a class="btn navy lg" href="blog.html">View All Articles</a></div></div></section>\n')
+
 # ---------------------------------------------------------------- main pages
 def build_main():
+    posts = load_posts()
     sprite = hdr = ftr = None
     for page in [p for p in PAGE_ORDER if p in MAIN]:
         meta = MAIN[page]
-        s = rd('%s/%s-multifile.html' % (W, page[:-5]))
+        s = rd('%s/%s-multifile.html' % (W, 'contact' if page == 'blog.html' else page[:-5]))
+        if page == 'blog.html':
+            s = re.sub(r'<main>.*?</main>', lambda m: blog_main(posts), s, flags=re.S)
+        NAVY = '<li><a href="youtube.html">YouTube</a></li>'
+        if s.count(NAVY) != 2: warn(page + ': nav anchor count %d' % s.count(NAVY))
+        s = s.replace(NAVY, NAVY + '<li><a href="blog.html">Blog</a></li>')
+        if page == 'index.html':
+            s = s.replace('<section class="bg-mist reveal" id="stories">', home_blog_section(posts) + '<section class="bg-mist reveal" id="stories">', 1)
         if page == 'index.html':
             sprite = re.search(r'<!-- icon sprite -->\s*(<svg width="0".*?</svg>)', s, re.S).group(1)
             hdr = re.search(r'<div class="topbar">.*?</header>', s, re.S).group(0)
@@ -173,6 +222,10 @@ def build_main():
         if meta['schema'] == 'about': kind, extra = 'AboutPage', {"mainEntity": {"@id": PERSON_ID}}
         elif meta['schema'] == 'contact': kind = 'ContactPage'
         elif meta['schema'] in ('programs', 'youtube'): kind = 'CollectionPage'
+        elif meta['schema'] == 'blog':
+            kind = 'Blog'
+            extra = {"blogPost": [{"@type": "BlogPosting", "headline": p['title'], "image": p['image'] if p['image'].startswith('http') else SITE + '/' + p['image'],
+                                   "datePublished": p['date'], "url": p['url'], "description": p['intro'], "author": {"@id": PERSON_ID}, "publisher": {"@id": ORG_ID}} for p in load_posts()]}
         if meta['schema'] == 'programs':
             extra = {"mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": service_node(*p)} for i, p in enumerate(PROGRAMS)]}}
         if meta['schema'] == 'youtube':
@@ -322,7 +375,7 @@ def parse_faq_items(s):
 
 def build_landing(sprite, hdr, ftr):
     markup = hdr + ftr
-    css = scoped_css(rd(W + '/assets/css/styles.css'), markup)
+    css = scoped_css(rd(W + '/assets/css/styles.css') + rd(os.path.dirname(__file__) + '/extra.css'), markup)
     head_html = prefix_classes(hdr).replace('<header class="psl-header">', '<div class="psl-header" role="banner">').replace('</header>', '</div>')
     head_html = prefix_classes(hdr)
     head_html = head_html.replace('<header class="psl-header">', '<div class="psl-header" role="banner">').replace('</header>', '</div>')
