@@ -12,9 +12,14 @@ W = ROOT + '/website'
 LAND = ROOT + '/site-final-landing'
 OUT = ROOT + ('/_blog_demo' if os.environ.get('BLOG_DEMO') else '/site-live')
 FORM_URL = 'https://dashboard.umangdigital.co.in/form/contact-form-mtwhdjkv'
-GROUP_URL = ''          # WhatsApp community invite link (thank-you page falls back to a WhatsApp chat when empty)
+WA_CHANNEL = 'https://whatsapp.com/channel/0029Va7vp5iLo4hdA8ZQvC1c'   # public WhatsApp Channel (open to everyone)
+SURVEY = 'https://clarity.prosperitylifeschool.com/survey2'            # Financial Clarity Assessment + free 1:1 call
+FB_PAGE = 'https://www.facebook.com/drmariacoach/'
+GROUP_URL = WA_CHANNEL
 WA = 'https://wa.me/918904820166'
-SOCIAL = ['https://www.youtube.com/@drmariapramila', 'https://www.instagram.com/drmariapramila/', 'https://www.linkedin.com/in/drmariapramila/']
+SOCIAL = ['https://www.youtube.com/@drmariapramila', 'https://www.youtube.com/@prosperitylifeschool', 'https://www.youtube.com/@SamriddhiwithDrMaria',
+          'https://www.instagram.com/drmariapramila/', 'https://www.linkedin.com/in/drmariapramila/', 'https://www.facebook.com/drmariacoach/',
+          'https://www.facebook.com/drmariapramila/', WA_CHANNEL]
 TODAY = datetime.date.today().isoformat()
 NAMES = [p[:-5] for p in PAGE_ORDER] + ['prosperity-thank-you', 'retirement-booking-form']
 problems = []
@@ -57,7 +62,8 @@ ORG = {"@type": ["Organization", "EducationalOrganization", "ProfessionalService
        "address": [{"@type": "PostalAddress", "addressLocality": "Bengaluru", "addressRegion": "Karnataka", "addressCountry": "IN"},
                    {"@type": "PostalAddress", "addressLocality": "Mangaluru", "addressRegion": "Karnataka", "addressCountry": "IN"}],
        "areaServed": [{"@type": "City", "name": "Bengaluru"}, {"@type": "City", "name": "Mangaluru"}, {"@type": "Country", "name": "India"}, {"@type": "Place", "name": "Gulf countries"}],
-       "contactPoint": {"@type": "ContactPoint", "telephone": "+918904820166", "email": "maria@prosperitylifeschool.com", "contactType": "customer service", "availableLanguage": ["English", "Kannada", "Tulu", "Konkani"]},
+       "contactPoint": [{"@type": "ContactPoint", "telephone": "+918904820166", "email": "maria@prosperitylifeschool.com", "contactType": "customer service", "availableLanguage": ["English", "Kannada", "Tulu", "Konkani"]},
+                        {"@type": "ContactPoint", "telephone": "+918073384729", "contactType": "office", "availableLanguage": ["English", "Kannada"]}],
        "sameAs": SOCIAL}
 PERSON = {"@type": "Person", "@id": PERSON_ID, "name": "Dr Maria Pramila Dsouza", "jobTitle": "Chartered Wealth Manager and Financial Coach",
           "url": SITE + "/about", "image": SITE + "/assets/img/dr-maria-office.jpg", "worksFor": {"@id": ORG_ID},
@@ -168,6 +174,26 @@ def home_blog_section(posts):
             '<h2>Latest Money Insights</h2><p>Plain-language articles on insurance, retirement, SIPs and family money.</p></div>\n'
             + blog_cards(posts, 3) + '\n<div class="cta-row center" style="margin-top:30px"><a class="btn navy lg" href="blog.html">View All Articles</a></div></div></section>\n')
 
+FB_SYMBOL = '<symbol id="b-fb" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>'
+def global_patches(s, page):
+    # client number: 1,000+ client families
+    s = s.replace('data-count="500" data-suf="+">500+</b>', 'data-count="1000" data-suf="+">1,000+</b>')
+    s = re.sub(r'500\+(</b>\s*(?:<span>)?\s*[Cc]lient famil)', r'1,000+\1', s)
+    s = re.sub(r'500\+( client famil)', r'1,000+\1', s)
+    # Facebook icon (page link from client) next to YouTube in every social row + sprite symbol
+    s = re.sub(r'(<a class="s-yt"[^>]*>.*?</a>)', lambda m: m.group(1) + '<a class="s-fb" href="%s" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><use href="#b-fb"/></svg></a>' % FB_PAGE, s, flags=re.S)
+    if 'id="b-fb"' not in s: s = s.replace('</defs>', FB_SYMBOL + '</defs>', 1)
+    # header / menu / sticky "Free Assessment" -> the client's real assessment
+    s = re.sub(r'<a class="btn( sm)?" href="prosperity-clarity-call-v5\.html">((?:Take )?Free Assessment)</a>',
+               lambda m: '<a class="btn%s" href="%s" target="_blank" rel="noopener">%s</a>' % (m.group(1) or '', SURVEY, m.group(2)), s)
+    s = s.replace('<a class="btn lg" href="prosperity-clarity-call-v5.html">Get Your Free Clarity Assessment', '<a class="btn lg" href="%s" target="_blank" rel="noopener">Get Your Free Clarity Assessment' % SURVEY)
+    # footer: office phone + WhatsApp channel
+    foot = '<li><svg><use href="#i-pin"/></svg><span>Bengaluru &amp; Mangaluru'
+    if foot in s:
+        s = s.replace(foot, '<li><svg><use href="#i-phone"/></svg><a href="tel:+918073384729">Office +91 80733 84729</a></li>\n<li><svg><use href="#i-chat"/></svg><a href="%s" target="_blank" rel="noopener">WhatsApp Channel</a></li>\n' % WA_CHANNEL + foot, 1)
+    else: warn(page + ': footer contact anchor missing')
+    return s
+
 # ---------------------------------------------------------------- main pages
 def build_main():
     posts = load_posts()
@@ -177,6 +203,7 @@ def build_main():
         s = rd('%s/%s-multifile.html' % (W, 'contact' if page == 'blog.html' else page[:-5]))
         if page == 'blog.html':
             s = re.sub(r'<main>.*?</main>', lambda m: blog_main(posts), s, flags=re.S)
+        s = global_patches(s, page)
         NAVY = '<li><a href="youtube.html">YouTube</a></li>'
         if s.count(NAVY) != 2: warn(page + ': nav anchor count %d' % s.count(NAVY))
         s = s.replace(NAVY, NAVY + '<li><a href="blog.html">Blog</a></li>')
@@ -310,6 +337,7 @@ LP_CSS = """
 .lp-disc-in{max-width:1200px;margin:0 auto;padding:22px 28px 0}
 .lp-disc b{color:#E8BC5A}
 .faq-q{text-align:left}
+.lp-alt{margin:0 0 18px;font-size:14px;color:rgba(255,255,255,.85)}.lp-alt a{color:#E8BC5A;text-decoration:underline;font-weight:700}
 """
 
 def landing_head_extra(css):
@@ -407,7 +435,8 @@ def build_landing(sprite, hdr, ftr):
         if page == 'prosperity-clarity-call-v5.html':
             s, n = re.subn(r'<div class="cta-row">\s*<a href="#" class="btn btn-pulse">Apply for My Free Clarity Call</a>\s*</div>', fb, s)
         elif page == 'prosperity-protection-gap-review.html':
-            s, n = re.subn(r'<div class="cta-row">\s*<a class="btn btn-pulse" href="#">Book My Complimentary Protection Clarity Call</a>\s*</div>', fb, s)
+            alt = '<p class="lp-alt">Prefer a quick self-check first? <a href="https://links.prosperitylifeschool.com/insurance-assessment" target="_blank" rel="noopener">Insurance Assessment</a> &middot; <a href="https://links.prosperitylifeschool.com/pls-accins-assessment" target="_blank" rel="noopener">Accidental Insurance Assessment</a></p>'
+            s, n = re.subn(r'<div class="cta-row">\s*<a class="btn btn-pulse" href="#">Book My Complimentary Protection Clarity Call</a>\s*</div>', lambda m: fb + alt, s)
         elif page == 'prosperity-advisor-career-readiness.html':
             s = s.replace('href="contact.html"', 'href="#apply"')
             s, n = re.subn(r'<a class="btn big js-book" href="#apply">Start: It Takes About a Minute <span class="arr">→</span></a>', fb, s)
@@ -422,13 +451,9 @@ def build_landing(sprite, hdr, ftr):
             s = s[:a] + '<div class="card" id="card"><div class="c-body">' + iframe() + '</div></div>\n' + s[b:]
             s = re.sub(r'<script>.*?</script>', '', s, flags=re.S); n = 1
         elif page == 'prosperity-thank-you.html':
-            if GROUP_URL:
-                s = s.replace('href="#" class="btn btn-pulse">Join VIP WhatsApp Community', 'href="%s" class="btn btn-pulse" target="_blank" rel="noopener">Join VIP WhatsApp Community' % GROUP_URL); n = 1
-            else:
-                s = s.replace('<h2>Join Our VIP WhatsApp Community</h2>', '<h2>Stay Connected on WhatsApp</h2>')
-                s = s.replace('Get exclusive financial-clarity tips, event updates and first access to future Prosperity Life School sessions.', 'Have a question before your call? Message our team on WhatsApp.')
-                s = s.replace('href="#" class="btn btn-pulse">Join VIP WhatsApp Community', 'href="%s" class="btn btn-pulse" target="_blank" rel="noopener">Message Us on WhatsApp' % WA); n = 1
-            s = s.replace('<script>\n  (function(){\n    var el = document.querySelector', '<script>\n  (function(){\n    var el = document.querySelector')
+            s = s.replace('<h2>Join Our VIP WhatsApp Community</h2>', '<h2>Join Our WhatsApp Channel</h2>')
+            s = s.replace('Get exclusive financial-clarity tips, event updates and first access to future Prosperity Life School sessions.', 'Get daily money content and updates from Dr Maria. The channel is open to everyone.')
+            s = s.replace('href="#" class="btn btn-pulse">Join VIP WhatsApp Community', 'href="%s" class="btn btn-pulse" target="_blank" rel="noopener">Join the WhatsApp Channel' % WA_CHANNEL); n = 1
         else: n = 1
         if not n: warn(page + ': form not placed')
         # --- kicker + H2s + FAQs
@@ -449,6 +474,8 @@ def build_landing(sprite, hdr, ftr):
             faqs = parse_faq_items(s)
             if not faqs: warn(page + ': could not parse faq items')
         # --- links, scripts, lazy images
+        s = re.sub(r'500\+(</b>\s*(?:<span>)?\s*[Cc]lient famil)', r'1,000+\1', s)
+        s = re.sub(r'500\+( client famil)', r'1,000+\1', s)
         s = absolutize(s)
         s = s.replace('</body>', '<script src="assets/js/hf.js" defer></script>\n</body>')
         # --- schema + head

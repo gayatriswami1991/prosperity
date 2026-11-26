@@ -60,7 +60,9 @@ MAIN = {
   faq_title='Programs and Membership: Frequently Asked Questions',
   faq=[
    ('What is the difference between Silver, Gold and Diamond?',
-    'Silver (Prosperity Blueprint) builds your money foundation with 16 modules and live calls. Gold (Prosperity Navigator) gives you a personal financial plan with implementation guidance. Diamond (Prosperity Mastery) adds income skills and is by qualification.'),
+    'Silver (Prosperity Blueprint) builds your money foundation with courses, a 21-day money challenge, the weekly Thursday Inner Circle call and a monthly bootcamp. Gold (Prosperity Navigator) gives you a personalised family financial plan with 6 months of implementation support and includes Silver. Diamond (Prosperity Mastery) is a 1-year journey with skills for multiple sources of income and is by qualification.'),
+   ('How much does Silver membership cost?',
+    'On this website, Silver is \u20b99,999 + GST for one member, or \u20b912,999 including GST for two family members. You can also reserve a family seat with \u20b92,000 now (total \u20b914,999). Webinar attendees get a special offer on their own page.'),
    ('Is there a free way to start?',
     'Yes. You can join the free community and attend a free masterclass first. Paid memberships are optional.'),
    ('Why are website prices different from webinar prices?',
@@ -87,7 +89,7 @@ MAIN = {
   faq_title='Videos and Reels: Frequently Asked Questions',
   faq=[
    ('Where can I watch Dr Maria’s videos?',
-    'On the YouTube channel Dr Maria’s Finance Chapel (@drmariapramila), and in short reels on Instagram (@drmariapramila).'),
+    'On three YouTube channels: Dr Maria’s Finance Chapel (English), Prosperity Life School (English) and Samriddhi with Dr. Maria (Kannada). Short reels are on Instagram (@drmariapramila).'),
    ('Are the videos free?',
     'Yes. All videos on YouTube are free to watch at any time.'),
    ('Are there videos in Kannada?',
